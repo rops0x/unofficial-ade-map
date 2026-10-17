@@ -36,6 +36,9 @@ export function createEventMap(element: HTMLElement): EventMap {
   const map = L.map(element, { zoomControl: false, fadeAnimation: false }).setView(AMSTERDAM_CENTER, START_ZOOM)
   L.control.zoom({ position: 'topright' }).addTo(map)
   L.tileLayer(TILE_URL, { attribution: ATTRIBUTION, maxZoom: 19, className: 'night-tiles' }).addTo(map)
+  // Leaflet only watches the window, but the panel below is laid out after the map and can collapse.
+  // Keep the same centre, debouncing moveend like Leaflet's own resize handler so toolbar animations stay cheap.
+  new ResizeObserver(() => map.invalidateSize({ debounceMoveend: true })).observe(element)
 
   const venueLayer = L.layerGroup().addTo(map)
   const colors = { venue: token('--accent'), venueEdge: token('--black'), user: token('--you'), userEdge: token('--text') }

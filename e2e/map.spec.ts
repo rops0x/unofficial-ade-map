@@ -111,6 +111,29 @@ test('with location blocked, explains and keeps the map working', async ({ page,
   await expect(venueMarkers(page)).toHaveCount(2)
 })
 
+// Leaflet draws venues on an SVG that is the map size it knows about plus 10% padding on every side.
+const LEAFLET_SVG_PADDING = 0.1
+
+async function heightOf(page: Page, selector: string): Promise<number> {
+  const box = await page.locator(selector).boundingBox()
+  if (!box) throw new Error(`${selector} is not on screen`)
+  return box.height
+}
+
+/** Leaflet must know the map's real size, or the centre sits behind the panel and new strips stay blank. */
+async function expectLeafletToFitMap(page: Page): Promise<void> {
+  await expect(async () => {
+    const sizeLeafletKnows = (await heightOf(page, '.leaflet-overlay-pane svg')) / (1 + 2 * LEAFLET_SVG_PADDING)
+    expect(Math.abs(sizeLeafletKnows - (await heightOf(page, '#map')))).toBeLessThan(2)
+  }).toPass({ timeout: 5_000 })
+}
+
+test('the map knows its real size once the panel is laid out', async ({ page }) => {
+  await openAt(page, SATURDAY_0030)
+
+  await expectLeafletToFitMap(page)
+})
+
 test('after ADE, says see you in 2027', async ({ page }) => {
   await openAt(page, AFTER_ADE)
 
