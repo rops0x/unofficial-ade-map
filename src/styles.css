@@ -1,0 +1,375 @@
+/* Amsterdam at night: canal ink, sodium streetlight amber for what's on, tram blue for you. */
+:root {
+  --canal-deep: #0a1724;
+  --canal: #0f2233;
+  --canal-line: #23394d;
+  --mist: #e6edf2;
+  --haze: #9db0c0;
+  --sodium: #ffb020;
+  --sodium-ink: #2a1a00;
+  --tram: #4fc3f7;
+  --alert: #ff8a7a;
+
+  --font: 'Archivo Variable', system-ui, sans-serif;
+  --gutter: 16px;
+  --tap: 44px;
+  --radius-control: 999px;
+  --radius-panel: 14px;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100dvh;
+  background: var(--canal-deep);
+  color: var(--mist);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sodium);
+  outline-offset: 2px;
+}
+
+/* Top bar: the name and the not-affiliated note are always visible. */
+.bar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: calc(env(safe-area-inset-top) + 10px) var(--gutter) 10px;
+  background: var(--canal);
+  border-bottom: 1px solid var(--canal-line);
+}
+
+.bar__title {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 1.05rem;
+  font-weight: 750;
+  font-stretch: 85%;
+  letter-spacing: 0.005em;
+}
+
+.bar__note {
+  margin: 0;
+  color: var(--haze);
+  font-size: 0.78rem;
+  text-align: right;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 0;
+}
+
+.map {
+  min-height: 0;
+  background: var(--canal-deep);
+}
+
+/* Panel: the time you're looking at is the loudest thing on the page. */
+.panel {
+  display: grid;
+  gap: 6px;
+  padding: 10px var(--gutter) calc(env(safe-area-inset-bottom) + 10px);
+  background: var(--canal);
+  border-top: 1px solid var(--canal-line);
+}
+
+.readout {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.readout__day {
+  margin: 0;
+  order: 2;
+  color: var(--haze);
+  font-size: 1rem;
+  font-weight: 600;
+  font-stretch: 90%;
+}
+
+.readout__time {
+  margin: 0;
+  color: var(--sodium);
+  font-size: clamp(2.75rem, 13vw, 4.5rem);
+  font-weight: 800;
+  font-stretch: 62%;
+  font-variant-numeric: tabular-nums;
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+}
+
+.status {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin: 0;
+  max-width: 60ch;
+}
+
+.status__text {
+  font-weight: 600;
+}
+
+.controls {
+  display: grid;
+  gap: 4px;
+}
+
+.controls[hidden],
+.notice[hidden],
+button[hidden] {
+  display: none;
+}
+
+/* Day buttons scroll sideways on narrow phones rather than wrapping. */
+.days {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin: 0 calc(-1 * var(--gutter));
+  padding: 0 var(--gutter);
+}
+
+.day,
+.action,
+.status__action {
+  flex: none;
+  min-height: var(--tap);
+  padding: 0 14px;
+  border: 1px solid var(--canal-line);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--mist);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.day[aria-pressed='true'] {
+  border-color: var(--sodium);
+  background: var(--sodium);
+  color: var(--sodium-ink);
+}
+
+.status__action {
+  min-height: 36px;
+  border-color: var(--sodium);
+  color: var(--sodium);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.action--now {
+  border-color: var(--sodium);
+  color: var(--sodium);
+}
+
+.notice {
+  margin: 0;
+  color: var(--alert);
+  font-size: 0.9rem;
+}
+
+.credit {
+  margin: 0;
+  color: var(--haze);
+  font-size: 0.75rem;
+}
+
+/* Time slider */
+.slider {
+  width: 100%;
+  height: var(--tap);
+  margin: 0;
+  background: transparent;
+  appearance: none;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--canal-line);
+}
+
+.slider::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--canal-line);
+}
+
+.slider::-webkit-slider-thumb {
+  width: 28px;
+  height: 28px;
+  margin-top: -12px;
+  border: 3px solid var(--canal);
+  border-radius: 50%;
+  background: var(--sodium);
+  appearance: none;
+}
+
+.slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border: 3px solid var(--canal);
+  border-radius: 50%;
+  background: var(--sodium);
+}
+
+/* Map: OSM tiles tinted to a night map so the screen isn't blinding at 3am. */
+.leaflet-container {
+  background: var(--canal-deep);
+  font-family: var(--font);
+}
+
+.night-tiles {
+  filter: invert(1) hue-rotate(195deg) saturate(0.45) brightness(0.8) contrast(0.95);
+}
+
+.leaflet-control-attribution {
+  background: rgb(10 23 36 / 80%) !important;
+  color: var(--haze);
+}
+
+.leaflet-control-attribution a,
+.leaflet-bar a {
+  color: var(--mist);
+}
+
+.leaflet-bar a {
+  background: var(--canal);
+  border-color: var(--canal-line);
+}
+
+.venue-popup .leaflet-popup-content-wrapper,
+.venue-popup .leaflet-popup-tip {
+  background: var(--canal);
+  color: var(--mist);
+  border: 1px solid var(--canal-line);
+}
+
+.venue-popup .leaflet-popup-content {
+  margin: 14px 16px;
+  font-size: 0.95rem;
+}
+
+.venue-popup a.leaflet-popup-close-button {
+  width: var(--tap);
+  height: var(--tap);
+  color: var(--haze);
+  font-size: 22px;
+  line-height: var(--tap);
+}
+
+.popup__venue {
+  margin: 0 28px 2px 0;
+  font-size: 1.15rem;
+  font-weight: 750;
+  font-stretch: 85%;
+  line-height: 1.2;
+}
+
+.popup__address {
+  margin: 0 0 10px !important;
+  color: var(--haze);
+  font-size: 0.85rem;
+}
+
+.popup__events {
+  display: grid;
+  gap: 10px;
+  max-height: 40vh;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+}
+
+.popup__event {
+  display: grid;
+  gap: 2px;
+}
+
+.popup__name {
+  color: var(--mist);
+  font-weight: 600;
+}
+
+a.popup__name {
+  color: var(--sodium);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.popup__when {
+  color: var(--haze);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Wider screens: panel becomes a side column next to the map. */
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr 380px;
+    grid-template-rows: 1fr;
+  }
+
+  .panel {
+    align-content: start;
+    border-top: 0;
+    border-left: 1px solid var(--canal-line);
+  }
+
+  .readout {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .readout__day {
+    order: 0;
+  }
+
+  .days {
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

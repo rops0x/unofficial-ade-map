@@ -1,0 +1,13 @@
+{
+ "collectedAt": "2026-10-17T10:00:00.000Z",
+ "venues": [
+  { "id": "v-melkweg", "name": "Melkweg", "address": "Lijnbaansgracht 234A, Amsterdam", "lat": 52.3647, "lng": 4.8812 },
+  { "id": "v-paradiso", "name": "Paradiso", "address": "Weteringschans 6-8, Amsterdam", "lat": 52.3622, "lng": 4.8838 }
+ ],
+ "events": [
+  { "id": "e-opening", "name": "Opening Party", "venueId": "v-melkweg", "start": "2026-10-21T10:00:00.000Z", "end": "2026-10-21T18:00:00.000Z", "isEndEstimated": false, "isDaily": false, "sourceUrl": "https://example.org/events/opening" },
+  { "id": "e-friday", "name": "Friday Night", "venueId": "v-paradiso", "start": "2026-10-23T21:00:00.000Z", "end": "2026-10-24T03:00:00.000Z", "isEndEstimated": false, "isDaily": false, "sourceUrl": "https://example.org/events/friday" },
+  { "id": "e-late", "name": "Late Friday", "venueId": "v-melkweg", "start": "2026-10-23T22:00:00.000Z", "end": "2026-10-24T06:00:00.000Z", "isEndEstimated": true, "isDaily": false, "sourceUrl": "https://example.org/events/late" },
+  { "id": "e-closing", "name": "Closing", "venueId": "v-paradiso", "start": "2026-10-25T17:00:00.000Z", "end": "2026-10-26T03:00:00.000Z", "isEndEstimated": false, "isDaily": false, "sourceUrl": "https://example.org/events/closing" }
+ ]
+}

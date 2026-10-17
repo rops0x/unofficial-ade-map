@@ -1,0 +1,38 @@
+{
+  "name": "unofficial-ade-map",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "data:collect": "node scripts/collect-ade.ts",
+    "data:venues": "node scripts/locate-venues.ts",
+    "data:build": "node scripts/build-events.ts",
+    "data:refresh": "npm run data:collect && npm run data:venues && npm run data:build",
+    "prebuild": "node scripts/check-events.ts"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "leaflet": "^1.9.4",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/leaflet": "^1.9.22",
+    "@types/node": "^26.6.5",
+    "@vitest/coverage-v8": "^5.0.5",
+    "jsdom": "^30.1.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.5"
+  }
+}

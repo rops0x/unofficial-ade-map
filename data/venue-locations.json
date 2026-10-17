@@ -1,0 +1,3287 @@
+{
+ "Lotti's Bar @ The Hoxton": {
+  "adeId": 2708600,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/lottis-bar-the-hoxton/2708600/",
+  "address": "Herengracht 255, Amsterdam",
+  "lat": 52.37181,
+  "lng": 4.8873904,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:23:51.786Z"
+ },
+ "Faralda Crane Hotel": {
+  "adeId": 59623,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/crane-hotel/59623/",
+  "address": "NDSM Plein 78, Amsterdam",
+  "lat": 52.3994089,
+  "lng": 4.8948433,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:23:52.229Z"
+ },
+ "The Workout Lab De Pijp": {
+  "adeId": 2899975,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-workout-lab/2899975/",
+  "address": "Albert Cuypstraat 116 A&B, Amsterdam",
+  "lat": 52.3546134,
+  "lng": 4.8865459,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:23:53.152Z"
+ },
+ "The Workout Lab West": {
+  "adeId": 2900635,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-workout-lab-west/2900635/",
+  "address": "Baarsjesweg 289H, Amsterdam",
+  "lat": 52.3596377,
+  "lng": 4.8558032,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:23:57.477Z"
+ },
+ "YUSU Coffee": {
+  "adeId": 2911736,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/yusu-coffee/2911736/",
+  "address": "YUSU, 2, Andreas Bonnstraat, Oosterparkbuurt, Oost, Amsterdam, Netherlands, Amsterdam",
+  "lat": 52.3598497,
+  "lng": 4.9110984,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:23:59.391Z"
+ },
+ "When Nature Calls Biohacking Center": {
+  "adeId": 2737938,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/when-nature-calls-biohacking-center/2737938/",
+  "address": "Prinsengracht 581, Amsterdam",
+  "lat": 52.3680881,
+  "lng": 4.88291,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:00.452Z"
+ },
+ "Onder Hans": {
+  "adeId": 2707172,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/onder-hans/2707172/",
+  "address": "Kerkstraat 136-138, Amsterdam",
+  "lat": 52.3624214,
+  "lng": 4.8960446,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:02.691Z"
+ },
+ "ARTIS Aquarium": {
+  "adeId": 2813296,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/artis/2813296/",
+  "address": "Plantage Middenlaan 38-40, Amsterdam",
+  "lat": 52.3648178,
+  "lng": 4.9164152,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:04.288Z"
+ },
+ "Sofitel Legend The Grand Amsterdam": {
+  "adeId": 2887282,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/sofitel-legend-the-grand-amsterdam/2887282/",
+  "address": "Oudezijds Voorburgwal 197, Amsterdam",
+  "lat": 52.3709275,
+  "lng": 4.895255,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:05.368Z"
+ },
+ "ADE Lab Village Westergas": {
+  "adeId": 335465,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/westerpark/335465/",
+  "address": "Westerpark, Amsterdam",
+  "lat": 52.3872277,
+  "lng": 4.8717903,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:06.400Z"
+ },
+ "De Rode Hoed": {
+  "adeId": 2276497,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-rode-hoed/2276497/",
+  "address": "Keizersgracht 102, Amsterdam",
+  "lat": 52.3773438,
+  "lng": 4.8872604,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:08.139Z"
+ },
+ "S-Bahn": {
+  "adeId": 2505650,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/s-bahn/2505650/",
+  "address": "Elementenstraat 16, Amsterdam",
+  "lat": 52.3935415,
+  "lng": 4.8522387,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:08.833Z"
+ },
+ "Museum Ons' Lieve Heer op Solder": {
+  "adeId": 2545302,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/museum-ons-lieve-heer-op-solder/2545302/",
+  "address": "Oudezijds Voorburgwal 38, Amsterdam",
+  "lat": 52.3751725,
+  "lng": 4.8993657,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:10.319Z"
+ },
+ "The Node North": {
+  "adeId": 2675648,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-node-north/2675648/",
+  "address": "Hagedoornplein 2, Amsterdam",
+  "lat": 52.3880656,
+  "lng": 4.9142881,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:11.597Z"
+ },
+ "SPRMRKT": {
+  "adeId": 2900036,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/sprmrkt/2900036/",
+  "address": "Muiderstraat 21, Amsterdam",
+  "lat": 52.3676804,
+  "lng": 4.9066892,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:12.539Z"
+ },
+ "DB55": {
+  "adeId": 2527167,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/db55/2527167/",
+  "address": "Danzigerbocht 55, Amsterdam",
+  "lat": 52.3960356,
+  "lng": 4.8756427,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:13.696Z"
+ },
+ "Padel Next": {
+  "adeId": 2608932,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/padel-next/2608932/",
+  "address": "Willem de Zwijgerlaan 338c, Amsterdam",
+  "lat": 52.3817412,
+  "lng": 4.8592628,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:14.768Z"
+ },
+ "Prinsengracht Pop-up": {
+  "adeId": 2352361,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/prinsengracht-pop-up/2352361/",
+  "address": "Prinsengracht 234, Amsterdam",
+  "lat": 52.3723647,
+  "lng": 4.8825384,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:16.544Z"
+ },
+ "Club Baggerbeest": {
+  "adeId": 2539951,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bar-baggerbeest/2539951/",
+  "address": "Rudi van Dantzigstraat 1, Amsterdam",
+  "lat": 52.3731473,
+  "lng": 4.960461,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:17.666Z"
+ },
+ "Bar - Restaurant Van de Werf": {
+  "adeId": 2042791,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/next/2042791/",
+  "address": "NDSM-Kade 2, Amsterdam",
+  "lat": 52.4014307,
+  "lng": 4.8919612,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:18.664Z"
+ },
+ "InDeep'n'Dance Records": {
+  "adeId": 52905,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/indeepndance/52905/",
+  "address": "Rozengracht 60, Amsterdam",
+  "lat": 52.3735522,
+  "lng": 4.8806598,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:19.983Z"
+ },
+ "W139": {
+  "adeId": 2686768,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/w139/2686768/",
+  "address": "Warmoesstraat 139, Amsterdam",
+  "lat": 52.3737514,
+  "lng": 4.8959885,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:21.785Z"
+ },
+ "Comedy Cafe Amsterdam": {
+  "adeId": 2829564,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/comedy-cafe-amsterdam/2829564/",
+  "address": "IJdok 89, Amsterdam",
+  "lat": 52.3844164,
+  "lng": 4.8948797,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:22.887Z"
+ },
+ "Q-Factory": {
+  "adeId": 1598,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/q-factory/1598/",
+  "address": "Atlantisplein 1, Amsterdam",
+  "lat": 52.3576656,
+  "lng": 4.9304987,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:24.442Z"
+ },
+ "The Stargate": {
+  "adeId": 2826793,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-stargate/2826793/",
+  "address": "Prinses Irenestraat 19 (upstairs), Amsterdam",
+  "lat": 52.3416903,
+  "lng": 4.8806126,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:34:03.226Z"
+ },
+ "Midi Amsterdam": {
+  "adeId": 2524732,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/midi-amsterdam/2524732/",
+  "address": "Overtoom 431 H, Amsterdam",
+  "lat": 52.3589026,
+  "lng": 4.8605186,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:27.325Z"
+ },
+ "JUICE MONKEYZ": {
+  "adeId": 2907850,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/juice-monkeyz/2907850/",
+  "address": "Spuistraat 98, Amsterdam",
+  "lat": 52.375112,
+  "lng": 4.8909012,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:28.602Z"
+ },
+ "Amsterdams Most Wanted Radio": {
+  "adeId": 2118057,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/amsterdams-most-wanted-radio/2118057/",
+  "address": "NDSM-Plein 86e, Amsterdam",
+  "lat": 52.4004345,
+  "lng": 4.8954781,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:29.825Z"
+ },
+ "Bar Theo": {
+  "adeId": 1875179,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bar-theo/1875179/",
+  "address": "Rozengracht 160, Amsterdam",
+  "lat": 52.3729576,
+  "lng": 4.878229,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:31.030Z"
+ },
+ "Fosbury & Sons": {
+  "adeId": 1831183,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/fosbury-sons/1831183/",
+  "address": "Prinsengracht 769, Amsterdam",
+  "lat": 52.3638494,
+  "lng": 4.8869378,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:32.216Z"
+ },
+ "Volta": {
+  "adeId": 1532329,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/volta/1532329/",
+  "address": "Houtmankade 336, Amsterdam",
+  "lat": 52.3859986,
+  "lng": 4.8818676,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:33.397Z"
+ },
+ "Duke of Tokyo": {
+  "adeId": 2861047,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/duke-of-tokyo/2861047/",
+  "address": "Reguliersdwarsstraat 37, Amsterdam",
+  "lat": 52.3664942,
+  "lng": 4.8906805,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:34.321Z"
+ },
+ "Kadinsky Cafe": {
+  "adeId": 2140315,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/kadinsky-cafe/2140315/",
+  "address": "ZOUTSTEEG 9-11, Amsterdam",
+  "lat": 52.3741679,
+  "lng": 4.8937537,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:36.240Z"
+ },
+ "Royal Room": {
+  "adeId": 36698,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/royal-room/36698/",
+  "address": "Rembrandtplein 17-1, Amsterdam",
+  "lat": 52.3664239,
+  "lng": 4.8967918,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:37.685Z"
+ },
+ "ANOTHER ROOM": {
+  "adeId": 2903647,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/aother-room-ade-specials/2903647/",
+  "address": "Houtkopersdwarsstraat 6, Amsterdam",
+  "lat": 52.3688151,
+  "lng": 4.9020192,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:39.384Z"
+ },
+ "KILLACUTZ": {
+  "adeId": 2534398,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/killacutz/2534398/",
+  "address": "Nieuwe Nieuwstraat 21-hs, Amsterdam",
+  "lat": 52.3753291,
+  "lng": 4.8936031,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:41.287Z"
+ },
+ "Eighty-Four Amsterdam": {
+  "adeId": 2922705,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/eighty-four-amsterdam/2922705/",
+  "address": "Oranje-Vrijstaatkade, Oostpoort, Oost, Amsterdam",
+  "lat": 52.3572764,
+  "lng": 4.9346804,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:43.060Z"
+ },
+ "Head Moverz": {
+  "adeId": 2949874,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/head-moverz/2949874/",
+  "address": "Anthony Fokkerweg 3, 1059 CM Amsterdam, Amsterdam",
+  "lat": 52.3448289,
+  "lng": 4.8425825,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:43.988Z"
+ },
+ "Rederij de Nederlanden - Multatuli": {
+  "adeId": 2834440,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/rederij-de-nederlanden-multatuli/2834440/",
+  "address": "Singel 250, Amsterdam, Nederland",
+  "lat": 52.3731263,
+  "lng": 4.8882893,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:45.942Z"
+ },
+ "Fabrique des Lumières": {
+  "adeId": 2700555,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/fabrique-des-lumieres/2700555/",
+  "address": "Pazzanistraat 37, Amsterdam",
+  "lat": 52.3861071,
+  "lng": 4.8721438,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:47.100Z"
+ },
+ "De Rietvinck": {
+  "adeId": 2830705,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-rietvinck/2830705/",
+  "address": "Vinkenstraat 185, Amsterdam",
+  "lat": 52.3836692,
+  "lng": 4.8834894,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:48.036Z"
+ },
+ "Noorderlicht": {
+  "adeId": 40620,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/noorderlicht/40620/",
+  "address": "NDSM Plein 102, Amsterdam",
+  "lat": 52.3995686,
+  "lng": 4.8969802,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:50.189Z"
+ },
+ "Nicholas Groente & Fruit": {
+  "adeId": 2682159,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/nicholas-groente-fruit/2682159/",
+  "address": "Sint Nicolaasstraat 19, Amsterdam",
+  "lat": 52.3749081,
+  "lng": 4.8931709,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:51.287Z"
+ },
+ "Black Gold Amsterdam Coffee & Vinyl": {
+  "adeId": 49689,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/black-gold-amsterdam/49689/",
+  "address": "Korte Koningsstraat 13, Amsterdam",
+  "lat": 52.3717743,
+  "lng": 4.903075,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:52.497Z"
+ },
+ "The Bulldog Palace": {
+  "adeId": 2123813,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-bulldog-palace/2123813/",
+  "address": "Leidseplein 15, Amsterdam",
+  "lat": 52.3639825,
+  "lng": 4.8833237,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:54.067Z"
+ },
+ "IJland": {
+  "adeId": 1478839,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ijland/1478839/",
+  "address": "Tt. Vasumweg 171, 1033 SG Amsterdam, Amsterdam",
+  "lat": 52.4111289,
+  "lng": 4.8772316,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:54.757Z"
+ },
+ "Daily Paper Flagship Store": {
+  "adeId": 2946636,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/daily-paper-flagship-store/2946636/",
+  "address": "Leidsestraat 27, Amsterdam",
+  "lat": 52.3661462,
+  "lng": 4.8870138,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:55.757Z"
+ },
+ "INC": {
+  "adeId": 2747628,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/inc/2747628/",
+  "address": "Halvemaansteeg 4-6, Amsterdam",
+  "lat": 52.366657,
+  "lng": 4.8958282,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:56.819Z"
+ },
+ "The Loft Amsterdam": {
+  "adeId": 45647,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/loft-amsterdam/45647/",
+  "address": "Overhoeksplein 1, Amsterdam",
+  "lat": 52.3838041,
+  "lng": 4.9024608,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:57.913Z"
+ },
+ "The Tequila Club": {
+  "adeId": 2555587,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-tequila-club/2555587/",
+  "address": "Korte Leidsedwarsstraat 28, Amsterdam",
+  "lat": 52.3633756,
+  "lng": 4.8845454,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:24:58.970Z"
+ },
+ "ClinkNOORD": {
+  "adeId": 2198047,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/clinknoord/2198047/",
+  "address": "Badhuiskade 3, Amsterdam",
+  "lat": 52.3841845,
+  "lng": 4.9036707,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:01.275Z"
+ },
+ "Bierfabriek": {
+  "adeId": 2860625,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bier-fabriek/2860625/",
+  "address": "Nes 67, 1012 KD, Amsterdam, Amsterdam",
+  "lat": 52.3701184,
+  "lng": 4.8935454,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:02.514Z"
+ },
+ "Huis van de Tijd": {
+  "adeId": 2516806,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/huis-van-de-tijd/2516806/",
+  "address": "Nieuwe Herengracht 18, Amsterdam",
+  "lat": 52.3659879,
+  "lng": 4.9037884,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:03.859Z"
+ },
+ "NDSM Ferry": {
+  "adeId": 2887350,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ndsm-ferry/2887350/",
+  "address": "IJboulevard, Amsterdam",
+  "lat": 52.3798896,
+  "lng": 4.9017256,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:05.887Z"
+ },
+ "Heineken Hoek": {
+  "adeId": 2676950,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/heineken-hoek/2676950/",
+  "address": "Kleine Gartmanplantsoen 1, Amsterdam",
+  "lat": 52.3637756,
+  "lng": 4.883282,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:07.841Z"
+ },
+ "Desmet Studio's": {
+  "adeId": 1634,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/desmet-studios/1634/",
+  "address": "Plantage Middenlaan 4 A, Amsterdam",
+  "lat": 52.3669679,
+  "lng": 4.9097184,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:08.442Z"
+ },
+ "Andaz Amsterdam": {
+  "adeId": 174403,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/andaz-amsterdam/174403/",
+  "address": "Keizersgracht 440, Amsterdam",
+  "lat": 52.3653148,
+  "lng": 4.9076367,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:09.625Z"
+ },
+ "Ampēre & Salon D'Homme": {
+  "adeId": 2895120,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ampere-salon-dhomme/2895120/",
+  "address": "De Clercqstraat 74 - 76, Amsterdam",
+  "lat": 52.3711809,
+  "lng": 4.8711756,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:11.609Z"
+ },
+ "Buddies Brink": {
+  "adeId": 2939194,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/buddies-brink/2939194/",
+  "address": "Mijehof 406, Amsterdam",
+  "lat": 52.3000793,
+  "lng": 4.9685949,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:13.579Z"
+ },
+ "50:HERTZ House & Techno Cafe Rembrandt Square": {
+  "adeId": 38571,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/50hertz-techno-cafe-rembrandt-square-bar-lunar/38571/",
+  "address": "Halvemaansteeg 14, Amsterdam",
+  "lat": 52.3665536,
+  "lng": 4.8957327,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:15.300Z"
+ },
+ "50:HERTZ House & Techno Club Rembrandt Square": {
+  "adeId": 2507629,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/50hertz-house-techno-club-rembrandt-square/2507629/",
+  "address": "Rembrandtplein 45, Amsterdam",
+  "lat": 52.366353,
+  "lng": 4.8977883,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:16.868Z"
+ },
+ "Bar Twenty Two": {
+  "adeId": 1632189,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bar-twenty-two/1632189/",
+  "address": "Leidseplein 20-22, Amsterdam",
+  "lat": 52.3639577,
+  "lng": 4.882758,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:17.655Z"
+ },
+ "Studio/K": {
+  "adeId": 41746,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/studio-k/41746/",
+  "address": "Timorplein 62, Amsterdam",
+  "lat": 52.3651126,
+  "lng": 4.9362392,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:18.705Z"
+ },
+ "Het Veronica Schip": {
+  "adeId": 2665664,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/het-veronica-schip/2665664/",
+  "address": "NDSM-pier 1, Amsterdam",
+  "lat": 52.4013777,
+  "lng": 4.8902194,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:19.752Z"
+ },
+ "Le Flaneur": {
+  "adeId": 2589643,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/le-flaneur/2589643/",
+  "address": "Prinsengracht 260, Amsterdam",
+  "lat": 52.3714655,
+  "lng": 4.8824748,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:20.800Z"
+ },
+ "Bordello Aperitivo": {
+  "adeId": 1750629,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bordello-aperitivo/1750629/",
+  "address": "Zeedijk 41, Amsterdam",
+  "lat": 52.3753852,
+  "lng": 4.901161,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:22.374Z"
+ },
+ "Zwart Goud": {
+  "adeId": 53169,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/zwart-goud/53169/",
+  "address": "Geldersekade 89s, Amsterdam",
+  "lat": 52.3736569,
+  "lng": 4.9007021,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:23.538Z"
+ },
+ "Loop51": {
+  "adeId": 2763512,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/loop51/2763512/",
+  "address": "Dusartstraat 51, Amsterdam",
+  "lat": 52.3512963,
+  "lng": 4.8894806,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:24.136Z"
+ },
+ "Mr Watson": {
+  "adeId": 2857474,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/mr-watson/2857474/",
+  "address": "Wibautstraat 206, Amsterdam",
+  "lat": 52.3520305,
+  "lng": 4.9130522,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:25.817Z"
+ },
+ "Bar Bacán": {
+  "adeId": 2851488,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bar-bacán/2851488/",
+  "address": "Reguliersdwarsstraat 105, Amsterdam",
+  "lat": 52.3660235,
+  "lng": 4.8941948,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:26.807Z"
+ },
+ "BASEMENT": {
+  "adeId": 2822761,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/basement/2822761/",
+  "address": "Leidseplein 19, Amsterdam",
+  "lat": 52.3639109,
+  "lng": 4.8831763,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:28.174Z"
+ },
+ "Margarita's Bar & Kitchen": {
+  "adeId": 2918029,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/margaritas-bar-kitchen/2918029/",
+  "address": "Lange Leidsedwarsstraat 71A, Amsterdam",
+  "lat": 52.3634788,
+  "lng": 4.8854314,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:29.189Z"
+ },
+ "Spritz Bar Amsterdam": {
+  "adeId": 2716639,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/spritz-bar-amsterdam/2716639/",
+  "address": "Leidsebosje 2, Amsterdam",
+  "lat": 52.3633536,
+  "lng": 4.8807051,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:30.940Z"
+ },
+ "Paradiso": {
+  "adeId": 1576,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/paradiso/1576/",
+  "address": "Weteringschans 6-8, Amsterdam",
+  "lat": 52.3621851,
+  "lng": 4.8838199,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:32.051Z"
+ },
+ "Levenslang Amsterdam": {
+  "adeId": 1721889,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/levenslang-amsterdam/1721889/",
+  "address": "Bijlmerbajes, H.J.E. Wenckebachweg 48, Amsterdam",
+  "lat": 52.3372503,
+  "lng": 4.9253277,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:33.173Z"
+ },
+ "Westerkerk": {
+  "adeId": 1686071,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/westerkerk/1686071/",
+  "address": "Prinsengracht 279, Amsterdam",
+  "lat": 52.3745258,
+  "lng": 4.8834977,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:35.307Z"
+ },
+ "ARCA Bar @ art'otel Amsterdam": {
+  "adeId": 2736540,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/artotel-amsterdam/2736540/",
+  "address": "Martelaarsgracht 5, Amsterdam",
+  "lat": 52.3778127,
+  "lng": 4.8966635,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:36.617Z"
+ },
+ "Chicago Social Club": {
+  "adeId": 1662,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/chicago-social-club/1662/",
+  "address": "Leidseplein 12, Amsterdam",
+  "lat": 52.3646445,
+  "lng": 4.8825968,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:37.766Z"
+ },
+ "Blend XL": {
+  "adeId": 1488467,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/blend-xl/1488467/",
+  "address": "Reguliersdwarsstraat 44, Amsterdam",
+  "lat": 52.3662189,
+  "lng": 4.8914911,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:38.680Z"
+ },
+ "Concrete Matter": {
+  "adeId": 2907234,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/concrete-matter/2907234/",
+  "address": "Gasthuismolensteeg 12, Centrum, Amsterdam",
+  "lat": 52.3722892,
+  "lng": 4.8876319,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:40.108Z"
+ },
+ "Vic's Bar": {
+  "adeId": 1489015,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/vics-bar/1489015/",
+  "address": "Damrak 1-5, Amsterdam",
+  "lat": 52.3772801,
+  "lng": 4.8976771,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:42.111Z"
+ },
+ "Club NYX": {
+  "adeId": 1624,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/club-nyx/1624/",
+  "address": "Reguliersdwarsstraat 42, Amsterdam",
+  "lat": 52.3662696,
+  "lng": 4.8913243,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:43.238Z"
+ },
+ "Bar Feijoa": {
+  "adeId": 1639671,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bar-feijoa/1639671/",
+  "address": "Vijzelstraat 39, Amsterdam",
+  "lat": 52.3659838,
+  "lng": 4.8932996,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:44.390Z"
+ },
+ "Tha Dogg House by Snoop Dogg": {
+  "adeId": 2894331,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/tha-dogg-house-by-snoop-dogg/2894331/",
+  "address": "Marnixstraat 333, Amsterdam",
+  "lat": 52.3726966,
+  "lng": 4.8761179,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:45.963Z"
+ },
+ "TYSON 2.0 Spui by Mike Tyson": {
+  "adeId": 2894334,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/tyson-2-0-spui-by-mike-tyson/2894334/",
+  "address": "Spuistraat 222, Amsterdam",
+  "lat": 52.3714759,
+  "lng": 4.8891416,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:47.014Z"
+ },
+ "Bajes Amsterdam": {
+  "adeId": 1554,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-bajes/1554/",
+  "address": "H.J.E. Wenckebachweg 48, Amsterdam",
+  "lat": 52.3371354,
+  "lng": 4.9251157,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:49.306Z"
+ },
+ "BISOUS": {
+  "adeId": 2889877,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bisous/2889877/",
+  "address": "albert cuypstraat 31H, Amsterdam",
+  "lat": 52.3547197,
+  "lng": 4.8878177,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:49.961Z"
+ },
+ "Gashouder": {
+  "adeId": 1594,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/gashouder/1594/",
+  "address": "Klönneplein 1, Amsterdam",
+  "lat": 52.3867571,
+  "lng": 4.8692403,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:52.301Z"
+ },
+ "THE OTHER SIDE": {
+  "adeId": 1667299,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-other-side/1667299/",
+  "address": "Rigakade 10, Amsterdam",
+  "lat": 52.3953221,
+  "lng": 4.8748282,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:53.438Z"
+ },
+ "Café Katoen": {
+  "adeId": 2706110,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/cafe-katoen/2706110/",
+  "address": "Oude Turfmarkt 153, Amsterdam",
+  "lat": 52.3677668,
+  "lng": 4.8941167,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:54.527Z"
+ },
+ "Panama": {
+  "adeId": 1632,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/panama/1632/",
+  "address": "Oostelijke handelskade 4, Amsterdam",
+  "lat": 52.3749358,
+  "lng": 4.9304264,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:55.513Z"
+ },
+ "nhow Amsterdam RAI": {
+  "adeId": 2530019,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/nhow-amsterdam-rai/2530019/",
+  "address": "Europaboulevard 2b, Amsterdam",
+  "lat": 52.3384883,
+  "lng": 4.890957,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:56.633Z"
+ },
+ "Uilenburgersjoel": {
+  "adeId": 2843072,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/uilenburgersjoel/2843072/",
+  "address": "Nieuwe Uilenburgerstraat 91, Amsterdam",
+  "lat": 52.3702124,
+  "lng": 4.9052637,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:58.270Z"
+ },
+ "PRIK": {
+  "adeId": 1636,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/prik/1636/",
+  "address": "Spuistraat 109, Amsterdam",
+  "lat": 52.3747124,
+  "lng": 4.8908445,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:25:59.979Z"
+ },
+ "CUE Amsterdam": {
+  "adeId": 2590211,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/cue-amsterdam/2590211/",
+  "address": "Utrechtsestraat 30A, Amsterdam",
+  "lat": 52.3644302,
+  "lng": 4.897927,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:01.169Z"
+ },
+ "Ziggo Dome": {
+  "adeId": 1584,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ziggo-dome/1584/",
+  "address": "De Passage 100, Amsterdam",
+  "lat": 52.3140578,
+  "lng": 4.9388526,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:02.745Z"
+ },
+ "Toekomstmuziek": {
+  "adeId": 2081815,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/toekomstmuziek/2081815/",
+  "address": "Danzigerbocht 29, AMSTERDAM",
+  "lat": 52.3966283,
+  "lng": 4.8755183,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:03.869Z"
+ },
+ "nachbar": {
+  "adeId": 2229239,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/nachbar/2229239/",
+  "address": "Nieuwezijdsvoorburgwal 169, Amsterdam",
+  "lat": null,
+  "lng": null,
+  "status": "not-found",
+  "checkedAt": "2026-10-17T11:34:04.680Z"
+ },
+ "Café Wu": {
+  "adeId": 2533351,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/cafe-wu/2533351/",
+  "address": "Dapperstraat 1, Amsterdam, Nederland",
+  "lat": 52.3610018,
+  "lng": 4.9283242,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:07.051Z"
+ },
+ "Podium Mozaïek": {
+  "adeId": 2916032,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/podium-mozaiek/2916032/",
+  "address": "Bos en Lommerweg 191, Amsterdam",
+  "lat": 52.3800775,
+  "lng": 4.8541342,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:08.548Z"
+ },
+ "Werkplaats": {
+  "adeId": 2070023,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/werkplaats/2070023/",
+  "address": "Wibautstraat 150, Amsterdam",
+  "lat": 52.3537525,
+  "lng": 4.9117913,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:10.273Z"
+ },
+ "Hearth": {
+  "adeId": 2118851,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/hearth/2118851/",
+  "address": "Camperstraat, 26 h, Amsterdam",
+  "lat": 52.3584675,
+  "lng": 4.9129749,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:11.468Z"
+ },
+ "Wanakam": {
+  "adeId": 2895975,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/wanakam/2895975/",
+  "address": "34, Ruyschstraat, Weesperzijde, Oost, Amsterdam, North Holland, Netherlands, 1091 CC, Netherlands, Amsterdam",
+  "lat": 52.3570886,
+  "lng": 4.90912,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:12.708Z"
+ },
+ "Soho House": {
+  "adeId": 2722484,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/soho-house/2722484/",
+  "address": "Spuistraat 210, Amsterdam",
+  "lat": 52.3720757,
+  "lng": 4.8892294,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:14.519Z"
+ },
+ "Melkweg": {
+  "adeId": 1644,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/melkweg/1644/",
+  "address": "Lijnbaansgracht 234A, Amsterdam",
+  "lat": 52.3647777,
+  "lng": 4.8810734,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:15.670Z"
+ },
+ "Van Eesteren Museum": {
+  "adeId": 2825075,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/van-eesteren-museum/2825075/",
+  "address": "Noordzijde 31, Amsterdam",
+  "lat": 52.3730127,
+  "lng": 4.8262451,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:16.684Z"
+ },
+ "Zoku": {
+  "adeId": 2272487,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/zoku/2272487/",
+  "address": "Weesperstraat 105, Amsterdam",
+  "lat": 52.363941,
+  "lng": 4.9067653,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:18.993Z"
+ },
+ "Koninklijk Instituut voor de Tropen (Royal Tropical Institute)": {
+  "adeId": 2489282,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/koninklijk-instituut-voor-de-tropen-royal-tropical-institute/2489282/",
+  "address": "Mauritskade 64, Amsterdam",
+  "lat": 52.3628899,
+  "lng": 4.92161,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:20.974Z"
+ },
+ "Café Lux": {
+  "adeId": 2128733,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/weber-lux/2128733/",
+  "address": "Marnixstraat 403, Amsterdam",
+  "lat": 52.3648702,
+  "lng": 4.8807443,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:21.617Z"
+ },
+ "Waterhouse Studios": {
+  "adeId": 2816561,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/waterhouse-studios/2816561/",
+  "address": "Danzigerkade 1, Amsterdam",
+  "lat": 52.3959849,
+  "lng": 4.8784789,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:23.714Z"
+ },
+ "De Duif": {
+  "adeId": 2865939,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-duif/2865939/",
+  "address": "Prinsengracht 756, Amsterdam",
+  "lat": 52.3614502,
+  "lng": 4.8966973,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:24.788Z"
+ },
+ "Palladium Amsterdam": {
+  "adeId": 2508513,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/palladium-amsterdam/2508513/",
+  "address": "Kleine-Gartmanplantsoen 7, Amsterdam",
+  "lat": 52.3635772,
+  "lng": 4.8835286,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:26.983Z"
+ },
+ "The Social Hub Amsterdam City": {
+  "adeId": 2317907,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-social-hub-amsterdam-city/2317907/",
+  "address": "Wibautstraat 129, Amsterdam",
+  "lat": 52.3544435,
+  "lng": 4.9134018,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:28.561Z"
+ },
+ "Parallel": {
+  "adeId": 1632125,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/parallel/1632125/",
+  "address": "Buiksloterweg 5C, Amsterdam",
+  "lat": 52.3833541,
+  "lng": 4.9036483,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:29.299Z"
+ },
+ "Muziekgebouw aan 't IJ": {
+  "adeId": 317227,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/muziekgebouw-aan-t-ij/317227/",
+  "address": "Piet Heinkade 1, Amsterdam",
+  "lat": 52.3782711,
+  "lng": 4.9131079,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:30.360Z"
+ },
+ "Rijksmuseum": {
+  "adeId": 2257993,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/rijksmuseum/2257993/",
+  "address": "Museumstraat 1, Amsterdam",
+  "lat": 52.3596632,
+  "lng": 4.8842791,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:31.879Z"
+ },
+ "Concertgebouw": {
+  "adeId": 1612,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/concertgebouw/1612/",
+  "address": "Concertgebouwplein 10, Amsterdam",
+  "lat": 52.3564254,
+  "lng": 4.8794923,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:32.914Z"
+ },
+ "De Engelbewaarder": {
+  "adeId": 2921886,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-engelbewaarder/2921886/",
+  "address": "Kloveniersburgwal 59H, Amsterdam",
+  "lat": 52.3702265,
+  "lng": 4.8984411,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:34.006Z"
+ },
+ "De Fik Garden": {
+  "adeId": 2697337,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-fik-garden/2697337/",
+  "address": "Sportparklaan 19, Amsterdam",
+  "lat": 52.3399913,
+  "lng": 4.8377632,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:35.147Z"
+ },
+ "AFAS Live": {
+  "adeId": 1574,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/afas-live/1574/",
+  "address": "ArenA Boulevard 590, Amsterdam",
+  "lat": 52.3122606,
+  "lng": 4.9442166,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:36.722Z"
+ },
+ "WestWeelde": {
+  "adeId": 1588,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/westerunie/1588/",
+  "address": "Klönneplein 4, Amsterdam",
+  "lat": 52.3870141,
+  "lng": 4.8699152,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:37.870Z"
+ },
+ "Ganbei Karaoke": {
+  "adeId": 2549518,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ganbei-karaoke/2549518/",
+  "address": "Korte Leidsedwarsstraat 45, Amsterdam",
+  "lat": 52.3649518,
+  "lng": 4.8824083,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:38.426Z"
+ },
+ "Yellow House": {
+  "adeId": 2528498,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/yellow-house/2528498/",
+  "address": "Danzigerbocht 45-R, Amsterdam",
+  "lat": 52.3963849,
+  "lng": 4.8743906,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:39.575Z"
+ },
+ "Skatecafe": {
+  "adeId": 54535,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/skatecafe/54535/",
+  "address": "Gedempt Hamerkanaal 42, Amsterdam",
+  "lat": 52.3854467,
+  "lng": 4.9256035,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:41.562Z"
+ },
+ "Doka": {
+  "adeId": 53589,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/doka/53589/",
+  "address": "Wibautstraat 150, Amsterdam",
+  "lat": 52.3537525,
+  "lng": 4.9117913,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:42.704Z"
+ },
+ "Zuiderkerk": {
+  "adeId": 1495645,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/zuiderkerk/1495645/",
+  "address": "Zuiderkerkhof 72, Amsterdam",
+  "lat": 52.3701627,
+  "lng": 4.8996992,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:43.644Z"
+ },
+ "The Bas[s]ment": {
+  "adeId": 1511191,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-bassment/1511191/",
+  "address": "Nieuwpoortkade 2a, Amsterdam",
+  "lat": 52.3846178,
+  "lng": 4.8594373,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:44.857Z"
+ },
+ "Het Dorp": {
+  "adeId": 2824260,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/het-dorp/2824260/",
+  "address": "Noordwal 1, amsterdam",
+  "lat": 52.3810665,
+  "lng": 4.9128053,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:45.990Z"
+ },
+ "Radio Radio": {
+  "adeId": 41934,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/radio-radio/41934/",
+  "address": "Pazzanistraat 3, Amsterdam",
+  "lat": 52.3860704,
+  "lng": 4.8740538,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:47.073Z"
+ },
+ "Studio Zeedijk": {
+  "adeId": 2910064,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/studio-zeedijk/2910064/",
+  "address": "Zeedijk 44H, Amsterdam",
+  "lat": 52.3751021,
+  "lng": 4.9009213,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:48.196Z"
+ },
+ "Stones": {
+  "adeId": 2928399,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/stones/2928399/",
+  "address": "Korte Leidsedwarsstraat 24A, Amsterdam",
+  "lat": 52.363903,
+  "lng": 4.8836623,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:49.926Z"
+ },
+ "Centrale Markthal": {
+  "adeId": 2826469,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/centrale-markthal-amsterdam/2826469/",
+  "address": "Centrale markthallen 170, Amsterdam",
+  "lat": 52.3781432,
+  "lng": 4.8662284,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:50.978Z"
+ },
+ "Lombardo's": {
+  "adeId": 2862123,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/lombardos/2862123/",
+  "address": "Nieuwe Spiegelstraat 50, Amsterdam",
+  "lat": 52.3635469,
+  "lng": 4.8887021,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:52.026Z"
+ },
+ "club RAUM": {
+  "adeId": 2081059,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/club-raum/2081059/",
+  "address": "Humberweg 3, Amsterdam",
+  "lat": 52.3913318,
+  "lng": 4.8310521,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:53.725Z"
+ },
+ "Thuishaven": {
+  "adeId": 1614,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/thuishaven/1614/",
+  "address": "Contactweg 68, Amsterdam",
+  "lat": 52.3967619,
+  "lng": 4.8563938,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:54.343Z"
+ },
+ "Café De Kroon": {
+  "adeId": 2222801,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/café-de-kroon/2222801/",
+  "address": "Rembrandtplein 17-1, Amsterdam",
+  "lat": 52.3664239,
+  "lng": 4.8967918,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:55.431Z"
+ },
+ "Club Prime": {
+  "adeId": 2857007,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/club-prime/2857007/",
+  "address": "Rembrandtplein 22, Amsterdam",
+  "lat": 52.365988,
+  "lng": 4.8966112,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:56.402Z"
+ },
+ "Splendor": {
+  "adeId": 2706057,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/splendor/2706057/",
+  "address": "Nieuwe Uilenburgerstraat 116,, Amsterdam",
+  "lat": 52.3699078,
+  "lng": 4.9032848,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:58.330Z"
+ },
+ "The Cristel Ballroom Gallery": {
+  "adeId": 2786868,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-cristel-ballroom-gallery/2786868/",
+  "address": "Geldersekade 58, Amsterdam",
+  "lat": 52.3748735,
+  "lng": 4.9012302,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:26:59.365Z"
+ },
+ "House of Noa": {
+  "adeId": 2830768,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/house-of-noa/2830768/",
+  "address": "Damrak 247, Amsterdam",
+  "lat": 52.3746913,
+  "lng": 4.89544,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:01.321Z"
+ },
+ "Huis Van Iemand Anders": {
+  "adeId": 2507805,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/huis-van-iemand-anders/2507805/",
+  "address": "Van Woustraat 2, Amsterdam",
+  "lat": 52.3567882,
+  "lng": 4.899523,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:02.293Z"
+ },
+ "Madam": {
+  "adeId": 37310,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/madam/37310/",
+  "address": "Overhoeksplein 3, Amsterdam",
+  "lat": 52.3838264,
+  "lng": 4.9019965,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:03.974Z"
+ },
+ "Lofi": {
+  "adeId": 36919,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/lofi/36919/",
+  "address": "Basisweg 63, Amsterdam",
+  "lat": 52.3912546,
+  "lng": 4.8242219,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:04.872Z"
+ },
+ "Shelter": {
+  "adeId": 38811,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/shelter/38811/",
+  "address": "Overhoeksplein 3, Amsterdam",
+  "lat": 52.3838264,
+  "lng": 4.9019965,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:06.073Z"
+ },
+ "BRET": {
+  "adeId": 1552,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bret/1552/",
+  "address": "Orlyplein 76, Amsterdam",
+  "lat": 52.3898525,
+  "lng": 4.836764,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:06.549Z"
+ },
+ "Jimmy Woo": {
+  "adeId": 43934,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/jimmy-woo/43934/",
+  "address": "Korte Leidsedwarsstraat 18, Amsterdam",
+  "lat": 52.3647963,
+  "lng": 4.8823749,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:07.778Z"
+ },
+ "Hotel Arena": {
+  "adeId": 30225,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/hotel-arena/30225/",
+  "address": "'s-Gravesandestraat 55, Amsterdam",
+  "lat": 52.3612334,
+  "lng": 4.9162951,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:08.996Z"
+ },
+ "Club UP": {
+  "adeId": 37303,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/club-up/37303/",
+  "address": "Korte Leidsedwarsstraat 26-1, Amsterdam",
+  "lat": 52.3633756,
+  "lng": 4.8845454,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:10.128Z"
+ },
+ "De Sering": {
+  "adeId": 2070197,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-sering/2070197/",
+  "address": "Rhoneweg, 6, Amsterdam",
+  "lat": 52.3905266,
+  "lng": 4.8321017,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:11.947Z"
+ },
+ "Auditorium": {
+  "adeId": 2166953,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/auditorium/2166953/",
+  "address": "Mauritskade 57, Amsterdam",
+  "lat": 52.3609599,
+  "lng": 4.9187035,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:12.859Z"
+ },
+ "United Studio's": {
+  "adeId": 42899,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/united-studios/42899/",
+  "address": "Moermanskkade 107, Amsterdam",
+  "lat": 52.3994388,
+  "lng": 4.8716807,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:14.044Z"
+ },
+ "Club Royal": {
+  "adeId": 2890110,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/club-royal/2890110/",
+  "address": "Rembrandtplein 44, Amsterdam",
+  "lat": 52.3657664,
+  "lng": 4.8972075,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:15.100Z"
+ },
+ "Bar Rouge": {
+  "adeId": 1491031,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bar-rouge/1491031/",
+  "address": "Singel, Amsterdam",
+  "lat": 52.3670469,
+  "lng": 4.8935232,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:16.336Z"
+ },
+ "Benelux Bar": {
+  "adeId": 2484771,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/benelux-bar/2484771/",
+  "address": "Gedempt Hamerkanaal 83, Amsterdam",
+  "lat": 52.3839146,
+  "lng": 4.9217507,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:17.538Z"
+ },
+ "Escape Club": {
+  "adeId": 1620,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/escape-club/1620/",
+  "address": "Rembrandtplein 11, Amsterdam",
+  "lat": 52.3664188,
+  "lng": 4.8963193,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:18.766Z"
+ },
+ "Sugarfactory": {
+  "adeId": 2670289,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/sugarfactory/2670289/",
+  "address": "Kristalpromenade 7, Halfweg",
+  "lat": 52.3847389,
+  "lng": 4.7463907,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:19.808Z"
+ },
+ "Club John Doe": {
+  "adeId": 30219,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/john-doe/30219/",
+  "address": "Rembrandtplein 31, Amsterdam",
+  "lat": 52.366478,
+  "lng": 4.897596,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:20.986Z"
+ },
+ "SUPPER": {
+  "adeId": 1580,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/supperclub/1580/",
+  "address": "Singel 460, Amsterdam",
+  "lat": 52.3675346,
+  "lng": 4.8888594,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:22.066Z"
+ },
+ "TILLATEC": {
+  "adeId": 2590176,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/tilla-tec/2590176/",
+  "address": "Doctor Jan van Breemenstraat 1, Amsterdam",
+  "lat": 52.3699549,
+  "lng": 4.843713,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:23.268Z"
+ },
+ "Soulkitchen Amsterdam": {
+  "adeId": 2597270,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/soulkitchen-amsterdam/2597270/",
+  "address": "Amstelstraat 30, Amsterdam",
+  "lat": 52.366104,
+  "lng": 4.899706,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:25.310Z"
+ },
+ "RADION": {
+  "adeId": 1630,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/radion/1630/",
+  "address": "Louwesweg 1, Amsterdam",
+  "lat": 52.3456292,
+  "lng": 4.8255446,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:26.519Z"
+ },
+ "Bitterzoet": {
+  "adeId": 38086,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bitterzoet/38086/",
+  "address": "Spuistraat 2, Amsterdam",
+  "lat": 52.3773568,
+  "lng": 4.8941422,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:27.574Z"
+ },
+ "Warehouse Elementenstraat": {
+  "adeId": 1572,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/warehouse-elementenstraat/1572/",
+  "address": "Elementenstraat 25, Amsterdam",
+  "lat": 52.3939684,
+  "lng": 4.851477,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:28.609Z"
+ },
+ "Chin Chin Club": {
+  "adeId": 30737,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/chin-chin-club/30737/",
+  "address": "Rozengracht 133, Amsterdam",
+  "lat": 52.3727679,
+  "lng": 4.8788419,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:29.770Z"
+ },
+ "Oliva": {
+  "adeId": 1491389,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/oliva/1491389/",
+  "address": "Rembrandtplein 17, Amsterdam",
+  "lat": 52.3664204,
+  "lng": 4.8967011,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:31.344Z"
+ },
+ "50:HERTZ CLUB TRAIN 2026": {
+  "adeId": 2498154,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/50hertz-house-techno-train/2498154/",
+  "address": "Amsterdam Central Station, Amsterdam",
+  "lat": 52.378901,
+  "lng": 4.9005805,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:32.016Z"
+ },
+ "Annie": {
+  "adeId": 2916991,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/club-annie/2916991/",
+  "address": "Lijnbaansgracht 238, Amsterdam",
+  "lat": 52.364812,
+  "lng": 4.8818315,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:33.073Z"
+ },
+ "A/CAFÉ": {
+  "adeId": 2892798,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/a-cafe/2892798/",
+  "address": "Nieuwendijk 123-125, Amsterdam",
+  "lat": 52.3757868,
+  "lng": 4.8952033,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:34.263Z"
+ },
+ "Westerpark": {
+  "adeId": 2712764,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/westerpark/2712764/",
+  "address": "Haarlemmerweg 8-10 1014 BE Amsterdam The Netherlands, Amsterdam",
+  "lat": 52.3872277,
+  "lng": 4.8717903,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:35.278Z"
+ },
+ "A Lab": {
+  "adeId": 2780085,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/a-lab/2780085/",
+  "address": "Overhoeksplein 2, Amsterdam",
+  "lat": 52.3841398,
+  "lng": 4.9029914,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:37.720Z"
+ },
+ "Oude Kerk Amsterdam": {
+  "adeId": 2686739,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/oude-kerk-amsterdam/2686739/",
+  "address": "Oudekerksplein 23, Amsterdam",
+  "lat": 52.3743621,
+  "lng": 4.8980733,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:38.972Z"
+ },
+ "The International": {
+  "adeId": 1799025,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-international/1799025/",
+  "address": "Oude Haagseweg 200, Badhoevedorp",
+  "lat": 52.3226927,
+  "lng": 4.8111169,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:40.048Z"
+ },
+ "art'otel Amsterdam": {
+  "adeId": 2847887,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/artotel-amsterdam/2847887/",
+  "address": "Prins Hendrikkade 33, Amsterdam",
+  "lat": 52.3776412,
+  "lng": 4.8971654,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:41.305Z"
+ },
+ "Hothead Bookshop": {
+  "adeId": 2717655,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/hothead-bookshop/2717655/",
+  "address": "Van Woustraat 96A, Amsterdam",
+  "lat": 52.3544589,
+  "lng": 4.9013395,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:42.354Z"
+ },
+ "Sojubar Amsterdam Leidseplein": {
+  "adeId": 2862534,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/sojubar-amsterdam-leidseplein/2862534/",
+  "address": "Kleine-Gartmanplantsoen 25, Amsterdam",
+  "lat": 52.3631771,
+  "lng": 4.884155,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:43.568Z"
+ },
+ "Coco’s Outback": {
+  "adeId": 2631655,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/cocos-outback/2631655/",
+  "address": "Thorbeckeplein 10-14, Amsterdam",
+  "lat": 52.3653486,
+  "lng": 4.8958213,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:44.477Z"
+ },
+ "Kinki Kappers van Bearlestraat": {
+  "adeId": 2923661,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/kinki-kappers-van-bearlestraat/2923661/",
+  "address": "Van Baerlestraat 91, Amsterdam",
+  "lat": 52.3539564,
+  "lng": 4.8818338,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:45.887Z"
+ },
+ "Hasta la Vista, Baby!": {
+  "adeId": 2938194,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/hasta-la-vista-baby/2938194/",
+  "address": "Eduard van Beinumstraat 40, Amsterdam",
+  "lat": 52.3398555,
+  "lng": 4.870975,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:46.928Z"
+ },
+ "Cut Throat Amsterdam": {
+  "adeId": 1511117,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/cut-throat-amsterdam/1511117/",
+  "address": "Beursplein 5, Amsterdam",
+  "lat": 52.3743895,
+  "lng": 4.8959668,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:47.989Z"
+ },
+ "STMPD Recording Studios": {
+  "adeId": 1775201,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/stmpd-recording-studios/1775201/",
+  "address": "H.J.E. Wenckebachweg 68, Amsterdam",
+  "lat": 52.3351684,
+  "lng": 4.9271474,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:49.369Z"
+ },
+ "Zone2Source": {
+  "adeId": 2839897,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/zone2source/2839897/",
+  "address": "Amstelpark 7, Amsterdam",
+  "lat": 52.328656,
+  "lng": 4.8928932,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:50.477Z"
+ },
+ "Bottleshop": {
+  "adeId": 2728530,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bottleshop/2728530/",
+  "address": "Wibautstraat 130, Amsterdam",
+  "lat": 52.3551031,
+  "lng": 4.9112338,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:51.552Z"
+ },
+ "De Makroon": {
+  "adeId": 2829435,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-makroon/2829435/",
+  "address": "Nieuwe Passeerdersstraat 6, Amsterdam",
+  "lat": 52.3666729,
+  "lng": 4.8785361,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:53.181Z"
+ },
+ "LuminAir": {
+  "adeId": 2668169,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/luminair/2668169/",
+  "address": "Oosterdoksstraat 4, Amsterdam",
+  "lat": 52.376792,
+  "lng": 4.9048729,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:53.888Z"
+ },
+ "got.drip": {
+  "adeId": 2890230,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/got-drip/2890230/",
+  "address": "72H De clercqstraat, Amsterdam",
+  "lat": 52.3707879,
+  "lng": 4.8690322,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:55.015Z"
+ },
+ "H7 Warehouse": {
+  "adeId": 1618,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/h7-warehouse/1618/",
+  "address": "Humberweg 7, Amsterdam",
+  "lat": 52.3904952,
+  "lng": 4.8308863,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:57.560Z"
+ },
+ "Eagle Head Studios": {
+  "adeId": 2890473,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/eagle-head-studios/2890473/",
+  "address": "NDSM plein 88E, Amsterdam",
+  "lat": 52.4001701,
+  "lng": 4.8957172,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:27:58.159Z"
+ },
+ "Elderly home Nieuw Vredenburgh": {
+  "adeId": 2886588,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/elderly-home-nieuw-vredenburgh/2886588/",
+  "address": "Postjesweg 125, Amsterdam",
+  "lat": 52.3638326,
+  "lng": 4.8512463,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:00.286Z"
+ },
+ "Meet Berlage": {
+  "adeId": 1535283,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/meet-berlage/1535283/",
+  "address": "Oudebrugsteeg 9, Amsterdam",
+  "lat": 52.375356,
+  "lng": 4.8971456,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:01.932Z"
+ },
+ "Garage Noord": {
+  "adeId": 50205,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/garage-noord/50205/",
+  "address": "Gedempt Hamerkanaal 40, Amsterdam",
+  "lat": 52.385573,
+  "lng": 4.9257197,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:03.018Z"
+ },
+ "CHENIN CHENIN": {
+  "adeId": 2576453,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/chenin-chenin/2576453/",
+  "address": "Hazenstraat 60C, Amsterdam",
+  "lat": 52.3699799,
+  "lng": 4.8802671,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:04.120Z"
+ },
+ "Cafe De Deugniet": {
+  "adeId": 2885627,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/cafe-de-deugniet/2885627/",
+  "address": "Oude Brugsteeg 12, Amsterdam",
+  "lat": 52.3753576,
+  "lng": 4.8975274,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:05.253Z"
+ },
+ "Casèt Amsterdam": {
+  "adeId": 2846822,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/caset-amsterdam/2846822/",
+  "address": "Haarlemmerdijk 70, Amsterdam",
+  "lat": 52.3826639,
+  "lng": 4.8873458,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:08.046Z"
+ },
+ "Rush Hour": {
+  "adeId": 41202,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/rush-hour/41202/",
+  "address": "Spuistraat 116, Amsterdam",
+  "lat": 52.3746782,
+  "lng": 4.8903678,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:09.113Z"
+ },
+ "G-Star RAW C.V": {
+  "adeId": 1490441,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/g-star-hq/1490441/",
+  "address": "Joan Muyskenweg 39, Amsterdam",
+  "lat": 52.333474,
+  "lng": 4.9146492,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:10.234Z"
+ },
+ "Kaap Amsterdam": {
+  "adeId": 330637,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/kaap-amsterdam/330637/",
+  "address": "IJdijk 1006, Amsterdam",
+  "lat": 52.3697918,
+  "lng": 4.9773284,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:12.256Z"
+ },
+ "Amsterdam Barber Company": {
+  "adeId": 2827168,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/amsterdam-barber-company/2827168/",
+  "address": "Prinsengracht 242H, Amsterdam",
+  "lat": 52.3722028,
+  "lng": 4.8825396,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:12.525Z"
+ },
+ "The Dolphins Coffeeshop": {
+  "adeId": 2897849,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-dolphins-coffeeshop/2897849/",
+  "address": "Kerkstraat 39, Amsterdam, Netherlands",
+  "lat": 52.3656175,
+  "lng": 4.8852579,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:13.596Z"
+ },
+ "a Sense of Place": {
+  "adeId": 2895159,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/a-sense-of-place/2895159/",
+  "address": "Willemsstraat 141-H, Amsterdam",
+  "lat": 52.3808758,
+  "lng": 4.8826176,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:16.150Z"
+ },
+ "NDSM Warehouse": {
+  "adeId": 1599061,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ndsm-warehouse/1599061/",
+  "address": "NDSM-Plein 85, Amsterdam",
+  "lat": 52.4013333,
+  "lng": 4.8957134,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:17.233Z"
+ },
+ "Het Sieraad": {
+  "adeId": 1600,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/het-sieraad/1600/",
+  "address": "Postjesweg 1, Amsterdam",
+  "lat": 52.364491,
+  "lng": 4.8557012,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:18.382Z"
+ },
+ "Nxt Museum": {
+  "adeId": 1492833,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/nxt-museum/1492833/",
+  "address": "Asterweg 22, Amsterdam",
+  "lat": 52.3930328,
+  "lng": 4.9012146,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:19.627Z"
+ },
+ "Bears Amsterdam": {
+  "adeId": 2680508,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bears-amsterdam/2680508/",
+  "address": "Sint Jacobsstraat 6, Amsterdam",
+  "lat": 52.3765096,
+  "lng": 4.8957377,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:21.216Z"
+ },
+ "Free Your Mind Club": {
+  "adeId": 2665098,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/free-your-mind-club/2665098/",
+  "address": "Rembrandtplein 11, Amsterdam",
+  "lat": 52.3664188,
+  "lng": 4.8963193,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:21.672Z"
+ },
+ "Beest Boulders Amsterdam": {
+  "adeId": 2848318,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/beest-boulders-amsterdam/2848318/",
+  "address": "Willem de Zwijgerlaan 338b, Amsterdam",
+  "lat": 52.3821174,
+  "lng": 4.8592893,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:22.588Z"
+ },
+ "Rosti": {
+  "adeId": 2857361,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/rosti/2857361/",
+  "address": "jan pieter heijestraat 88, amsterdam",
+  "lat": 52.3639085,
+  "lng": 4.8630697,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:24.401Z"
+ },
+ "Galla Studios": {
+  "adeId": 2906636,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/galla-studios/2906636/",
+  "address": "Tweede Hugo de Grootstraat 27, Amsterdam",
+  "lat": 52.3743746,
+  "lng": 4.8734692,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:26.300Z"
+ },
+ "Super Lyan Cocktailbar": {
+  "adeId": 2694265,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/super-lyan-cocktailbar/2694265/",
+  "address": "Nieuwezijds Voorburgwal 3, Amsterdam",
+  "lat": 52.3708232,
+  "lng": 4.8899415,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:28.047Z"
+ },
+ "Plein Theater": {
+  "adeId": 2736880,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/plein-theater/2736880/",
+  "address": "Sajetplein 39, Amsterdam",
+  "lat": 52.3609793,
+  "lng": 4.9139965,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:29.762Z"
+ },
+ "Five Pizzas": {
+  "adeId": 2890808,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/five-pizzas/2890808/",
+  "address": "Aalsmeerweg 14H, Amsterdam, Netherlands",
+  "lat": 52.3505756,
+  "lng": 4.8492482,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:30.231Z"
+ },
+ "Schout-bij-nacht": {
+  "adeId": 2900186,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/schout-bij-nacht/2900186/",
+  "address": "Westerstraat 76, Amsterdam",
+  "lat": 52.3787267,
+  "lng": 4.884228,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:32.159Z"
+ },
+ "Embassy of the Free Mind": {
+  "adeId": 2051557,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/embassy-of-the-free-mind/2051557/",
+  "address": "Keizersgracht 123, Amsterdam",
+  "lat": 52.376342,
+  "lng": 4.8874494,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:34.258Z"
+ },
+ "Hemkade 48": {
+  "adeId": 1644829,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/hemkade-48/1644829/",
+  "address": "Hemkade 48, Zaandam",
+  "lat": 52.4221861,
+  "lng": 4.8196378,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:35.503Z"
+ },
+ "Theater de Richel": {
+  "adeId": 2823552,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/theater-de-richel/2823552/",
+  "address": "Nieuwezijds Voorburgwal 282, AMSTERDAM",
+  "lat": 52.3711377,
+  "lng": 4.8900858,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:36.586Z"
+ },
+ "café40": {
+  "adeId": 2291149,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/café40/2291149/",
+  "address": "café40, Oudebrugsteeg 7, Amsterdam",
+  "lat": 52.37526,
+  "lng": 4.8974437,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:37.928Z"
+ },
+ "SpareKey Bar&Cafe": {
+  "adeId": 2842700,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/sparekey-bar-cafe/2842700/",
+  "address": "Rijnsburgstraat 85, Amsterdam",
+  "lat": 52.3465665,
+  "lng": 4.8473549,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:39.906Z"
+ },
+ "FAC SHOP": {
+  "adeId": 2539779,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/fac-shop/2539779/",
+  "address": "Zeedijk 61 A, Amsterdam",
+  "lat": 52.3748597,
+  "lng": 4.9010133,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:41.651Z"
+ },
+ "Jekkah": {
+  "adeId": 2344243,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/jekkah/2344243/",
+  "address": "Bijlmerplein 89A, Amsterdam",
+  "lat": 52.3135686,
+  "lng": 4.950737,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:42.755Z"
+ },
+ "Eivissa Event Ship": {
+  "adeId": 2522058,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/eivissa-event-ship/2522058/",
+  "address": "55, Danzigerkade, Minervahaven, Westpoort, Amsterdam, Noord-Holland, Nederland, 1013 AP, Nederland, Amsterdam",
+  "lat": 52.4006891,
+  "lng": 4.8761957,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:43.956Z"
+ },
+ "Café Brandon": {
+  "adeId": 1438533,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/cafe-brandon/1438533/",
+  "address": "Keizersgracht 157, Amsterdam",
+  "lat": 52.3754007,
+  "lng": 4.8864147,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:45.079Z"
+ },
+ "t' Blauwe Theehuis": {
+  "adeId": 2905201,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/t-blauwe-theehuis/2905201/",
+  "address": "Vondelpark 5, Amsterdam",
+  "lat": 52.3588413,
+  "lng": 4.8725828,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:46.181Z"
+ },
+ "Nude Project Store": {
+  "adeId": 2911719,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/nude-project-store/2911719/",
+  "address": "Nude Project, 31, Leidsestraat, Grachtengordel, Centrum, Amsterdam,  Netherlands",
+  "lat": 52.3660918,
+  "lng": 4.8869116,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:47.371Z"
+ },
+ "Club Smokey": {
+  "adeId": 2646317,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/club-smokey/2646317/",
+  "address": "Rembrandtplein 18-20, Amsterdam",
+  "lat": 52.365988,
+  "lng": 4.8966112,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:48.415Z"
+ },
+ "Yuzu Dining Bar": {
+  "adeId": 2863409,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/yuzu-dining-bar/2863409/",
+  "address": "Kerkstraat 59, Amsterdam",
+  "lat": 52.365106,
+  "lng": 4.886092,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:49.532Z"
+ },
+ "ROZENSTRAAT – a rose is a rose is a rose": {
+  "adeId": 2922392,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/rozenstraat---a-rose-is-a-rose-is-a-rose/2922392/",
+  "address": "Rozenstraat 59, Amsterdam",
+  "lat": 52.372736,
+  "lng": 4.8811394,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:50.767Z"
+ },
+ "ARTIS Planetarium": {
+  "adeId": 2153413,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/artis-planetarium/2153413/",
+  "address": "Plantage Kerklaan 38-40, Amsterdam",
+  "lat": 52.3662382,
+  "lng": 4.9165461,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:52.199Z"
+ },
+ "raam art space": {
+  "adeId": 2836803,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/raam-art-space/2836803/",
+  "address": "Oosterdokskade 161, Amsterdam",
+  "lat": 52.3756142,
+  "lng": 4.9094351,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:52.940Z"
+ },
+ "Koninklijk Theater Tuschinski": {
+  "adeId": 2845410,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/koninklijk-theater-tuschinski/2845410/",
+  "address": "Reguliersbreestraat 26-34, Amsterdam",
+  "lat": 52.3666046,
+  "lng": 4.89469,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:54.883Z"
+ },
+ "Theater Amsterdam": {
+  "adeId": 50217,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/theater-amsterdam/50217/",
+  "address": "Danzigerkade 5, Amsterdam",
+  "lat": 52.396946,
+  "lng": 4.8772589,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:56.093Z"
+ },
+ "STOPERA": {
+  "adeId": 2848325,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/stopera/2848325/",
+  "address": "Amstel 1, Amsterdam",
+  "lat": 52.3620433,
+  "lng": 4.9040451,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:57.188Z"
+ },
+ "Vrijburg": {
+  "adeId": 2854075,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/vrijburg/2854075/",
+  "address": "Diepenbrockstraat 46, Amsterdam",
+  "lat": 52.3457959,
+  "lng": 4.8825984,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:28:58.373Z"
+ },
+ "the Braise Brothers": {
+  "adeId": 2847588,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-braise-brothers/2847588/",
+  "address": "Kinkerstraat 45H, Amsterdam",
+  "lat": 52.3676963,
+  "lng": 4.8741365,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:00.084Z"
+ },
+ "CREA Music Hall": {
+  "adeId": 2867584,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/crea-music-hall/2867584/",
+  "address": "Nieuwe Achtergracht 170, Amsterdam",
+  "lat": 52.3632664,
+  "lng": 4.912836,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:01.355Z"
+ },
+ "NYX Hotel": {
+  "adeId": 2908412,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/nyx-hotel/2908412/",
+  "address": "Amstelstraat 17, Amsterdam",
+  "lat": 52.3662969,
+  "lng": 4.8984498,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:03.091Z"
+ },
+ "Aladdin's Notenhoek": {
+  "adeId": 2894004,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/aladdins-notenhoek/2894004/",
+  "address": "Jan Evertsenstraat 142, Amsterdam",
+  "lat": 52.3703894,
+  "lng": 4.851453,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:05.308Z"
+ },
+ "The Butcher Social Club": {
+  "adeId": 2938552,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-butcher-social-club/2938552/",
+  "address": "7 Overhoeksplein, Amsterdam",
+  "lat": 52.3837412,
+  "lng": 4.9021368,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:06.052Z"
+ },
+ "SAMPLE": {
+  "adeId": 2941551,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/sample/2941551/",
+  "address": "Hoekenrode 10 A, Amsterdam",
+  "lat": 52.3119795,
+  "lng": 4.9481583,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:07.411Z"
+ },
+ "SUPPER Cruise": {
+  "adeId": 2043857,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/supper-cruise/2043857/",
+  "address": "De Ruijterkade 14, Amsterdam",
+  "lat": 52.3816319,
+  "lng": 4.8962774,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:08.692Z"
+ },
+ "Loods6": {
+  "adeId": 2848905,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/loods6/2848905/",
+  "address": "KNSM Laan 143, Amsterdam",
+  "lat": 52.3772736,
+  "lng": 4.9387737,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:10.237Z"
+ },
+ "OSCAM": {
+  "adeId": 65858,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/oscam/65858/",
+  "address": "Bijlmerplein 97, Amsterdam",
+  "lat": 52.3143969,
+  "lng": 4.9511992,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:10.957Z"
+ },
+ "Oceandiva Original": {
+  "adeId": 2818668,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/oceandiva-original/2818668/",
+  "address": "tt Melissaweg 60, Amsterdam",
+  "lat": 52.4064087,
+  "lng": 4.882145,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:13.061Z"
+ },
+ "ICK Dans Amsterdam - Space for Dance Art": {
+  "adeId": 2132663,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ick-dance-amsterdam/2132663/",
+  "address": "Delflandlaan 2, Amsterdam",
+  "lat": 52.3574502,
+  "lng": 4.8402997,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:14.685Z"
+ },
+ "Transit": {
+  "adeId": 2842954,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/transit/2842954/",
+  "address": "Aambeeldstraat 38, Amsterdam",
+  "lat": 52.3844412,
+  "lng": 4.9288805,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:16.007Z"
+ },
+ "Analogue Shop": {
+  "adeId": 2857679,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/analogue-shop/2857679/",
+  "address": "Zeedijk 80, Amsterdam",
+  "lat": 52.3743988,
+  "lng": 4.9004162,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:16.973Z"
+ },
+ "Klaproos": {
+  "adeId": 60947,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/klaproos/60947/",
+  "address": "Papaverhoek 39, Amsterdam",
+  "lat": 52.3936769,
+  "lng": 4.9120903,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:18.716Z"
+ },
+ "Three Sisters Pub": {
+  "adeId": 1566,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/three-sisters-pub/1566/",
+  "address": "Rembrandtplein 17, Amsterdam",
+  "lat": 52.3664204,
+  "lng": 4.8967011,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:19.868Z"
+ },
+ "Avondwinkel Van Wou": {
+  "adeId": 2904874,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/avondwinkel-van-wou/2904874/",
+  "address": "Van Woustraat 243, Amsterdam",
+  "lat": 52.349462,
+  "lng": 4.9042977,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:21.449Z"
+ },
+ "Nationale Opera & Ballet": {
+  "adeId": 2933268,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/nationale-opera-ballet/2933268/",
+  "address": "Amstel 3, Amsterdam",
+  "lat": 52.3632576,
+  "lng": 4.9034311,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:22.711Z"
+ },
+ "Bimhuis": {
+  "adeId": 1622,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/muziekgebouw-aan-t-ij/1622/",
+  "address": "Piet Heinkade 1, Amsterdam",
+  "lat": 52.3782711,
+  "lng": 4.9131079,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:24.399Z"
+ },
+ "Cinetol": {
+  "adeId": 46225,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/cinetol/46225/",
+  "address": "Tolstraat 182, Amsterdam",
+  "lat": 52.3527374,
+  "lng": 4.9066741,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:24.666Z"
+ },
+ "Bar Bacan": {
+  "adeId": 2561600,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bar-bacan/2561600/",
+  "address": "Reguliersdwarsstraat 105, Amsterdam",
+  "lat": 52.3660235,
+  "lng": 4.8941948,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:26.040Z"
+ },
+ "Stadsschouwburg Amsterdam": {
+  "adeId": 2829076,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ita/2829076/",
+  "address": "Leidseplein 26, Amsterdam",
+  "lat": 52.3643559,
+  "lng": 4.8819428,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:26.871Z"
+ },
+ "Borisov": {
+  "adeId": 1483453,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/borisov/1483453/",
+  "address": "Rigakade 10, Amsterdam",
+  "lat": 52.3953221,
+  "lng": 4.8748282,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:28.120Z"
+ },
+ "Velvet Vixen": {
+  "adeId": 2519408,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/velvet-vixen/2519408/",
+  "address": "Korte leidsedwarsstraat  36, Amsterdam",
+  "lat": 52.3635253,
+  "lng": 4.8836079,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:29.068Z"
+ },
+ "TufTuf Amsterdam": {
+  "adeId": 2688428,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/tuftuf-amsterdam/2688428/",
+  "address": "Handboogstraat 11, Amsterdam",
+  "lat": 52.3680921,
+  "lng": 4.8902368,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:31.030Z"
+ },
+ "Pllek": {
+  "adeId": 2812614,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/pllek/2812614/",
+  "address": "Neveritaweg 59, Amsterdam",
+  "lat": 52.3991339,
+  "lng": 4.8930985,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:32.170Z"
+ },
+ "Blast Galaxy": {
+  "adeId": 2811365,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/blast-galaxy/2811365/",
+  "address": "Magneetstraat 5, Amsterdam",
+  "lat": 52.3901522,
+  "lng": 4.853859,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:33.378Z"
+ },
+ "Café Café Amsterdam": {
+  "adeId": 2716146,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/cafe-cafe-amsterdam/2716146/",
+  "address": "Amstel 1, Amsterdam",
+  "lat": 52.3620433,
+  "lng": 4.9040451,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:34.371Z"
+ },
+ "Sissi's Amsterdam": {
+  "adeId": 1507913,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/sissis-expo-resto/1507913/",
+  "address": "Anthony Fokkerweg 3, Amsterdam",
+  "lat": 52.3448289,
+  "lng": 4.8425825,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:35.599Z"
+ },
+ "OOSTerbar": {
+  "adeId": 2711945,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/oosterbar/2711945/",
+  "address": "Mauritskade 57, Amsterdam",
+  "lat": 52.3609599,
+  "lng": 4.9187035,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:36.798Z"
+ },
+ "Belushi's": {
+  "adeId": 2896196,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/belushis/2896196/",
+  "address": "warmoesstraat 129, Amsterdam",
+  "lat": 52.3739684,
+  "lng": 4.8963635,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:37.716Z"
+ },
+ "LEIDSE Amsterdam": {
+  "adeId": 2509030,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/club-leidse/2509030/",
+  "address": "Kleine-Gartmanplantsoen 11H, Amsterdam",
+  "lat": 52.3635167,
+  "lng": 4.8836136,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:39.105Z"
+ },
+ "Foundation Amsterdam Hip Hop Centre": {
+  "adeId": 2717007,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/foundation-amsterdam-hip-hop-centre/2717007/",
+  "address": "Bijlmerplein 141, Amsterdam",
+  "lat": 52.3142767,
+  "lng": 4.9536702,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:40.125Z"
+ },
+ "CANDELA": {
+  "adeId": 2910333,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/candela/2910333/",
+  "address": "Korte Leidsedwarsstraat 87, Amsterdam",
+  "lat": 52.3638863,
+  "lng": 4.8839561,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:42.094Z"
+ },
+ "Mediahaven": {
+  "adeId": 1586,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/mediahaven/1586/",
+  "address": "Moermanskkade 107, Amsterdam",
+  "lat": 52.3994388,
+  "lng": 4.8716807,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:43.983Z"
+ },
+ "IJver Amsterdam NDSM": {
+  "adeId": 1647545,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ijver-amsterdam-ndsm/1647545/",
+  "address": "Scheepsbouwkade 72, Amsterdam",
+  "lat": 52.4013744,
+  "lng": 4.8951228,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:44.830Z"
+ },
+ "ingang": {
+  "adeId": 2916947,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ingang/2916947/",
+  "address": "Gedempt Hamerkanaal 86, Amsterdam",
+  "lat": 52.3841614,
+  "lng": 4.9210048,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:46.080Z"
+ },
+ "kwartier": {
+  "adeId": 2922311,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/kwartier/2922311/",
+  "address": "Centrale Groothandelsmarkt 186, Amsterdam",
+  "lat": 52.3783273,
+  "lng": 4.8656001,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:47.194Z"
+ },
+ "Chupitos": {
+  "adeId": 2937614,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/chupitos/2937614/",
+  "address": "Korte Leidsedwarsstraat 129, Amsterdam",
+  "lat": 52.3631895,
+  "lng": 4.8849477,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:49.066Z"
+ },
+ "de Thomaskerk": {
+  "adeId": 2068209,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-thomaskerk/2068209/",
+  "address": "Prinses Irenestraat 36, Amsterdam",
+  "lat": 52.342086,
+  "lng": 4.8748262,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:50.642Z"
+ },
+ "De Koffieschenkerij": {
+  "adeId": 2910428,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-koffieschenkerij/2910428/",
+  "address": "Oudekerksplein 27, Amsterdam",
+  "lat": 52.3741211,
+  "lng": 4.8983509,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:51.716Z"
+ },
+ "BounceSpace": {
+  "adeId": 2553508,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bouncespace/2553508/",
+  "address": "Overtoom 141, Amsterdam",
+  "lat": 52.3619605,
+  "lng": 4.8729233,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:52.908Z"
+ },
+ "Concept 404": {
+  "adeId": 2864635,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/concept-404/2864635/",
+  "address": "Ferdinand Bolstraat 94, Amsterdam",
+  "lat": 52.3543772,
+  "lng": 4.8903316,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:54.995Z"
+ },
+ "Ruimte 59-61": {
+  "adeId": 2889208,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ruimte-59-61/2889208/",
+  "address": "Laurierstraat 59/61, Amsterdam",
+  "lat": 52.3718938,
+  "lng": 4.879783,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:57.213Z"
+ },
+ "Heesterveld Creative Community": {
+  "adeId": 1689447,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/heesterveld-creative-community/1689447/",
+  "address": "Heesterveld 75, Amsterdam",
+  "lat": 52.3067328,
+  "lng": 4.9543095,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:57.899Z"
+ },
+ "Ilario": {
+  "adeId": 2829553,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ilario/2829553/",
+  "address": "Eerste Sweelinckstraat 11H, Amsterdam",
+  "lat": 52.3562006,
+  "lng": 4.8977713,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:29:59.954Z"
+ },
+ "Armada Music Headquarters": {
+  "adeId": 1801587,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/armada-music-headquarters/1801587/",
+  "address": "Pilotenstraat 6, Amsterdam",
+  "lat": 52.342136,
+  "lng": 4.8433346,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:01.143Z"
+ },
+ "NDSM": {
+  "adeId": 1556,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ndsm/1556/",
+  "address": "Tt. Neveritaweg 15, Amsterdam",
+  "lat": 52.4011093,
+  "lng": 4.8986463,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:02.606Z"
+ },
+ "Rokin 75": {
+  "adeId": 2937764,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/rokin-75/2937764/",
+  "address": "Rokin 75, Amsterdam",
+  "lat": 52.3705304,
+  "lng": 4.8929994,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:03.233Z"
+ },
+ "4EVER": {
+  "adeId": 2939217,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/4ever/2939217/",
+  "address": "Kruitbergstraat 16, Amsterdam",
+  "lat": 52.3178449,
+  "lng": 4.9780393,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:05.672Z"
+ },
+ "Amsta Van 't Hofflaan": {
+  "adeId": 2939296,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/amsta-van-t-hofflaan/2939296/",
+  "address": "Van T Hofflaan 51, Amsterdam",
+  "lat": 52.3470664,
+  "lng": 4.9345956,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:07.723Z"
+ },
+ "Ruby Emma Hotel & Bar": {
+  "adeId": 2824952,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ruby-emma/2824952/",
+  "address": "Amstelvlietstraat 4, Amsterdam",
+  "lat": 52.3383105,
+  "lng": 4.9207324,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:09.177Z"
+ },
+ "WIHH Art Gallery": {
+  "adeId": 2840578,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/wihh-art-gallery/2840578/",
+  "address": "Reguliersdwarsstraat 73, Amsterdam",
+  "lat": 52.3662219,
+  "lng": 4.8926985,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:10.724Z"
+ },
+ "Vonckelend": {
+  "adeId": 2907526,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/vonckelend/2907526/",
+  "address": "Rokin 81, Amsterdam",
+  "lat": 52.3704045,
+  "lng": 4.8929861,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:11.948Z"
+ },
+ "Amsta - De Beusemaecker": {
+  "adeId": 2939268,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/amsta-de-beusemaecker/2939268/",
+  "address": "Dr. J.A. Ringersstraat 12 A-K, Amsterdam",
+  "lat": 52.3837449,
+  "lng": 4.8027686,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:34:06.696Z"
+ },
+ "het Rijk van de Keizer": {
+  "adeId": 2051979,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/het-rijk-van-de-keizer/2051979/",
+  "address": "Joris van den Berghweg 109, Amsterdam",
+  "lat": 52.3833779,
+  "lng": 4.7798757,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:15.220Z"
+ },
+ "Sugar Shack": {
+  "adeId": 2829629,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/sugar-shack/2829629/",
+  "address": "Kalverstraat 151, Amsterdam",
+  "lat": 52.3687104,
+  "lng": 4.8912383,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:16.384Z"
+ },
+ "Allard Pierson": {
+  "adeId": 2904624,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/allard-pierson/2904624/",
+  "address": "Oude Turfmarkt 127, Amsterdam",
+  "lat": 52.3688053,
+  "lng": 4.8930549,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:17.846Z"
+ },
+ "Café Los": {
+  "adeId": 2890107,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/cafe-los/2890107/",
+  "address": "Rembrandtplein 1, Amsterdam",
+  "lat": 52.36639,
+  "lng": 4.8957763,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:18.797Z"
+ },
+ "J5 Amsterdam": {
+  "adeId": 2705559,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/j5-amsterdam/2705559/",
+  "address": "Leidsestraat 68, Amsterdam",
+  "lat": 52.3654191,
+  "lng": 4.8850986,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:21.208Z"
+ },
+ "Aiche Store": {
+  "adeId": 2940675,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/aiche-store/2940675/",
+  "address": "Gerard Doustraat 71,, Amsterdam",
+  "lat": 52.3557305,
+  "lng": 4.8914171,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:22.813Z"
+ },
+ "MUD Jeans Brandstore": {
+  "adeId": 2733632,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/mud-jeans-brandstore/2733632/",
+  "address": "Torensteeg 3a, Amsterdam",
+  "lat": 52.3744362,
+  "lng": 4.8899307,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:24.748Z"
+ },
+ "Nido": {
+  "adeId": 2831672,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/nido/2831672/",
+  "address": "Linnaeusstraat 2c, Amsterdam",
+  "lat": 52.3619452,
+  "lng": 4.9227718,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:25.927Z"
+ },
+ "Episode Berenstraat": {
+  "adeId": 2888181,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/episode-berenstraat/2888181/",
+  "address": "Berenstraat 1, Amsterdam",
+  "lat": 52.3703046,
+  "lng": 4.8842064,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:27.183Z"
+ },
+ "RENTGLAM": {
+  "adeId": 2827870,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/rentglam/2827870/",
+  "address": "Overtoom 87, Amsterdam",
+  "lat": 52.362631,
+  "lng": 4.8755776,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:28.232Z"
+ },
+ "Rederij de Nederlanden - Peter de Grote": {
+  "adeId": 2834361,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/rederij-de-nederlanden-peter-de-grote/2834361/",
+  "address": "Ms van Riemsdijkweg 51, Amsterdam",
+  "lat": 52.3994652,
+  "lng": 4.8916776,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:30.448Z"
+ },
+ "Ceintuur Theater": {
+  "adeId": 2830291,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ceintuur-theater/2830291/",
+  "address": "Ceintuurbaan 282, Amsterdam",
+  "lat": 52.3526653,
+  "lng": 4.8914516,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:32.213Z"
+ },
+ "Café De Duivel": {
+  "adeId": 2373059,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/café-de-duivel/2373059/",
+  "address": "Reguliersdwarsstraat 87, Amsterdam",
+  "lat": 52.3660898,
+  "lng": 4.8935379,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:33.298Z"
+ },
+ "Rijksakademie": {
+  "adeId": 2898906,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/rijksakademie-van-beeldende-kunsten/2898906/",
+  "address": "Sarphatistraat 470, Amsterdam",
+  "lat": 52.3629354,
+  "lng": 4.9177925,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:34.965Z"
+ },
+ "TYSON 2.0 Brandstore by Mike Tyson": {
+  "adeId": 2899075,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/tyson-2-0-brandstore-by-mike-tyson/2899075/",
+  "address": "9 Oude Spiegelstraat, Amsterdam",
+  "lat": 52.3701828,
+  "lng": 4.8872766,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:35.708Z"
+ },
+ "Zero Zero": {
+  "adeId": 2758844,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/zero-zero/2758844/",
+  "address": "Nieuwe Spiegelstraat 3a, Amsterdam",
+  "lat": 52.3650987,
+  "lng": 4.8903573,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:36.637Z"
+ },
+ "Nassaukerk": {
+  "adeId": 2906747,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/nassaukerk/2906747/",
+  "address": "De Wittenkade 111, Amsterdam",
+  "lat": 52.3827306,
+  "lng": 4.8769712,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:38.815Z"
+ },
+ "Wereldmuseum Amsterdam": {
+  "adeId": 2683592,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/wereldmuseum-amsterdam/2683592/",
+  "address": "2 Linnaeusstraat, Amsterdam",
+  "lat": 52.3603615,
+  "lng": 4.9254683,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:39.775Z"
+ },
+ "Overtone Bistro": {
+  "adeId": 2890211,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/overtone-bistro/2890211/",
+  "address": "Overtoom 503-H, Amsterdam",
+  "lat": 52.358009,
+  "lng": 4.8570949,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:40.927Z"
+ },
+ "The Barberhood Amsterdam": {
+  "adeId": 2705800,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-barberhood-amsterdam/2705800/",
+  "address": "Elandsgracht 80C, Amsterdam",
+  "lat": 52.36974,
+  "lng": 4.8803804,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:42.726Z"
+ },
+ "Philadelphia Zorg - De Eenhoorn": {
+  "adeId": 2939328,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/philadelphia-zorg-de-eenhoorn/2939328/",
+  "address": "Mária Telkesstraat 198, Amsterdam",
+  "lat": 52.3505653,
+  "lng": 4.9215772,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:43.936Z"
+ },
+ "Amsterdam in Motion": {
+  "adeId": 2892285,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/amsterdam-in-motion/2892285/",
+  "address": "Pazzanistraat 19, Amsterdam",
+  "lat": 52.386139,
+  "lng": 4.8732891,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:45.611Z"
+ },
+ "A Beautiful Mess - Amsterdam": {
+  "adeId": 2921853,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/a-beautiful-mess-amsterdam/2921853/",
+  "address": "Oosterdokskade 227, Amsterdam",
+  "lat": 52.37579,
+  "lng": 4.9100473,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:47.690Z"
+ },
+ "Vondell Boat": {
+  "adeId": 2824015,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/vondell-boat/2824015/",
+  "address": "Keizersgracht, Amsterdam",
+  "lat": 52.3658854,
+  "lng": 4.8865795,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:48.355Z"
+ },
+ "Van Gogh Museum": {
+  "adeId": 2507901,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/van-gogh-museum/2507901/",
+  "address": "Museumplein 6, Amsterdam",
+  "lat": 52.3579248,
+  "lng": 4.8813227,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:50.565Z"
+ },
+ "Bar How": {
+  "adeId": 2927608,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/bar-how/2927608/",
+  "address": "Papaverhoek 23, Amsterdam",
+  "lat": 52.3931564,
+  "lng": 4.9115519,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:51.790Z"
+ },
+ "The 5th Amsterdam Oost": {
+  "adeId": 2486808,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-5th-amsterdam-oost/2486808/",
+  "address": "Timorplein 21, Amsterdam",
+  "lat": 52.3653615,
+  "lng": 4.9355026,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:53.542Z"
+ },
+ "Taets Art and Event Park": {
+  "adeId": 2455387,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/taets-art-and-event-park/2455387/",
+  "address": "Middenweg 62, Zaandam",
+  "lat": 52.4212514,
+  "lng": 4.8335217,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:54.563Z"
+ },
+ "Sociëteit De Kring": {
+  "adeId": 65837,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-kring/65837/",
+  "address": "Kleine-Gartmanplantsoen 7-9, Amsterdam",
+  "lat": 52.363621,
+  "lng": 4.8834996,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:56.119Z"
+ },
+ "WTC": {
+  "adeId": 2582076,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/wtc/2582076/",
+  "address": "Strawinskylaan 1, Amsterdam",
+  "lat": 52.3405614,
+  "lng": 4.8748718,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:57.385Z"
+ },
+ "Het Ketelhuis": {
+  "adeId": 2910491,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/het-ketelhuis/2910491/",
+  "address": "Pazzanistraat 4, Amsterdam",
+  "lat": 52.3863104,
+  "lng": 4.8736349,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:57.908Z"
+ },
+ "Generator Amsterdam": {
+  "adeId": 2169379,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/generator-amsterdam/2169379/",
+  "address": "Mauritskade 57, Amsterdam",
+  "lat": 52.3609599,
+  "lng": 4.9187035,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:30:58.959Z"
+ },
+ "Pacific Amsterdam": {
+  "adeId": 1670811,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/pacific-amsterdam/1670811/",
+  "address": "Polonceaukade 23, Amsterdam",
+  "lat": 52.3858882,
+  "lng": 4.8714119,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:00.542Z"
+ },
+ "Badhuis Amsterdam": {
+  "adeId": 2566926,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/badhuis-amsterdam/2566926/",
+  "address": "Javaplein 21, Amsterdam",
+  "lat": 52.3635511,
+  "lng": 4.9399238,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:02.952Z"
+ },
+ "Pastai Restaurant": {
+  "adeId": 2829571,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/pastai-restaurant/2829571/",
+  "address": "Jan Pieter Heijestraat 118, Amsterdam",
+  "lat": 52.3626308,
+  "lng": 4.8638572,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:04.048Z"
+ },
+ "Camarat": {
+  "adeId": 2863597,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/camarat/2863597/",
+  "address": "Gedempt Hamerkanaal 4, Amsterdam",
+  "lat": 52.385543,
+  "lng": 4.9261805,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:05.135Z"
+ },
+ "Rhone Ephesus Amsterdam": {
+  "adeId": 2902301,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/rhone-ephesus-amsterdam/2902301/",
+  "address": "5 Humberweg, Amsterdam",
+  "lat": 52.3905401,
+  "lng": 4.8308857,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:06.308Z"
+ },
+ "De Kromhouthal": {
+  "adeId": 1606,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-kromhouthal/1606/",
+  "address": "Gedempt Hamerkanaal 231, Amsterdam",
+  "lat": 52.3833042,
+  "lng": 4.9204881,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:08.093Z"
+ },
+ "Phono Lake": {
+  "adeId": 2563610,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/phono-lake/2563610/",
+  "address": "Christoffel Plantijngracht 4, Amsterdam",
+  "lat": 52.3602217,
+  "lng": 4.8156522,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:09.258Z"
+ },
+ "Stayokay Amsterdam Oost": {
+  "adeId": 2852166,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/stayokay-amsterdam-oost/2852166/",
+  "address": "Timorplein 21, Amsterdam",
+  "lat": 52.3653615,
+  "lng": 4.9355026,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:10.272Z"
+ },
+ "MAAP LaB AmS": {
+  "adeId": 2910302,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/maap-lab-ams/2910302/",
+  "address": "Reestraat 9, Amsterdam",
+  "lat": 52.3723085,
+  "lng": 4.884169,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:11.182Z"
+ },
+ "Dak Showroom": {
+  "adeId": 2700016,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/dak-showroom/2700016/",
+  "address": "Bellamyplein 16H, Amsterdam",
+  "lat": 52.3684257,
+  "lng": 4.8673272,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:12.494Z"
+ },
+ "Basic-Fit Stadhouderskade": {
+  "adeId": 2904178,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/basic-fit-stadhouderskade/2904178/",
+  "address": "Stadhouderskade 74-75, Amsterdam",
+  "lat": 52.3586207,
+  "lng": 4.9031158,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:13.636Z"
+ },
+ "Chillzone Books": {
+  "adeId": 2861733,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/chillzone-books/2861733/",
+  "address": "Van Diemenstraat 410, Amsterdam",
+  "lat": 52.3902742,
+  "lng": 4.8870701,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:14.746Z"
+ },
+ "Jinja Asian Kitchen & Bar": {
+  "adeId": 2888288,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/jinja-asian-kitchen-bar/2888288/",
+  "address": "De Clercqstraat 79H, Amsterdam",
+  "lat": 52.3702519,
+  "lng": 4.8679525,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:16.525Z"
+ },
+ "TUKU Coffee - De Hallen": {
+  "adeId": 2911655,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/tuku-coffee-de-hallen/2911655/",
+  "address": "Tollensstraat 57Y, 1053 RS Amsterdam, Amsterdam",
+  "lat": 52.3671424,
+  "lng": 4.8690461,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:17.642Z"
+ },
+ "Coko Space": {
+  "adeId": 2904843,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/coko-space/2904843/",
+  "address": "Prinsengracht 526, Amsterdam",
+  "lat": 52.3633844,
+  "lng": 4.8864282,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:19.415Z"
+ },
+ "So Studio Amsterdam": {
+  "adeId": 2740431,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/so-studio-amsterdam/2740431/",
+  "address": "Admiraal de Ruijterweg 21, Amsterdam",
+  "lat": 52.370474,
+  "lng": 4.8634962,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:21.049Z"
+ },
+ "Havenpark": {
+  "adeId": 1570,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/havenpark/1570/",
+  "address": "Wethouder van Essenweg 1, Amsterdam",
+  "lat": 52.3924358,
+  "lng": 4.7708194,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:22.662Z"
+ },
+ "Frict Amsterdam": {
+  "adeId": 2929506,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/frict-amsterdam/2929506/",
+  "address": "Hoogte Kadijk 400, Amsterdam",
+  "lat": 52.3668463,
+  "lng": 4.922053,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:23.204Z"
+ },
+ "NextOn": {
+  "adeId": 2706068,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/nexon-ade/2706068/",
+  "address": "Corridor 15 (THV P6), Amsterdam",
+  "lat": 52.3123218,
+  "lng": 4.9442256,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:34:09.576Z"
+ },
+ "Lagerwal": {
+  "adeId": 2193719,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/lagerwal/2193719/",
+  "address": "tt. Melissaweg 57, Amsterdam",
+  "lat": 52.40591,
+  "lng": 4.8850031,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:27.835Z"
+ },
+ "Rederij de Nederlanden - Wapen van Amsterdam": {
+  "adeId": 2834250,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/rederij-de-nederlanden-wapen-van-amsterdam/2834250/",
+  "address": "Ms van Riemsdijkweg 31, Amsterdam",
+  "lat": 52.4032665,
+  "lng": 4.894319,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:29.007Z"
+ },
+ "Artisan Hall Amsterdam": {
+  "adeId": 2865106,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/artisan-hall-amsterdam/2865106/",
+  "address": "Keizersgracht 349, Amsterdam",
+  "lat": 52.3690489,
+  "lng": 4.8849437,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:30.597Z"
+ },
+ "Concerto Record Store": {
+  "adeId": 2815912,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/concerto-record-store/2815912/",
+  "address": "Utrechtsestraat 60, Amsterdam",
+  "lat": 52.3632704,
+  "lng": 4.8983548,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:31.717Z"
+ },
+ "De Vlieger": {
+  "adeId": 2903090,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-vlieger/2903090/",
+  "address": "Witte de Withstraat 188, 1057 ZL Amsterdam, Amsterdam",
+  "lat": 52.3713279,
+  "lng": 4.8591295,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:33.747Z"
+ },
+ "Cruise Control Studios": {
+  "adeId": 2753668,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/cruise-control-studios/2753668/",
+  "address": "Rokin 75, Amsterdam",
+  "lat": 52.3705304,
+  "lng": 4.8929994,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:35.655Z"
+ },
+ "No Man's Art Gallery": {
+  "adeId": 2921749,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/no-mans-art-gallery/2921749/",
+  "address": "Bos en Lommerweg 88-90, Amsterdam",
+  "lat": 52.3809007,
+  "lng": 4.8550408,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:36.716Z"
+ },
+ "Wijnhuis.Amsterdam": {
+  "adeId": 2867239,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/wijnhuis-amsterdam/2867239/",
+  "address": "Koninginneweg 255, Amsterdam",
+  "lat": 52.3517056,
+  "lng": 4.8577391,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:38.445Z"
+ },
+ "Vitti Barberia": {
+  "adeId": 2824026,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/vitti-barberia/2824026/",
+  "address": "Jacob Van Lennepkade 185, Amsterdam",
+  "lat": 52.3627459,
+  "lng": 4.8635626,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:39.120Z"
+ },
+ "Cartel Amsterdam": {
+  "adeId": 2721601,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/cartel-amsterdam/2721601/",
+  "address": "Nieuwe Spiegelstraat 5/A,, Amsterdam",
+  "lat": 52.3650366,
+  "lng": 4.8903004,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:41.263Z"
+ },
+ "TestTafel": {
+  "adeId": 2828752,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/testtafel/2828752/",
+  "address": "Dijksgracht 6, Amsterdam",
+  "lat": 52.3764703,
+  "lng": 4.9132815,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:42.992Z"
+ },
+ "Flagship Amsterdam": {
+  "adeId": 2737427,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/flagship/2737427/",
+  "address": "Prins Hendrikkade 33A, Amsterdam",
+  "lat": 52.3710892,
+  "lng": 4.9149731,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:44.436Z"
+ },
+ "Plantage Dokzaal": {
+  "adeId": 1503145,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/plantage-dokzaal/1503145/",
+  "address": "Plantage Doklaan 8, Amsterdam",
+  "lat": 52.3686012,
+  "lng": 4.9113307,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:45.168Z"
+ },
+ "Protestantse Diaconie": {
+  "adeId": 2776323,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/protestantse-diaconie/2776323/",
+  "address": "Nieuwe Herengracht 18, Amsterdam",
+  "lat": 52.3659879,
+  "lng": 4.9037884,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:46.817Z"
+ },
+ "Cinema The Pulse": {
+  "adeId": 2890115,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/cinema-the-pulse/2890115/",
+  "address": "Hildegard Von Bingenstraat 4, Amsterdam",
+  "lat": 52.3376428,
+  "lng": 4.8662536,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:47.725Z"
+ },
+ "Shu Amsterdam": {
+  "adeId": 2549067,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/shu-amsterdam/2549067/",
+  "address": "Handboogstraat 15 H, Amsterdam",
+  "lat": 52.3680206,
+  "lng": 4.8902681,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:49.396Z"
+ },
+ "Johan Cruijff ArenA": {
+  "adeId": 1578,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/johan-cruijff-arena/1578/",
+  "address": "Boulevard 1, Amsterdam",
+  "lat": 52.314353,
+  "lng": 4.9428431,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:51.052Z"
+ },
+ "NDSM Theater": {
+  "adeId": 2479105,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/ndsm-theater/2479105/",
+  "address": "Scheepsbouwkade 4-6, Amsterdam",
+  "lat": 52.4007755,
+  "lng": 4.8974892,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:52.953Z"
+ },
+ "Out of Office Coffee": {
+  "adeId": 2847696,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/out-of-office-coffee/2847696/",
+  "address": "Haarlemmerweg 313, Amsterdam",
+  "lat": 52.3850833,
+  "lng": 4.8672152,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:53.263Z"
+ },
+ "LYUBLU": {
+  "adeId": 2892675,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/lyublu/2892675/",
+  "address": "Waterlooplein 8-F, Amsterdam",
+  "lat": 52.3684453,
+  "lng": 4.9017859,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:55.801Z"
+ },
+ "Sir Adam": {
+  "adeId": 2844493,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/sir-adam/2844493/",
+  "address": "overhoeksplein 7, Amsterdam",
+  "lat": 52.3837412,
+  "lng": 4.9021368,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:57.486Z"
+ },
+ "Het Open Huis": {
+  "adeId": 2830541,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/het-open-huis/2830541/",
+  "address": "Bilderdijkpark 12A, Amsterdam",
+  "lat": 52.3712465,
+  "lng": 4.8691887,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:31:59.248Z"
+ },
+ "Hal West": {
+  "adeId": 2705599,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/hal-west/2705599/",
+  "address": "Hannie Dankbaarpassage 24, Amsterdam",
+  "lat": 52.3666569,
+  "lng": 4.8676585,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:32:01.125Z"
+ },
+ "'t Zonnehuis": {
+  "adeId": 2479209,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/t-zonnehuis/2479209/",
+  "address": "Zonneplein 30, Amsterdam",
+  "lat": 52.4134517,
+  "lng": 4.8913316,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:32:02.575Z"
+ },
+ "Escape deLux": {
+  "adeId": 33822,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/escape-delux/33822/",
+  "address": "Rembrandtplein 17, Amsterdam",
+  "lat": 52.3664204,
+  "lng": 4.8967011,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:32:03.677Z"
+ },
+ "A'DAM Toren": {
+  "adeId": 59026,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/adam-toren/59026/",
+  "address": "Overhoeks 1, Amsterdam",
+  "lat": 52.3836219,
+  "lng": 4.9022479,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:32:04.607Z"
+ },
+ "Anantara Grand Hotel Krasnapolsky Amsterdam": {
+  "adeId": 2941614,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/anantara-grand-hotel-krasnapolsky-amsterdam/2941614/",
+  "address": "Dam 9, Amsterdam",
+  "lat": 52.3727291,
+  "lng": 4.8943846,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:32:06.065Z"
+ },
+ "Anand Jyoti": {
+  "adeId": 2939396,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/anand-jyoti/2939396/",
+  "address": "Mijehof 7A, Amsterdam",
+  "lat": 52.302371,
+  "lng": 4.9685293,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:32:07.022Z"
+ },
+ "The Hoxton": {
+  "adeId": 2708547,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/the-hoxton/2708547/",
+  "address": "Herengracht 255, Amsterdam",
+  "lat": 52.37181,
+  "lng": 4.8873904,
+  "status": "located",
+  "checkedAt": "2026-10-17T11:32:08.934Z"
+ }
+}
