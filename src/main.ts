@@ -1,4 +1,4 @@
-import '@fontsource-variable/archivo/standard.css'
+import '@fontsource-variable/inter/wght.css'
 import 'leaflet/dist/leaflet.css'
 import './styles.css'
 import rawData from './data/events.json'

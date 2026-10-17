@@ -38,7 +38,7 @@ export function createEventMap(element: HTMLElement): EventMap {
   L.tileLayer(TILE_URL, { attribution: ATTRIBUTION, maxZoom: 19, className: 'night-tiles' }).addTo(map)
 
   const venueLayer = L.layerGroup().addTo(map)
-  const colors = { venue: token('--sodium'), venueEdge: token('--canal-deep'), user: token('--tram') }
+  const colors = { venue: token('--accent'), venueEdge: token('--black'), user: token('--you'), userEdge: token('--text') }
   let userMarker: L.CircleMarker | null = null
   let accuracyCircle: L.Circle | null = null
   let lastSignature: string | null = null
@@ -72,7 +72,7 @@ export function createEventMap(element: HTMLElement): EventMap {
       if (userMarker) {
         userMarker.setLatLng(latLng)
       } else {
-        userMarker = L.circleMarker(latLng, { radius: 8, color: '#ffffff', weight: 3, fillColor: colors.user, fillOpacity: 1 })
+        userMarker = L.circleMarker(latLng, { radius: 8, color: colors.userEdge, weight: 3, fillColor: colors.user, fillOpacity: 1 })
           .bindTooltip('You are here')
           .addTo(map)
         userMarker.getElement()?.classList.add('user-marker')

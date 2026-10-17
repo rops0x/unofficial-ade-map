@@ -1,20 +1,27 @@
-/* Amsterdam at night: canal ink, sodium streetlight amber for what's on, tram blue for you. */
+/*
+ * ADE house style: black and white, one electric yellow for what's on, ADE's own blue for you.
+ * Values taken from amsterdam-dance-event.nl (see DESIGN.md). Dark only, so the screen isn't blinding at 3am.
+ */
 :root {
-  --canal-deep: #0a1724;
-  --canal: #0f2233;
-  --canal-line: #23394d;
-  --mist: #e6edf2;
-  --haze: #9db0c0;
-  --sodium: #ffb020;
-  --sodium-ink: #2a1a00;
-  --tram: #4fc3f7;
+  --black: #000;
+  --surface: #0d0d0d;
+  --surface-raised: #1c1c1c;
+  --line: #333;
+  --text: #fff;
+  --text-muted: #999;
+  --accent: #ffff07;
+  --on-accent: #000;
+  --you: #43a2f3;
   --alert: #ff8a7a;
 
-  --font: 'Archivo Variable', system-ui, sans-serif;
+  /* ADE sets Helvetica Neue; Apple devices have it built in, everyone else gets Inter (ADE's second face). */
+  --font: 'Helvetica Neue', 'Inter Variable', Helvetica, Arial, sans-serif;
+  --tracking-tight: -0.03em;
   --gutter: 16px;
   --tap: 44px;
-  --radius-control: 999px;
-  --radius-panel: 14px;
+  --radius-control: 100px;
+  --radius-panel: 15px;
+  --ease-out: cubic-bezier(0.19, 1, 0.22, 1);
 
   color-scheme: dark;
 }
@@ -35,8 +42,8 @@ body {
   display: grid;
   grid-template-rows: auto 1fr;
   height: 100dvh;
-  background: var(--canal-deep);
-  color: var(--mist);
+  background: var(--black);
+  color: var(--text);
   font-family: var(--font);
   font-size: 1rem;
   line-height: 1.45;
@@ -44,7 +51,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--sodium);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -55,22 +62,21 @@ body {
   justify-content: space-between;
   gap: 12px;
   padding: calc(env(safe-area-inset-top) + 10px) var(--gutter) 10px;
-  background: var(--canal);
-  border-bottom: 1px solid var(--canal-line);
+  background: var(--black);
+  border-bottom: 1px solid var(--line);
 }
 
 .bar__title {
   margin: 0;
   white-space: nowrap;
   font-size: 1.05rem;
-  font-weight: 750;
-  font-stretch: 85%;
-  letter-spacing: 0.005em;
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
 }
 
 .bar__note {
   margin: 0;
-  color: var(--haze);
+  color: var(--text-muted);
   font-size: 0.78rem;
   text-align: right;
 }
@@ -83,7 +89,7 @@ body {
 
 .map {
   min-height: 0;
-  background: var(--canal-deep);
+  background: var(--black);
 }
 
 /* Panel: the time you're looking at is the loudest thing on the page. */
@@ -91,8 +97,8 @@ body {
   display: grid;
   gap: 6px;
   padding: 10px var(--gutter) calc(env(safe-area-inset-bottom) + 10px);
-  background: var(--canal);
-  border-top: 1px solid var(--canal-line);
+  background: var(--surface);
+  border-top: 1px solid var(--line);
 }
 
 .readout {
@@ -105,21 +111,19 @@ body {
 .readout__day {
   margin: 0;
   order: 2;
-  color: var(--haze);
+  color: var(--text-muted);
   font-size: 1rem;
-  font-weight: 600;
-  font-stretch: 90%;
+  font-weight: 500;
 }
 
 .readout__time {
   margin: 0;
-  color: var(--sodium);
+  color: var(--accent);
   font-size: clamp(2.75rem, 13vw, 4.5rem);
-  font-weight: 800;
-  font-stretch: 62%;
+  font-weight: 700;
   font-variant-numeric: tabular-nums;
   line-height: 0.9;
-  letter-spacing: -0.01em;
+  letter-spacing: var(--tracking-tight);
 }
 
 .status {
@@ -132,7 +136,7 @@ body {
 }
 
 .status__text {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .controls {
@@ -156,42 +160,52 @@ button[hidden] {
   padding: 0 var(--gutter);
 }
 
+/* ADE pill buttons: outlined by default, solid yellow when chosen or primary. */
 .day,
 .action,
 .status__action {
   flex: none;
   min-height: var(--tap);
-  padding: 0 14px;
-  border: 1px solid var(--canal-line);
+  padding: 0 18px;
+  border: 1px solid var(--line);
   border-radius: var(--radius-control);
   background: transparent;
-  color: var(--mist);
+  color: var(--text);
   font: inherit;
-  font-weight: 600;
+  font-weight: 500;
+  line-height: 1;
   cursor: pointer;
+  transition: transform 0.4s var(--ease-out);
 }
 
-.day[aria-pressed='true'] {
-  border-color: var(--sodium);
-  background: var(--sodium);
-  color: var(--sodium-ink);
+.day:hover,
+.action:hover,
+.status__action:hover {
+  border-color: var(--text);
+}
+
+.day:active,
+.action:active,
+.status__action:active {
+  transform: scale(0.97);
+}
+
+.day[aria-pressed='true'],
+.action--now,
+.status__action {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .status__action {
   min-height: 36px;
-  border-color: var(--sodium);
-  color: var(--sodium);
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-}
-
-.action--now {
-  border-color: var(--sodium);
-  color: var(--sodium);
 }
 
 .notice {
@@ -202,7 +216,7 @@ button[hidden] {
 
 .credit {
   margin: 0;
-  color: var(--haze);
+  color: var(--text-muted);
   font-size: 0.75rem;
 }
 
@@ -219,63 +233,67 @@ button[hidden] {
 .slider::-webkit-slider-runnable-track {
   height: 4px;
   border-radius: 2px;
-  background: var(--canal-line);
+  background: var(--line);
 }
 
 .slider::-moz-range-track {
   height: 4px;
   border-radius: 2px;
-  background: var(--canal-line);
+  background: var(--line);
 }
 
 .slider::-webkit-slider-thumb {
   width: 28px;
   height: 28px;
   margin-top: -12px;
-  border: 3px solid var(--canal);
+  border: 3px solid var(--surface);
   border-radius: 50%;
-  background: var(--sodium);
+  background: var(--accent);
   appearance: none;
 }
 
 .slider::-moz-range-thumb {
   width: 22px;
   height: 22px;
-  border: 3px solid var(--canal);
+  border: 3px solid var(--surface);
   border-radius: 50%;
-  background: var(--sodium);
+  background: var(--accent);
 }
 
-/* Map: OSM tiles tinted to a night map so the screen isn't blinding at 3am. */
+/* Map: OSM tiles turned into a black-and-white night map so the yellow venues carry all the colour. */
 .leaflet-container {
-  background: var(--canal-deep);
+  background: var(--black);
   font-family: var(--font);
 }
 
 .night-tiles {
-  filter: invert(1) hue-rotate(195deg) saturate(0.45) brightness(0.8) contrast(0.95);
+  filter: invert(1) grayscale(1) brightness(0.7) contrast(1.1);
 }
 
 .leaflet-control-attribution {
-  background: rgb(10 23 36 / 80%) !important;
-  color: var(--haze);
+  background: rgb(0 0 0 / 80%) !important;
+  color: var(--text-muted);
 }
 
 .leaflet-control-attribution a,
 .leaflet-bar a {
-  color: var(--mist);
+  color: var(--text);
 }
 
 .leaflet-bar a {
-  background: var(--canal);
-  border-color: var(--canal-line);
+  background: var(--surface);
+  border-color: var(--line);
 }
 
 .venue-popup .leaflet-popup-content-wrapper,
 .venue-popup .leaflet-popup-tip {
-  background: var(--canal);
-  color: var(--mist);
-  border: 1px solid var(--canal-line);
+  background: var(--surface-raised);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+.venue-popup .leaflet-popup-content-wrapper {
+  border-radius: var(--radius-panel);
 }
 
 .venue-popup .leaflet-popup-content {
@@ -286,7 +304,7 @@ button[hidden] {
 .venue-popup a.leaflet-popup-close-button {
   width: var(--tap);
   height: var(--tap);
-  color: var(--haze);
+  color: var(--text-muted);
   font-size: 22px;
   line-height: var(--tap);
 }
@@ -294,15 +312,24 @@ button[hidden] {
 .popup__venue {
   margin: 0 28px 2px 0;
   font-size: 1.15rem;
-  font-weight: 750;
-  font-stretch: 85%;
+  font-weight: 700;
   line-height: 1.2;
+  letter-spacing: var(--tracking-tight);
 }
 
 .popup__address {
-  margin: 0 0 10px !important;
-  color: var(--haze);
+  margin: 0 0 4px !important;
+  color: var(--text-muted);
   font-size: 0.85rem;
+}
+
+a.popup__maps {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .popup__events {
@@ -321,18 +348,18 @@ button[hidden] {
 }
 
 .popup__name {
-  color: var(--mist);
-  font-weight: 600;
+  color: var(--text);
+  font-weight: 500;
 }
 
 a.popup__name {
-  color: var(--sodium);
+  color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .popup__when {
-  color: var(--haze);
+  color: var(--text-muted);
   font-size: 0.85rem;
   font-variant-numeric: tabular-nums;
 }
@@ -347,7 +374,7 @@ a.popup__name {
   .panel {
     align-content: start;
     border-top: 0;
-    border-left: 1px solid var(--canal-line);
+    border-left: 1px solid var(--line);
   }
 
   .readout {
