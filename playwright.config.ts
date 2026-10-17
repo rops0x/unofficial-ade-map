@@ -12,7 +12,7 @@ export default defineConfig({
   },
   projects: [{ name: 'mobile', use: { ...devices['iPhone 13'], browserName: 'chromium' } }],
   webServer: {
-    command: `npx vite build --mode e2e --outDir dist-e2e && npx vite preview --outDir dist-e2e --port ${PORT} --strictPort`,
+    command: `npx vite build --mode e2e --outDir dist-e2e && npx vite preview --mode e2e --outDir dist-e2e --port ${PORT} --strictPort`,
     url: `http://localhost:${PORT}`,
     reuseExistingServer: false,
     timeout: 120_000,

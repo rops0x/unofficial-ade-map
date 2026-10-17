@@ -26,7 +26,13 @@ const contentSecurityPolicy: Plugin = {
     html.replace('<head>', `<head>\n    <meta http-equiv="Content-Security-Policy" content="${CONTENT_SECURITY_POLICY}" />`),
 }
 
+// The GitHub Pages test site lives at https://<user>.github.io/unofficial-ade-map/;
+// set this back to '/' once the site moves to its own domain. e2e builds stay at the
+// root because Playwright opens http://localhost:<port>/.
+const PAGES_BASE = '/unofficial-ade-map/'
+
 export default defineConfig(({ mode }) => ({
+  base: mode === 'e2e' ? '/' : PAGES_BASE,
   plugins: [contentSecurityPolicy],
   resolve: {
     alias: mode === 'e2e' ? [{ find: /^\.\/data\/events\.json$/, replacement: E2E_FIXTURE }] : [],
