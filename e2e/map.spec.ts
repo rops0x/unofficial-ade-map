@@ -134,6 +134,41 @@ test('the map knows its real size once the panel is laid out', async ({ page }) 
   await expectLeafletToFitMap(page)
 })
 
+test('on a phone, the time controls collapse to give the map more room', async ({ page }) => {
+  await openAt(page, SATURDAY_0030)
+  const toggle = page.getByRole('button', { name: 'Time controls' })
+  const slider = page.getByRole('slider', { name: 'Time' })
+  await expect(slider).toBeVisible()
+  const expandedHeight = await heightOf(page, '#map')
+
+  await toggle.click()
+
+  await expect(toggle).toHaveAttribute('aria-expanded', 'false')
+  await expect(slider).toBeHidden()
+  await expect(page.getByRole('button', { name: 'Thu 22 Oct' })).toBeHidden()
+  await expect(time(page)).toHaveText('00:30')
+  await expect(status(page)).toContainText('2 events on')
+  await expect.poll(() => heightOf(page, '#map')).toBeGreaterThan(expandedHeight)
+  await expectLeafletToFitMap(page)
+
+  await toggle.click()
+
+  await expect(toggle).toHaveAttribute('aria-expanded', 'true')
+  await expect(slider).toBeVisible()
+})
+
+test('a panel collapsed on a phone opens up again as a wide-screen side column', async ({ page }) => {
+  await openAt(page, SATURDAY_0030)
+  await page.getByRole('button', { name: 'Time controls' }).click()
+  await expect(page.getByRole('slider', { name: 'Time' })).toBeHidden()
+
+  await page.setViewportSize({ width: 1200, height: 800 })
+
+  await expect(page.getByRole('button', { name: 'Time controls' })).toBeHidden()
+  await expect(page.getByRole('slider', { name: 'Time' })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'Show my location' })).toBeVisible()
+})
+
 test('after ADE, says see you in 2027', async ({ page }) => {
   await openAt(page, AFTER_ADE)
 

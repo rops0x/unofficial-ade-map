@@ -22,6 +22,20 @@ function setup() {
 const button = (root: HTMLElement, label: string): HTMLButtonElement | undefined =>
   [...root.querySelectorAll('button')].find((element) => element.textContent === label)
 
+function required<T extends Element>(found: T | null, what: string): T {
+  if (!found) throw new Error(`Missing ${what}`)
+  return found
+}
+
+const collapseToggle = (root: HTMLElement): HTMLButtonElement =>
+  required(root.querySelector<HTMLButtonElement>('button[aria-label="Time controls"]'), 'collapse toggle')
+
+const collapsible = (root: HTMLElement, toggle: HTMLButtonElement): HTMLElement => {
+  const id = toggle.getAttribute('aria-controls')
+  if (!id) throw new Error('Collapse toggle has no aria-controls')
+  return required(root.querySelector<HTMLElement>(`#${id}`), `#${id}`)
+}
+
 describe('createTimeControl', () => {
   beforeEach(() => {
     document.body.replaceChildren()
@@ -93,6 +107,37 @@ describe('createTimeControl', () => {
 
     expect(root.querySelector('[data-role="time"]')?.textContent).toBe('See you in 2027!')
     expect(root.querySelector<HTMLElement>('[data-role="controls"]')?.hidden).toBe(true)
+  })
+
+  test('starts expanded, with a toggle that controls the slider and day buttons', () => {
+    const { root } = setup()
+    const toggle = collapseToggle(root)
+
+    expect(toggle.getAttribute('aria-expanded')).toBe('true')
+    expect(collapsible(root, toggle).contains(root.querySelector('input[type="range"]'))).toBe(true)
+    expect(root.hasAttribute('data-collapsed')).toBe(false)
+  })
+
+  test('the toggle collapses and re-expands the time controls', () => {
+    const { root } = setup()
+    const toggle = collapseToggle(root)
+
+    toggle.click()
+    expect(toggle.getAttribute('aria-expanded')).toBe('false')
+    expect(root.hasAttribute('data-collapsed')).toBe(true)
+
+    toggle.click()
+    expect(toggle.getAttribute('aria-expanded')).toBe('true')
+    expect(root.hasAttribute('data-collapsed')).toBe(false)
+  })
+
+  test('keeps the time, status and notice outside the collapsible part', () => {
+    const { root } = setup()
+    const body = collapsible(root, collapseToggle(root))
+
+    expect(body.contains(required(root.querySelector('[data-role="time"]'), 'time'))).toBe(false)
+    expect(body.contains(required(root.querySelector('[role="status"]'), 'status'))).toBe(false)
+    expect(body.contains(required(root.querySelector('[role="alert"]'), 'notice'))).toBe(false)
   })
 
   test('the location button asks for the location', () => {

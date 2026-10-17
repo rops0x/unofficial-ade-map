@@ -2,6 +2,8 @@ import { type FestivalDay, festivalDayKey, momentAtStep, sameClockTimeOn, stepAt
 import { formatDayLabel, formatMoment, formatTime } from '../time/format.ts'
 import type { Status } from './status.ts'
 
+const BODY_ID = 'time-controls'
+
 export interface TimeControlOptions {
   readonly days: readonly FestivalDay[]
   readonly onMomentChange: (moment: number) => void
@@ -35,6 +37,21 @@ function button(className: string, label: string, onClick: () => void): HTMLButt
   created.textContent = label
   created.addEventListener('click', onClick)
   return created
+}
+
+/**
+ * Disclosure button that sets `data-collapsed` on the panel root; styles.css hides the panel body
+ * (and the credit main.ts appends) on phones only, so the desktop side column never collapses.
+ */
+function collapseToggle(root: HTMLElement, controlsId: string): HTMLButtonElement {
+  const toggle = button('panel__toggle', '', () => {
+    const isCollapsed = root.toggleAttribute('data-collapsed')
+    toggle.setAttribute('aria-expanded', String(!isCollapsed))
+  })
+  toggle.setAttribute('aria-label', 'Time controls')
+  toggle.setAttribute('aria-controls', controlsId)
+  toggle.setAttribute('aria-expanded', 'true')
+  return toggle
 }
 
 function dayFor(days: readonly FestivalDay[], moment: number): FestivalDay {
@@ -85,10 +102,16 @@ export function createTimeControl(root: HTMLElement, options: TimeControlOptions
   const actions = make('div', 'actions')
   actions.append(nowButton, locateButton)
 
+  // On phones the slider, days and actions fold away to free up the map; the time and status stay visible.
+  const body = make('div', 'panel__body')
+  body.id = BODY_ID
+  body.append(controls, actions)
+  readout.append(collapseToggle(root, BODY_ID))
+
   const notice = make('p', 'notice', 'notice')
   notice.setAttribute('role', 'alert')
 
-  root.append(readout, status, controls, actions, notice)
+  root.append(readout, status, body, notice)
 
   return {
     update(view) {
