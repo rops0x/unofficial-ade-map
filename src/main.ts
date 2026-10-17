@@ -4,6 +4,7 @@ import './styles.css'
 import rawData from './data/events.json'
 import { groupByVenue, type LoadedData, loadEventData } from './events/data.ts'
 import type { EventData } from './events/schema.ts'
+import { type Coordinates, findAddress } from './map/geocode.ts'
 import { watchLocation } from './map/location.ts'
 import { createEventMap } from './map/map.ts'
 import { festivalDays } from './time/days.ts'
@@ -13,11 +14,17 @@ import { describeStatus } from './ui/status.ts'
 import { createTimeControl } from './ui/timeControl.ts'
 
 const FOLLOW_NOW_INTERVAL_MS = 60_000
+// A typed address is a single point, not a GPS fix with a margin of error.
+const TYPED_ADDRESS_ACCURACY = 0
+const ADDRESS_NOT_FOUND = 'Couldn’t find that address in Amsterdam. Check the spelling or add the house number.'
+const ADDRESS_LOOKUP_FAILED = 'Couldn’t look up that address right now. Check your connection or try again in a minute.'
 
 interface AppState {
   readonly moment: number
   readonly isFollowingNow: boolean
   readonly isLocating: boolean
+  readonly isAddressOpen: boolean
+  readonly isFindingAddress: boolean
   readonly notice: string | null
 }
 
@@ -36,12 +43,46 @@ function showFatal(panel: HTMLElement, message: string): void {
 
 function run(data: LoadedData, range: FestivalRange, mapElement: HTMLElement, panel: HTMLElement): void {
   const map = createEventMap(mapElement)
-  let state: AppState = { moment: initialView(Date.now(), range).moment, isFollowingNow: true, isLocating: false, notice: null }
+  let state: AppState = {
+    moment: initialView(Date.now(), range).moment,
+    isFollowingNow: true,
+    isLocating: false,
+    isAddressOpen: false,
+    isFindingAddress: false,
+    notice: null,
+  }
   let stopLocating: (() => void) | null = null
 
   const setState = (changes: Partial<AppState>): void => {
     state = { ...state, ...changes }
     render()
+  }
+
+  const stopFollowingDevice = (): void => {
+    stopLocating?.()
+    stopLocating = null
+  }
+
+  async function showAddress(address: string): Promise<void> {
+    if (state.isFindingAddress) return
+    setState({ isFindingAddress: true, notice: null })
+    let found: Coordinates | null
+    try {
+      found = await findAddress(address)
+    } catch {
+      // Offline, timed out or rate limited: the visitor can only retry, so say that.
+      setState({ isFindingAddress: false, notice: ADDRESS_LOOKUP_FAILED })
+      return
+    }
+    if (!found) {
+      setState({ isFindingAddress: false, notice: ADDRESS_NOT_FOUND })
+      return
+    }
+    map.showUser({ ...found, accuracy: TYPED_ADDRESS_ACCURACY })
+    map.focusUser()
+    // The typed address replaces the device's position, so stop the device moving the marker.
+    stopFollowingDevice()
+    setState({ isFindingAddress: false, isLocating: false, isAddressOpen: false })
   }
 
   const control = createTimeControl(panel, {
@@ -64,9 +105,9 @@ function run(data: LoadedData, range: FestivalRange, mapElement: HTMLElement, pa
         },
         onError: (message) => {
           hasFailed = true
-          stopLocating?.()
-          stopLocating = null
-          setState({ isLocating: false, notice: message })
+          stopFollowingDevice()
+          // No device location: offer the address field straight away.
+          setState({ isLocating: false, isAddressOpen: true, notice: message })
         },
       })
       // onError can fire before watchLocation returns (no geolocation at all); then stay retryable.
@@ -75,6 +116,9 @@ function run(data: LoadedData, range: FestivalRange, mapElement: HTMLElement, pa
         setState({ isLocating: true })
       }
     },
+    // Closing the form also clears its messages, so none is left pointing at a hidden field.
+    onAddressToggle: () => setState(state.isAddressOpen ? { isAddressOpen: false, notice: null } : { isAddressOpen: true }),
+    onAddress: (address) => void showAddress(address),
   })
 
   const credit = document.createElement('p')
@@ -93,6 +137,8 @@ function run(data: LoadedData, range: FestivalRange, mapElement: HTMLElement, pa
       isEnded: view.kind === 'ended',
       status: describeStatus({ moment: state.moment, now, range, onCount: onNow.length, nextStart: nextStartAfter(state.moment, data.events) }),
       locateLabel: state.isLocating ? 'Centre on me' : 'Show my location',
+      isAddressOpen: state.isAddressOpen,
+      isFindingAddress: state.isFindingAddress,
       ...(state.notice ? { notice: state.notice } : {}),
     })
   }

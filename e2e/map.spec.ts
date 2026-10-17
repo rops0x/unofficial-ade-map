@@ -9,6 +9,18 @@ const DAM_SQUARE = { latitude: 52.373, longitude: 4.8925 }
 const venueMarkers = (page: Page) => page.locator('.leaflet-overlay-pane path.leaflet-interactive:not(.user-marker)')
 const time = (page: Page) => page.locator('[data-role="time"]')
 const status = (page: Page) => page.getByRole('status')
+const userMarker = (page: Page) => page.locator('path.user-marker')
+const addressField = (page: Page) => page.getByRole('textbox', { name: 'Your address' })
+
+/** Answers address lookups like Nominatim would, without calling it. Returns the queries it saw. */
+async function fakeNominatim(page: Page, results: readonly object[]): Promise<string[]> {
+  const queries: string[] = []
+  await page.route('https://nominatim.openstreetmap.org/search?**', (route) => {
+    queries.push(new URL(route.request().url()).searchParams.get('q') ?? '')
+    return route.fulfill({ json: results, headers: { 'Access-Control-Allow-Origin': '*' } })
+  })
+  return queries
+}
 
 async function openAt(page: Page, now: Date): Promise<void> {
   // Keep tests off the real tile servers.
@@ -96,7 +108,7 @@ test.describe('with location allowed', () => {
 
     await page.getByRole('button', { name: 'Show my location' }).click()
 
-    await expect(page.locator('path.user-marker')).toHaveCount(1)
+    await expect(userMarker(page)).toHaveCount(1)
     await expect(page.getByRole('button', { name: 'Centre on me' })).toBeVisible()
   })
 })
@@ -109,6 +121,59 @@ test('with location blocked, explains and keeps the map working', async ({ page,
 
   await expect(page.getByRole('alert')).toContainText('Location is off for this site')
   await expect(venueMarkers(page)).toHaveCount(2)
+})
+
+test('with location blocked, offers to enter an address and shows it on the map', async ({ page, context }) => {
+  await context.clearPermissions()
+  const queries = await fakeNominatim(page, [{ lat: '52.3731', lon: '4.8926', display_name: 'Dam, Amsterdam' }])
+  await openAt(page, SATURDAY_0030)
+
+  await page.getByRole('button', { name: 'Show my location' }).click()
+  await expect(addressField(page)).toBeVisible()
+  await addressField(page).fill('Dam 1')
+  await addressField(page).press('Enter')
+
+  await expect(userMarker(page)).toHaveCount(1)
+  await expect(addressField(page)).toBeHidden()
+  await expect(page.getByRole('alert')).toBeHidden()
+  expect(queries).toEqual(['Dam 1'])
+})
+
+test('an address can be entered without asking for location first', async ({ page }) => {
+  await fakeNominatim(page, [{ lat: '52.3731', lon: '4.8926', display_name: 'Dam, Amsterdam' }])
+  await openAt(page, SATURDAY_0030)
+
+  await page.getByRole('button', { name: 'Enter an address' }).click()
+  await addressField(page).fill('Dam 1')
+  await page.getByRole('button', { name: 'Find' }).click()
+
+  await expect(userMarker(page)).toHaveCount(1)
+})
+
+test('when the address lookup fails, says so and lets the visitor try again', async ({ page }) => {
+  await page.route('https://nominatim.openstreetmap.org/search?**', (route) => route.abort())
+  await openAt(page, SATURDAY_0030)
+
+  await page.getByRole('button', { name: 'Enter an address' }).click()
+  await addressField(page).fill('Dam 1')
+  await addressField(page).press('Enter')
+
+  await expect(page.getByRole('alert')).toContainText('Couldn’t look up that address right now')
+  await expect(page.getByRole('button', { name: 'Find' })).toHaveAttribute('aria-disabled', 'false')
+  await expect(addressField(page)).toBeVisible()
+})
+
+test('an address outside Amsterdam explains that it was not found', async ({ page }) => {
+  await fakeNominatim(page, [])
+  await openAt(page, SATURDAY_0030)
+
+  await page.getByRole('button', { name: 'Enter an address' }).click()
+  await addressField(page).fill('Nowhere 999')
+  await addressField(page).press('Enter')
+
+  await expect(page.getByRole('alert')).toContainText('Couldn’t find that address in Amsterdam')
+  await expect(addressField(page)).toBeVisible()
+  await expect(userMarker(page)).toHaveCount(0)
 })
 
 // Leaflet draws venues on an SVG that is the map size it knows about plus 10% padding on every side.

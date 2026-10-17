@@ -65,7 +65,7 @@ describe('watchLocation', () => {
 
 describe('locationErrorMessage', () => {
   test.each([
-    [PERMISSION_DENIED, 'Location is off for this site. Allow it in your browser settings to see where you are.'],
+    [PERMISSION_DENIED, 'Location is off for this site. Allow it in your browser settings, or enter an address instead.'],
     [POSITION_UNAVAILABLE, 'Couldn’t find your location. The map works without it.'],
     [TIMEOUT, 'Finding your location took too long. Try again in a moment.'],
   ])('code %i', (code, message) => {

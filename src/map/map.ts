@@ -71,7 +71,11 @@ export function createEventMap(element: HTMLElement): EventMap {
     showUser(position) {
       const latLng: L.LatLngTuple = [position.lat, position.lng]
       accuracyCircle?.remove()
-      accuracyCircle = L.circle(latLng, { radius: position.accuracy, color: colors.user, weight: 1, fillOpacity: 0.08, interactive: false }).addTo(map)
+      // A typed address has no accuracy radius to draw.
+      accuracyCircle =
+        position.accuracy > 0
+          ? L.circle(latLng, { radius: position.accuracy, color: colors.user, weight: 1, fillOpacity: 0.08, interactive: false }).addTo(map)
+          : null
       if (userMarker) {
         userMarker.setLatLng(latLng)
       } else {

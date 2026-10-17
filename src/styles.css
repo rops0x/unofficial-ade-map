@@ -196,6 +196,7 @@ body {
 
 .controls[hidden],
 .notice[hidden],
+.address[hidden],
 button[hidden] {
   display: none;
 }
@@ -256,6 +257,56 @@ button[hidden] {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+/* Address field, for visitors who keep their location off. */
+.address {
+  display: grid;
+  gap: 6px;
+}
+
+.address__label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.address__row {
+  display: flex;
+  gap: 8px;
+}
+
+.address__input {
+  flex: 1;
+  min-width: 0;
+  min-height: var(--tap);
+  padding: 0 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: transparent;
+  color: var(--text);
+  /* 16px or more stops iOS zooming in when the field gets focus. */
+  font: inherit;
+  font-size: max(1rem, 16px);
+}
+
+.address__input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Pairs with the global 2px :focus-visible outline. */
+.address__input:focus-visible {
+  border-color: var(--accent);
+}
+
+.address .action[aria-disabled='true'] {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.address__hint {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
 }
 
 .notice {

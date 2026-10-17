@@ -13,7 +13,7 @@ function view(overrides: Partial<TimeControlView> = {}): TimeControlView {
 
 function setup() {
   const root = document.createElement('section')
-  const handlers = { onMomentChange: vi.fn(), onNow: vi.fn(), onLocate: vi.fn() }
+  const handlers = { onMomentChange: vi.fn(), onNow: vi.fn(), onLocate: vi.fn(), onAddressToggle: vi.fn(), onAddress: vi.fn() }
   const control = createTimeControl(root, { days, ...handlers })
   control.update(view())
   return { root, handlers, control }
@@ -146,5 +146,58 @@ describe('createTimeControl', () => {
     button(root, 'Show my location')?.click()
 
     expect(handlers.onLocate).toHaveBeenCalled()
+  })
+
+  test('offers to enter an address instead, with the form closed at first', () => {
+    const { root, handlers } = setup()
+    const addressButton = required(button(root, 'Enter an address') ?? null, 'address button')
+    const form = required(root.querySelector<HTMLFormElement>(`#${addressButton.getAttribute('aria-controls')}`), 'address form')
+
+    expect(addressButton.getAttribute('aria-expanded')).toBe('false')
+    expect(form.hidden).toBe(true)
+    addressButton.click()
+    expect(handlers.onAddressToggle).toHaveBeenCalled()
+  })
+
+  test('shows the address form when open and passes on the address typed', () => {
+    const { root, handlers, control } = setup()
+
+    control.update(view({ isAddressOpen: true }))
+    const input = required(root.querySelector<HTMLInputElement>('input[name="address"]'), 'address field')
+    input.value = 'Dam 1'
+    input.form?.requestSubmit()
+
+    expect(button(root, 'Enter an address')?.getAttribute('aria-expanded')).toBe('true')
+    expect(input.form?.hidden).toBe(false)
+    expect(handlers.onAddress).toHaveBeenCalledWith('Dam 1')
+  })
+
+  test('opening the address form by its button puts the cursor in the field', () => {
+    const { root, handlers, control } = setup()
+    const addressButton = required(button(root, 'Enter an address') ?? null, 'address button')
+    document.body.append(root)
+    handlers.onAddressToggle.mockImplementation(() => control.update(view({ isAddressOpen: true })))
+
+    addressButton.click()
+
+    expect(document.activeElement).toBe(root.querySelector('input[name="address"]'))
+  })
+
+  test('closing the form while typing in it returns focus to its button', () => {
+    const { root, control } = setup()
+    document.body.append(root)
+    control.update(view({ isAddressOpen: true }))
+    required(root.querySelector<HTMLInputElement>('input[name="address"]'), 'address field').focus()
+
+    control.update(view({ isAddressOpen: false }))
+
+    expect(document.activeElement).toBe(button(root, 'Enter an address'))
+  })
+
+  test('the address form folds away with the rest of the controls', () => {
+    const { root } = setup()
+    const body = collapsible(root, collapseToggle(root))
+
+    expect(body.contains(root.querySelector('form'))).toBe(true)
   })
 })

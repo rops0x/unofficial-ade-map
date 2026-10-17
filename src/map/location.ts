@@ -16,7 +16,7 @@ const TIMEOUT = 3
 const WATCH_OPTIONS: PositionOptions = { enableHighAccuracy: true, maximumAge: 30_000, timeout: 20_000 }
 
 export function locationErrorMessage(code: number): string {
-  if (code === PERMISSION_DENIED) return 'Location is off for this site. Allow it in your browser settings to see where you are.'
+  if (code === PERMISSION_DENIED) return 'Location is off for this site. Allow it in your browser settings, or enter an address instead.'
   if (code === TIMEOUT) return 'Finding your location took too long. Try again in a moment.'
   return 'Couldn’t find your location. The map works without it.'
 }

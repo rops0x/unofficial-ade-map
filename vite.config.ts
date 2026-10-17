@@ -5,15 +5,16 @@ import { defineConfig } from 'vitest/config'
 // In e2e mode the map loads fixed fixture data instead of the collected ADE data.
 const E2E_FIXTURE = fileURLToPath(new URL('./e2e/fixtures/events.json', import.meta.url))
 
-// Built pages may only load their own files plus OpenStreetMap tiles. Added at build
-// time only, so the dev server's injected scripts keep working.
+// Built pages may only load their own files plus OpenStreetMap tiles, and only talk to
+// OpenStreetMap's Nominatim to look up a typed address. Added at build time only, so the
+// dev server's injected scripts keep working.
 const CONTENT_SECURITY_POLICY = [
   "default-src 'self'",
   "script-src 'self'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: https://tile.openstreetmap.org",
   "font-src 'self'",
-  "connect-src 'self'",
+  "connect-src 'self' https://nominatim.openstreetmap.org",
   "object-src 'none'",
   "base-uri 'none'",
   "form-action 'none'",

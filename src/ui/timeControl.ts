@@ -1,5 +1,6 @@
 import { type FestivalDay, festivalDayKey, momentAtStep, sameClockTimeOn, stepAt, stepCount } from '../time/days.ts'
 import { formatDayLabel, formatMoment, formatTime } from '../time/format.ts'
+import { ADDRESS_FORM_ID, createAddressForm } from './addressForm.ts'
 import type { Status } from './status.ts'
 
 const BODY_ID = 'time-controls'
@@ -9,6 +10,8 @@ export interface TimeControlOptions {
   readonly onMomentChange: (moment: number) => void
   readonly onNow: () => void
   readonly onLocate: () => void
+  readonly onAddressToggle: () => void
+  readonly onAddress: (address: string) => void
 }
 
 export interface TimeControlView {
@@ -18,6 +21,8 @@ export interface TimeControlView {
   readonly status: Status
   readonly locateLabel?: string
   readonly notice?: string
+  readonly isAddressOpen?: boolean
+  readonly isFindingAddress?: boolean
 }
 
 export interface TimeControl {
@@ -99,13 +104,22 @@ export function createTimeControl(root: HTMLElement, options: TimeControlOptions
 
   const nowButton = button('action action--now', 'Back to now', options.onNow)
   const locateButton = button('action', 'Show my location', options.onLocate)
+  // For visitors who'd rather not share their location: type an address instead.
+  const addressForm = createAddressForm({ onSubmit: options.onAddress })
+  const addressButton = button('action', 'Enter an address', () => {
+    options.onAddressToggle()
+    // Only a deliberate open moves the cursor; one opened by a location error leaves focus alone.
+    if (!addressForm.element.hidden) addressForm.focus()
+  })
+  addressButton.setAttribute('aria-controls', ADDRESS_FORM_ID)
+  addressButton.setAttribute('aria-expanded', 'false')
   const actions = make('div', 'actions')
-  actions.append(nowButton, locateButton)
+  actions.append(nowButton, locateButton, addressButton)
 
   // On phones the slider, days and actions fold away to free up the map; the time and status stay visible.
   const body = make('div', 'panel__body')
   body.id = BODY_ID
-  body.append(controls, actions)
+  body.append(controls, actions, addressForm.element)
   readout.append(collapseToggle(root, BODY_ID))
 
   const notice = make('p', 'notice', 'notice')
@@ -134,6 +148,12 @@ export function createTimeControl(root: HTMLElement, options: TimeControlOptions
 
       nowButton.hidden = !view.canGoToNow
       locateButton.textContent = view.locateLabel ?? 'Show my location'
+      const isAddressOpen = view.isAddressOpen ?? false
+      const hadFocus = addressForm.element.contains(document.activeElement)
+      addressButton.setAttribute('aria-expanded', String(isAddressOpen))
+      addressForm.update({ isOpen: isAddressOpen, isFinding: view.isFindingAddress ?? false })
+      // Don't strand keyboard and screen-reader users on a form that just closed.
+      if (hadFocus && !isAddressOpen) addressButton.focus()
       notice.textContent = view.notice ?? ''
       notice.hidden = !view.notice
     },

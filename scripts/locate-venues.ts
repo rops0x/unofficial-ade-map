@@ -3,8 +3,9 @@
 // Results are cached in data/venue-locations.json; only new venues are looked up.
 // Usage: npm run data:venues [-- --retry]   (--retry looks up venues that failed before)
 import { isHiddenVenueName } from '../src/events/hidden.ts'
+import { type Coordinates, nominatimSearchUrl, parseNominatimResult } from '../src/map/geocode.ts'
 import { extractVenueAddress } from './lib/ade.ts'
-import { addressVariants, type Coordinates, nominatimSearchUrl, parseNominatimResult } from './lib/geocode.ts'
+import { addressVariants } from './lib/geocode.ts'
 import { isAllowedUrl } from './lib/hosts.ts'
 import { decodeEntities } from './lib/html.ts'
 import { politeGet, politeGetJson } from './lib/http.ts'
