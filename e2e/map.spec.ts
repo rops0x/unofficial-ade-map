@@ -67,6 +67,17 @@ test('a venue popup links to the event page in a new tab', async ({ page }) => {
   await expect(page.locator('.leaflet-popup')).toContainText('23:00–05:00')
 })
 
+test('a venue popup links to the venue in Google Maps', async ({ page }) => {
+  await openAt(page, SATURDAY_0030)
+
+  await page.getByRole('slider', { name: 'Time' }).fill('34')
+  await venueMarkers(page).first().click()
+
+  const link = page.getByRole('link', { name: 'Open in Google Maps' })
+  await expect(link).toHaveAttribute('href', /^https:\/\/www\.google\.com\/maps\/search\/\?api=1&query=/)
+  await expect(link).toHaveAttribute('target', '_blank')
+})
+
 test('an event without a listed end time says so', async ({ page }) => {
   await openAt(page, SATURDAY_0030)
 

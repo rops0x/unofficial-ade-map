@@ -1,7 +1,10 @@
+import type { Venue } from '../events/schema.ts'
 import type { LoadedEvent, VenueGroup } from '../events/data.ts'
 import { formatTime } from '../time/format.ts'
 
 // Event text comes from scraped websites: build DOM with textContent only, never innerHTML.
+
+const GOOGLE_MAPS_SEARCH_URL = 'https://www.google.com/maps/search/'
 
 function isWebLink(url: string): boolean {
   try {
@@ -19,6 +22,22 @@ function element<K extends keyof HTMLElementTagNameMap>(doc: Document, tag: K, c
   return created
 }
 
+function newTabLink(doc: Document, className: string, text: string, href: string): HTMLAnchorElement {
+  const link = element(doc, 'a', className, text)
+  link.href = href
+  link.target = '_blank'
+  link.rel = 'noopener noreferrer'
+  return link
+}
+
+/** Searches by the marker's coordinates, so Maps lands exactly where the map shows the venue. */
+function googleMapsUrl(venue: Venue): string {
+  const url = new URL(GOOGLE_MAPS_SEARCH_URL)
+  url.searchParams.set('api', '1')
+  url.searchParams.set('query', `${venue.lat},${venue.lng}`)
+  return url.toString()
+}
+
 function describeWhen(event: LoadedEvent): string {
   if (event.isEndEstimated) return `From ${formatTime(event.startMs)}, end time not listed`
   const hours = `${formatTime(event.startMs)}–${formatTime(event.endMs)}`
@@ -28,11 +47,7 @@ function describeWhen(event: LoadedEvent): string {
 function eventItem(doc: Document, event: LoadedEvent): HTMLLIElement {
   const item = element(doc, 'li', 'popup__event')
   if (isWebLink(event.sourceUrl)) {
-    const link = element(doc, 'a', 'popup__name', event.name)
-    link.href = event.sourceUrl
-    link.target = '_blank'
-    link.rel = 'noopener noreferrer'
-    item.append(link)
+    item.append(newTabLink(doc, 'popup__name', event.name, event.sourceUrl))
   } else {
     item.append(element(doc, 'span', 'popup__name', event.name))
   }
@@ -47,6 +62,7 @@ export function buildVenuePopup(group: VenueGroup, doc: Document): HTMLElement {
   root.append(
     element(doc, 'h2', 'popup__venue', group.venue.name),
     element(doc, 'p', 'popup__address', group.venue.address),
+    newTabLink(doc, 'popup__maps', 'Open in Google Maps', googleMapsUrl(group.venue)),
     list,
   )
   return root

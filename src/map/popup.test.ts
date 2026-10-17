@@ -32,7 +32,7 @@ describe('buildVenuePopup', () => {
   })
 
   test('links each event to its event page in a new tab', () => {
-    const link = buildVenuePopup({ venue, events: [event()] }, document).querySelector('a')
+    const link = buildVenuePopup({ venue, events: [event()] }, document).querySelector('.popup__events a')
 
     expect(link?.getAttribute('href')).toBe('https://www.amsterdam-dance-event.nl/en/program/2026/night-one/1/')
     expect(link?.getAttribute('target')).toBe('_blank')
@@ -61,6 +61,17 @@ describe('buildVenuePopup', () => {
   test('does not link to a non-web address', () => {
     const popup = buildVenuePopup({ venue, events: [event({ sourceUrl: 'javascript:alert(1)' })] }, document)
 
-    expect(popup.querySelector('a')).toBeNull()
+    expect(popup.querySelector('.popup__events a')).toBeNull()
+  })
+
+  test('links the venue to Google Maps at its map position in a new tab', () => {
+    const popup = buildVenuePopup({ venue, events: [event()] }, document)
+
+    const link = popup.querySelector<HTMLAnchorElement>('a.popup__maps')
+
+    expect(link?.textContent).toBe('Open in Google Maps')
+    expect(link?.getAttribute('href')).toBe('https://www.google.com/maps/search/?api=1&query=52.3647%2C4.8812')
+    expect(link?.getAttribute('target')).toBe('_blank')
+    expect(link?.getAttribute('rel')).toBe('noopener noreferrer')
   })
 })
