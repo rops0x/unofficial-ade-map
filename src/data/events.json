@@ -19,8 +19,8 @@
    "id": "ade-venue-2899975",
    "name": "The Workout Lab De Pijp",
    "address": "Albert Cuypstraat 116 A&B, Amsterdam",
-   "lat": 52.3546134,
-   "lng": 4.8865459
+   "lat": 52.3552217,
+   "lng": 4.8923772
   },
   {
    "id": "ade-venue-2900635",
@@ -47,8 +47,8 @@
    "id": "ade-venue-2707172",
    "name": "Onder Hans",
    "address": "Kerkstraat 136-138, Amsterdam",
-   "lat": 52.3624214,
-   "lng": 4.8960446
+   "lat": 52.363679,
+   "lng": 4.8880546
   },
   {
    "id": "ade-venue-2813296",
@@ -397,15 +397,15 @@
    "id": "ade-venue-174403",
    "name": "Andaz Amsterdam",
    "address": "Keizersgracht 440, Amsterdam",
-   "lat": 52.3653148,
-   "lng": 4.9076367
+   "lat": 52.3678521,
+   "lng": 4.8840177
   },
   {
    "id": "ade-venue-2895120",
    "name": "Ampēre & Salon D'Homme",
    "address": "De Clercqstraat 74 - 76, Amsterdam",
-   "lat": 52.3711809,
-   "lng": 4.8711756
+   "lat": 52.3707781,
+   "lng": 4.8689592
   },
   {
    "id": "ade-venue-2939194",
@@ -691,8 +691,8 @@
    "id": "ade-venue-2533351",
    "name": "Café Wu",
    "address": "Dapperstraat 1, Amsterdam, Nederland",
-   "lat": 52.3610018,
-   "lng": 4.9283242
+   "lat": 52.3653167,
+   "lng": 4.9262241
   },
   {
    "id": "ade-venue-2916032",
@@ -1202,8 +1202,8 @@
    "id": "ade-venue-1799025",
    "name": "The International",
    "address": "Oude Haagseweg 200, Badhoevedorp",
-   "lat": 52.3226927,
-   "lng": 4.8111169
+   "lat": 52.3282392,
+   "lng": 4.8034342
   },
   {
    "id": "ade-venue-2847887",
@@ -1405,15 +1405,15 @@
    "id": "ade-venue-1600",
    "name": "Het Sieraad",
    "address": "Postjesweg 1, Amsterdam",
-   "lat": 52.364491,
-   "lng": 4.8557012
+   "lat": 52.3645339,
+   "lng": 4.8592981
   },
   {
    "id": "ade-venue-1492833",
    "name": "Nxt Museum",
    "address": "Asterweg 22, Amsterdam",
-   "lat": 52.3930328,
-   "lng": 4.9012146
+   "lat": 52.3911825,
+   "lng": 4.9041379
   },
   {
    "id": "ade-venue-2680508",
@@ -1454,8 +1454,8 @@
    "id": "ade-venue-2694265",
    "name": "Super Lyan Cocktailbar",
    "address": "Nieuwezijds Voorburgwal 3, Amsterdam",
-   "lat": 52.3708232,
-   "lng": 4.8899415
+   "lat": 52.3772294,
+   "lng": 4.8955981
   },
   {
    "id": "ade-venue-2736880",
@@ -1608,8 +1608,8 @@
    "id": "ade-venue-2848325",
    "name": "STOPERA",
    "address": "Amstel 1, Amsterdam",
-   "lat": 52.3620433,
-   "lng": 4.9040451
+   "lat": 52.3676456,
+   "lng": 4.9001655
   },
   {
    "id": "ade-venue-2854075",
@@ -1734,8 +1734,8 @@
    "id": "ade-venue-2933268",
    "name": "Nationale Opera & Ballet",
    "address": "Amstel 3, Amsterdam",
-   "lat": 52.3632576,
-   "lng": 4.9034311
+   "lat": 52.3675581,
+   "lng": 4.9003851
   },
   {
    "id": "ade-venue-1622",
@@ -1804,8 +1804,8 @@
    "id": "ade-venue-2716146",
    "name": "Café Café Amsterdam",
    "address": "Amstel 1, Amsterdam",
-   "lat": 52.3620433,
-   "lng": 4.9040451
+   "lat": 52.3676456,
+   "lng": 4.9001655
   },
   {
    "id": "ade-venue-1507913",
@@ -2119,8 +2119,8 @@
    "id": "ade-venue-2683592",
    "name": "Wereldmuseum Amsterdam",
    "address": "2 Linnaeusstraat, Amsterdam",
-   "lat": 52.3603615,
-   "lng": 4.9254683
+   "lat": 52.3627683,
+   "lng": 4.922683
   },
   {
    "id": "ade-venue-2890211",
@@ -2294,8 +2294,8 @@
    "id": "ade-venue-2904178",
    "name": "Basic-Fit Stadhouderskade",
    "address": "Stadhouderskade 74-75, Amsterdam",
-   "lat": 52.3586207,
-   "lng": 4.9031158
+   "lat": 52.3580083,
+   "lng": 4.890335
   },
   {
    "id": "ade-venue-2861733",
@@ -2399,8 +2399,8 @@
    "id": "ade-venue-2921749",
    "name": "No Man's Art Gallery",
    "address": "Bos en Lommerweg 88-90, Amsterdam",
-   "lat": 52.3809007,
-   "lng": 4.8550408
+   "lat": 52.3823832,
+   "lng": 4.8552228
   },
   {
    "id": "ade-venue-2867239",
@@ -2434,8 +2434,8 @@
    "id": "ade-venue-2737427",
    "name": "Flagship Amsterdam",
    "address": "Prins Hendrikkade 33A, Amsterdam",
-   "lat": 52.3710892,
-   "lng": 4.9149731
+   "lat": 52.3776412,
+   "lng": 4.8971654
   },
   {
    "id": "ade-venue-1503145",

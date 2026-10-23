@@ -1,11 +1,12 @@
 // Finds coordinates for every venue that has events, once per venue.
-// Reads the address from the ADE venue page, then geocodes it with Nominatim.
+// Reads the address from the ADE venue page, then geocodes it with Nominatim, keeping only a
+// match on the listed street and house number (else the venue's name; else fix it by hand).
 // Results are cached in data/venue-locations.json; only new venues are looked up.
 // Usage: npm run data:venues [-- --retry]   (--retry looks up venues that failed before)
 import { isHiddenVenueName } from '../src/events/hidden.ts'
 import { type Coordinates, nominatimSearchUrl, parseNominatimResult } from '../src/map/geocode.ts'
 import { extractVenueAddress } from './lib/ade.ts'
-import { addressVariants } from './lib/geocode.ts'
+import { addressSearchUrl, addressVariants, parseListedMatch } from './lib/geocode.ts'
 import { isAllowedUrl } from './lib/hosts.ts'
 import { decodeEntities } from './lib/html.ts'
 import { politeGet, politeGetJson } from './lib/http.ts'
@@ -24,11 +25,12 @@ import {
 const venueName = (title: string): string => decodeEntities(title).trim()
 
 async function geocode(address: string, name: string): Promise<Coordinates | null> {
-  for (const query of [...addressVariants(address), `${name}, Amsterdam`]) {
-    const found = parseNominatimResult(await politeGetJson(nominatimSearchUrl(query)))
+  for (const query of addressVariants(address)) {
+    const found = parseListedMatch(await politeGetJson(addressSearchUrl(query)), address)
     if (found) return found
   }
-  return null
+  // OpenStreetMap doesn't know every house number, but often knows the venue by name.
+  return parseNominatimResult(await politeGetJson(nominatimSearchUrl(`${name}, Amsterdam`)))
 }
 
 async function locate(name: string, adeId: number, pageUrl: string): Promise<VenueLocationsFile[string]> {

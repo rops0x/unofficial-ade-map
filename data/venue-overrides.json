@@ -3,5 +3,90 @@
   "address": "Nieuwezijds Voorburgwal 169, 1012 RK Amsterdam",
   "lat": 52.3721038,
   "lng": 4.8909848
+ },
+ "The Workout Lab De Pijp": {
+  "address": "Albert Cuypstraat 116 A&B, Amsterdam",
+  "lat": 52.3552217,
+  "lng": 4.8923772
+ },
+ "Onder Hans": {
+  "address": "Kerkstraat 136-138, Amsterdam",
+  "lat": 52.363679,
+  "lng": 4.8880546
+ },
+ "Andaz Amsterdam": {
+  "address": "Keizersgracht 440, Amsterdam",
+  "lat": 52.3678521,
+  "lng": 4.8840177
+ },
+ "Ampēre & Salon D'Homme": {
+  "address": "De Clercqstraat 74 - 76, Amsterdam",
+  "lat": 52.3707781,
+  "lng": 4.8689592
+ },
+ "Café Wu": {
+  "address": "Dapperstraat 1, Amsterdam, Nederland",
+  "lat": 52.3653167,
+  "lng": 4.9262241
+ },
+ "The International": {
+  "address": "Oude Haagseweg 200, Badhoevedorp",
+  "lat": 52.3282392,
+  "lng": 4.8034342
+ },
+ "Het Sieraad": {
+  "address": "Postjesweg 1, Amsterdam",
+  "lat": 52.3645339,
+  "lng": 4.8592981
+ },
+ "Nxt Museum": {
+  "address": "Asterweg 22, Amsterdam",
+  "lat": 52.3911825,
+  "lng": 4.9041379
+ },
+ "STOPERA": {
+  "address": "Amstel 1, Amsterdam",
+  "lat": 52.3676456,
+  "lng": 4.9001655
+ },
+ "Café Café Amsterdam": {
+  "address": "Amstel 1, Amsterdam",
+  "lat": 52.3676456,
+  "lng": 4.9001655
+ },
+ "Nationale Opera & Ballet": {
+  "address": "Amstel 3, Amsterdam",
+  "lat": 52.3675581,
+  "lng": 4.9003851
+ },
+ "Wereldmuseum Amsterdam": {
+  "address": "2 Linnaeusstraat, Amsterdam",
+  "lat": 52.3627683,
+  "lng": 4.922683
+ },
+ "Basic-Fit Stadhouderskade": {
+  "address": "Stadhouderskade 74-75, Amsterdam",
+  "lat": 52.3580083,
+  "lng": 4.890335
+ },
+ "No Man's Art Gallery": {
+  "address": "Bos en Lommerweg 88-90, Amsterdam",
+  "lat": 52.3823832,
+  "lng": 4.8552228
+ },
+ "Flagship Amsterdam": {
+  "address": "Prins Hendrikkade 33A, Amsterdam",
+  "lat": 52.3776412,
+  "lng": 4.8971654
+ },
+ "Super Lyan Cocktailbar": {
+  "address": "Nieuwezijds Voorburgwal 3, Amsterdam",
+  "lat": 52.3772294,
+  "lng": 4.8955981
+ },
+ "RAWFACTORY": {
+  "address": "Joan Muyskenweg 39, Amsterdam",
+  "lat": 52.333474,
+  "lng": 4.9146492
  }
 }
