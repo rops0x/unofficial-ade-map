@@ -9,6 +9,10 @@ const START_ZOOM = 14
 const USER_ZOOM = 15
 const BASE_RADIUS = 6
 const RADIUS_PER_EVENT = 1.5
+// A picked venue gets a thick white ring and a little extra size, so it reads as "recommended" without a new colour.
+const PICK_EXTRA_RADIUS = 2
+const PICK_EDGE_WEIGHT = 3
+const EDGE_WEIGHT = 2
 const TILE_URL = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png'
 const ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 
@@ -31,6 +35,8 @@ function textElement(text: string): HTMLElement {
 
 const prefersReducedMotion =(): boolean => window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
+const isPicked = (group: VenueGroup): boolean => group.events.some((event) => event.pick !== undefined)
+
 export function createEventMap(element: HTMLElement): EventMap {
   // No fade: tiles appear at once, which is cheaper on a phone battery.
   const map = L.map(element, { zoomControl: false, fadeAnimation: false }).setView(AMSTERDAM_CENTER, START_ZOOM)
@@ -41,7 +47,7 @@ export function createEventMap(element: HTMLElement): EventMap {
   new ResizeObserver(() => map.invalidateSize({ debounceMoveend: true })).observe(element)
 
   const venueLayer = L.layerGroup().addTo(map)
-  const colors = { venue: token('--accent'), venueEdge: token('--black'), user: token('--you'), userEdge: token('--text') }
+  const colors = { venue: token('--accent'), venueEdge: token('--black'), pickEdge: token('--text'), user: token('--you'), userEdge: token('--text') }
   let userMarker: L.CircleMarker | null = null
   let accuracyCircle: L.Circle | null = null
   let lastSignature: string | null = null
@@ -54,17 +60,21 @@ export function createEventMap(element: HTMLElement): EventMap {
       if (signature === lastSignature) return
       lastSignature = signature
       venueLayer.clearLayers()
-      groups.forEach((group) => {
-        L.circleMarker([group.venue.lat, group.venue.lng], {
-          radius: BASE_RADIUS + Math.sqrt(group.events.length) * RADIUS_PER_EVENT,
-          color: colors.venueEdge,
-          weight: 2,
+      // Picked venues go last, so they are drawn on top of the venues around them.
+      const ordered = [...groups.filter((group) => !isPicked(group)), ...groups.filter(isPicked)]
+      ordered.forEach((group) => {
+        const picked = isPicked(group)
+        const marker = L.circleMarker([group.venue.lat, group.venue.lng], {
+          radius: BASE_RADIUS + Math.sqrt(group.events.length) * RADIUS_PER_EVENT + (picked ? PICK_EXTRA_RADIUS : 0),
+          color: picked ? colors.pickEdge : colors.venueEdge,
+          weight: picked ? PICK_EDGE_WEIGHT : EDGE_WEIGHT,
           fillColor: colors.venue,
           fillOpacity: 0.9,
         })
           .bindPopup(() => buildVenuePopup(group, document), { className: 'venue-popup', maxWidth: 300 })
-          .bindTooltip(textElement(group.venue.name), { direction: 'top', offset: [0, -8] })
+          .bindTooltip(textElement(picked ? `${group.venue.name} · pick` : group.venue.name), { direction: 'top', offset: [0, -8] })
           .addTo(venueLayer)
+        if (picked) marker.getElement()?.classList.add('pick-marker')
       })
     },
 

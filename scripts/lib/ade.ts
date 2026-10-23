@@ -20,7 +20,12 @@ export const AdeEventSchema = z.object({
   end_date_time: AdeDateSchema.nullable(),
   show_end_date_time: z.boolean(),
   url: z.string(),
-  venue: z.object({ title: z.string() }).nullable(),
+  // Either can be missing; normalizeAdeEvent skips such a listing as 'no-venue'.
+  venue: z.object({ title: z.string().nullable() }).nullable(),
+  // Only feed the filters: missing in data collected before them, and an unexpected value must never
+  // block the whole event crawl, so it reads as null instead.
+  categories: z.string().nullish().catch(null),
+  soldOut: z.boolean().nullish().catch(null),
 })
 
 export const AdeVenueSchema = z.object({

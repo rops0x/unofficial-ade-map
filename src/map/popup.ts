@@ -1,5 +1,5 @@
 import type { Venue } from '../events/schema.ts'
-import type { LoadedEvent, VenueGroup } from '../events/data.ts'
+import type { EventPick, LoadedEvent, VenueGroup } from '../events/data.ts'
 import { formatTime } from '../time/format.ts'
 
 // Event text comes from scraped websites: build DOM with textContent only, never innerHTML.
@@ -44,14 +44,22 @@ function describeWhen(event: LoadedEvent): string {
   return event.isDaily ? `${hours} daily` : hours
 }
 
+/** The pick's note and a credit linking to the post it came from. */
+function pickLines(doc: Document, pick: EventPick): HTMLElement[] {
+  const note = element(doc, 'span', 'popup__pick', pick.note === undefined ? 'Pick' : `Pick: ${pick.note}`)
+  const credit = `${pick.source.name} · ${pick.source.title}`
+  return [note, isWebLink(pick.source.url) ? newTabLink(doc, 'popup__source', credit, pick.source.url) : element(doc, 'span', 'popup__source', credit)]
+}
+
 function eventItem(doc: Document, event: LoadedEvent): HTMLLIElement {
-  const item = element(doc, 'li', 'popup__event')
+  const item = element(doc, 'li', event.pick ? 'popup__event popup__event--pick' : 'popup__event')
   if (isWebLink(event.sourceUrl)) {
     item.append(newTabLink(doc, 'popup__name', event.name, event.sourceUrl))
   } else {
     item.append(element(doc, 'span', 'popup__name', event.name))
   }
   item.append(element(doc, 'span', 'popup__when', describeWhen(event)))
+  if (event.pick) item.append(...pickLines(doc, event.pick))
   return item
 }
 

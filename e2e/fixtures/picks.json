@@ -1,0 +1,8 @@
+{
+ "sources": [
+  { "id": "fri", "name": "r/amsterdam_rave", "title": "Friday preview", "url": "https://example.org/reddit/friday-preview" }
+ ],
+ "picks": [
+  { "eventId": "e-friday", "sourceId": "fri", "note": "Live set worth staying up for." }
+ ]
+}

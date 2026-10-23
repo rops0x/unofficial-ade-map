@@ -53,6 +53,59 @@ describe('describeStatus', () => {
     expect(status).toEqual({ text: 'Nothing on at 04:59, and nothing later.', action: null })
   })
 
+  test('when showing only picks, counts picks', () => {
+    const status = describeStatus({ moment: at('2026-10-23T21:00:00Z'), now: at('2026-10-23T21:00:00Z'), range, onCount: 3, nextStart: null, noun: 'pick' })
+
+    expect(status.text).toBe('3 picks on')
+  })
+
+  test('when no pick is on, says so and offers the next pick', () => {
+    const status = describeStatus({
+      moment: at('2026-10-22T05:30:00Z'),
+      now: at('2026-10-22T05:30:00Z'),
+      range,
+      onCount: 0,
+      nextStart: at('2026-10-22T06:00:00Z'),
+      noun: 'pick',
+    })
+
+    expect(status).toEqual({ text: 'No picks on at 07:30.', action: { label: 'Jump to 08:00', moment: at('2026-10-22T06:00:00Z') } })
+  })
+
+  test('with filters on, counts matching events', () => {
+    const status = describeStatus({ moment: at('2026-10-23T21:00:00Z'), now: at('2026-10-23T21:00:00Z'), range, onCount: 2, nextStart: null, noun: 'matching event' })
+
+    expect(status.text).toBe('2 matching events on')
+  })
+
+  test('when no matching event is on, says so and offers the next one', () => {
+    const status = describeStatus({
+      moment: at('2026-10-22T05:30:00Z'),
+      now: at('2026-10-22T05:30:00Z'),
+      range,
+      onCount: 0,
+      nextStart: at('2026-10-22T06:00:00Z'),
+      noun: 'matching event',
+    })
+
+    expect(status).toEqual({ text: 'No matching events on at 07:30.', action: { label: 'Jump to 08:00', moment: at('2026-10-22T06:00:00Z') } })
+  })
+
+  test('with picks only and filters on, counts the picks that match', () => {
+    const now = at('2026-10-23T21:00:00Z')
+
+    expect(describeStatus({ moment: now, now, range, onCount: 1, nextStart: null, noun: 'matching pick' }).text).toBe('1 matching pick on')
+    expect(describeStatus({ moment: now, now, range, onCount: 0, nextStart: null, noun: 'matching pick' }).text).toBe(
+      'No matching picks on at 23:00, and none later.',
+    )
+  })
+
+  test('when no pick is on and none follows, says so', () => {
+    const status = describeStatus({ moment: at('2026-10-26T03:59:00Z'), now: at('2026-10-23T10:00:00Z'), range, onCount: 0, nextStart: null, noun: 'pick' })
+
+    expect(status.text).toBe('No picks on at 04:59, and none later.')
+  })
+
   test('after ADE, says goodbye', () => {
     const status = describeStatus({ moment: range.end, now: at('2026-10-27T10:00:00Z'), range, onCount: 0, nextStart: null })
 

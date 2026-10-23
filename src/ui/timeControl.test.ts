@@ -194,6 +194,50 @@ describe('createTimeControl', () => {
     expect(document.activeElement).toBe(button(root, 'Enter an address'))
   })
 
+  test('offers no picks filter when there are no picks', () => {
+    const { root } = setup()
+
+    expect(button(root, 'Picks only')).toBeUndefined()
+  })
+
+  test('the picks filter shows whether it is on and asks to switch', () => {
+    const root = document.createElement('section')
+    const onPicksToggle = vi.fn()
+    const control = createTimeControl(root, { days, onMomentChange: vi.fn(), onNow: vi.fn(), onLocate: vi.fn(), onAddressToggle: vi.fn(), onAddress: vi.fn(), onPicksToggle })
+    control.update(view())
+    const filter = required(button(root, 'Picks only') ?? null, 'picks filter')
+    expect(filter.getAttribute('aria-pressed')).toBe('false')
+
+    filter.click()
+    control.update(view({ isPicksOnly: true }))
+
+    expect(onPicksToggle).toHaveBeenCalled()
+    expect(filter.getAttribute('aria-pressed')).toBe('true')
+  })
+
+  test('offers no filters button when the data has no filters', () => {
+    const { root } = setup()
+
+    expect(root.querySelector('[data-role="filters"]')).toBeNull()
+  })
+
+  test('the filters button opens the filters and shows how many are on', () => {
+    const root = document.createElement('section')
+    const onFiltersOpen = vi.fn()
+    const control = createTimeControl(root, { days, onMomentChange: vi.fn(), onNow: vi.fn(), onLocate: vi.fn(), onAddressToggle: vi.fn(), onAddress: vi.fn(), onFiltersOpen })
+    control.update(view())
+    const filters = required(root.querySelector<HTMLButtonElement>('[data-role="filters"]'), 'filters button')
+    expect(filters.textContent).toBe('Filters')
+    expect(filters.getAttribute('aria-haspopup')).toBe('dialog')
+
+    filters.click()
+    control.update(view({ activeFilterCount: 2 }))
+
+    expect(onFiltersOpen).toHaveBeenCalled()
+    expect(filters.textContent).toBe('Filters · 2')
+    expect(filters.dataset.active).toBe('true')
+  })
+
   test('the address form folds away with the rest of the controls', () => {
     const { root } = setup()
     const body = collapsible(root, collapseToggle(root))

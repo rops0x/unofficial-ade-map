@@ -7,10 +7,14 @@ const AFTER_ADE = new Date('2026-10-27T10:00:00Z')
 const DAM_SQUARE = { latitude: 52.373, longitude: 4.8925 }
 
 const venueMarkers = (page: Page) => page.locator('.leaflet-overlay-pane path.leaflet-interactive:not(.user-marker)')
+const pickMarkers = (page: Page) => page.locator('.leaflet-overlay-pane path.pick-marker')
 const time = (page: Page) => page.locator('[data-role="time"]')
 const status = (page: Page) => page.getByRole('status')
 const userMarker = (page: Page) => page.locator('path.user-marker')
 const addressField = (page: Page) => page.getByRole('textbox', { name: 'Your address' })
+// By role, not name: "Filters · 1" and the dialog's "Close filters" would both match the name "Filters".
+const filtersButton = (page: Page) => page.locator('[data-role="filters"]')
+const filterDialog = (page: Page) => page.getByRole('dialog', { name: 'Filter events' })
 
 /** Answers address lookups like Nominatim would, without calling it. Returns the queries it saw. */
 async function fakeNominatim(page: Page, results: readonly object[]): Promise<string[]> {
@@ -90,6 +94,31 @@ test('a venue popup links to the venue in Google Maps', async ({ page }) => {
   await expect(link).toHaveAttribute('target', '_blank')
 })
 
+test('picked venues stand out, and "Picks only" hides the rest', async ({ page }) => {
+  await openAt(page, SATURDAY_0030)
+  await expect(venueMarkers(page)).toHaveCount(2)
+  await expect(pickMarkers(page)).toHaveCount(1)
+
+  await page.getByRole('button', { name: 'Picks only' }).click()
+
+  await expect(page.getByRole('button', { name: 'Picks only' })).toHaveAttribute('aria-pressed', 'true')
+  await expect(status(page)).toContainText('1 pick on')
+  await expect(venueMarkers(page)).toHaveCount(1)
+  await page.getByRole('button', { name: 'Picks only' }).click()
+  await expect(venueMarkers(page)).toHaveCount(2)
+})
+
+test('a picked event says why and links to the post it came from', async ({ page }) => {
+  await openAt(page, SATURDAY_0030)
+
+  await pickMarkers(page).click()
+
+  await expect(page.locator('.leaflet-popup')).toContainText('Pick: Live set worth staying up for.')
+  const credit = page.getByRole('link', { name: 'r/amsterdam_rave · Friday preview' })
+  await expect(credit).toHaveAttribute('href', 'https://example.org/reddit/friday-preview')
+  await expect(credit).toHaveAttribute('target', '_blank')
+})
+
 test('an event without a listed end time says so', async ({ page }) => {
   await openAt(page, SATURDAY_0030)
 
@@ -98,6 +127,79 @@ test('an event without a listed end time says so', async ({ page }) => {
   await venueMarkers(page).click()
 
   await expect(page.locator('.leaflet-popup')).toContainText('From 00:00, end time not listed')
+})
+
+// Fixture filters: Friday Night is Techno, Late Friday is Deep House (so House too) and sold out.
+test('Filters narrow the map to the events that match and say how many', async ({ page }) => {
+  await openAt(page, SATURDAY_0030)
+  await filtersButton(page).click()
+  const dialog = filterDialog(page)
+  await expect(dialog).toBeVisible()
+
+  await dialog.getByRole('group', { name: 'Genre' }).getByRole('button', { name: 'Techno' }).click()
+
+  await expect(dialog.getByRole('button', { name: 'Techno' })).toHaveAttribute('aria-pressed', 'true')
+  await dialog.getByRole('button', { name: 'Show 1 event' }).click()
+  await expect(dialog).toBeHidden()
+  await expect(venueMarkers(page)).toHaveCount(1)
+  await expect(status(page)).toContainText('1 matching event on')
+  await expect(filtersButton(page)).toHaveText('Filters · 1')
+  await expect(filtersButton(page)).toHaveCSS('background-color', 'rgb(255, 255, 7)')
+  await expect(filtersButton(page)).toBeFocused()
+})
+
+test('a genre family finds its styles, sold-out events can be hidden, and Esc or the backdrop closes the filters', async ({ page }) => {
+  await openAt(page, SATURDAY_0030)
+  await filtersButton(page).click()
+  const dialog = filterDialog(page)
+
+  await dialog.getByRole('group', { name: 'Genre' }).getByRole('button', { name: 'House', exact: true }).click()
+  await expect(dialog.getByRole('button', { name: 'Show 1 event' })).toBeVisible()
+  await dialog.getByRole('switch', { name: 'Hide sold-out events' }).check()
+  await expect(dialog.getByRole('button', { name: 'Show 0 events' })).toBeVisible()
+  await page.keyboard.press('Escape')
+
+  await expect(dialog).toBeHidden()
+  await expect(filtersButton(page)).toBeFocused()
+  await expect(status(page)).toContainText('No matching events on at 00:30')
+  await expect(venueMarkers(page)).toHaveCount(0)
+
+  await filtersButton(page).click()
+  await dialog.getByRole('button', { name: 'Clear all' }).click()
+  await expect(dialog.getByRole('button', { name: 'Show 2 events' })).toBeVisible()
+  await page.mouse.click(5, 5)
+
+  await expect(dialog).toBeHidden()
+  await expect(filtersButton(page)).toHaveText('Filters')
+  await expect(venueMarkers(page)).toHaveCount(2)
+})
+
+test('"Picks only" and the filters apply together', async ({ page }) => {
+  await openAt(page, SATURDAY_0030)
+  await page.getByRole('button', { name: 'Picks only' }).click()
+  await filtersButton(page).click()
+
+  await filterDialog(page).getByRole('button', { name: 'House', exact: true }).click()
+  await filterDialog(page).getByRole('button', { name: 'Show 0 events' }).click()
+
+  await expect(status(page)).toContainText('No matching picks on at 00:30')
+  await expect(venueMarkers(page)).toHaveCount(0)
+})
+
+test('the filters fit a phone screen in ADE’s style', async ({ page }) => {
+  await openAt(page, SATURDAY_0030)
+  await filtersButton(page).click()
+  const dialog = filterDialog(page)
+
+  await dialog.getByText('Specific styles').click()
+  await dialog.getByRole('button', { name: 'Techno' }).click()
+
+  const box = await dialog.boundingBox()
+  const viewport = page.viewportSize()
+  expect(box && viewport && box.x >= 0 && box.y >= 0 && box.x + box.width <= viewport.width && box.y + box.height <= viewport.height).toBe(true)
+  await expect(dialog).toHaveCSS('border-radius', '15px')
+  await expect(dialog.getByRole('button', { name: 'Techno' })).toHaveCSS('background-color', 'rgb(255, 255, 7)')
+  await expect(dialog.getByRole('button', { name: 'Show 1 event' })).toBeInViewport()
 })
 
 test.describe('with location allowed', () => {

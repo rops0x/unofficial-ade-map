@@ -1,5 +1,6 @@
 import { describe, expect, test } from 'vitest'
 import bundled from '../data/events.json'
+import { EMPTY_SELECTION, matchesFilters, toggleOption } from '../filters/filters.ts'
 import { groupByVenue, loadEventData } from './data.ts'
 import { EventDataSchema, type EventData } from './schema.ts'
 
@@ -23,6 +24,22 @@ describe('loadEventData', () => {
     expect(loaded.events[0]).toMatchObject({ id: 'b', venue: { name: 'Paradiso' }, startMs: Date.parse('2026-10-23T23:00:00Z') })
     expect(loaded.collectedAt).toBe(Date.parse('2026-10-20T10:00:00.000Z'))
   })
+
+  test('keeps the filters and each event’s tags and sold-out flag, ready for the filter checks', () => {
+    const filters = [{ id: 'type', label: 'Type', options: [{ id: '2592403', label: 'Warehouses' }] }]
+    const tagged = { ...data, filters, events: [{ ...data.events[0]!, tags: ['2592403'], isSoldOut: true }] }
+
+    const loaded = loadEventData(tagged)
+    const [event] = loaded.events
+
+    expect(loaded.filters).toEqual(filters)
+    expect(event).toMatchObject({ tags: ['2592403'], isSoldOut: true })
+    expect(event && matchesFilters(event, toggleOption(EMPTY_SELECTION, 'type', '2592403'))).toBe(true)
+  })
+
+  test('data collected without filters loads with none', () => {
+    expect(loadEventData(data).filters).toEqual([])
+  })
 })
 
 describe('groupByVenue', () => {
@@ -39,5 +56,13 @@ describe('groupByVenue', () => {
 describe('bundled events.json', () => {
   test('passes the schema, so the site never ships broken data', () => {
     expect(EventDataSchema.safeParse(bundled).success).toBe(true)
+  })
+
+  test('carries ADE’s Program, Genre and Type filters, with events tagged and marked sold out or not', () => {
+    const shipped = EventDataSchema.parse(bundled)
+
+    expect((shipped.filters ?? []).map((group) => group.label)).toEqual(['Program', 'Genre', 'Type'])
+    expect(shipped.events.some((event) => (event.tags ?? []).length > 0)).toBe(true)
+    expect(shipped.events.every((event) => typeof event.isSoldOut === 'boolean')).toBe(true)
   })
 })

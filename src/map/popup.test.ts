@@ -64,6 +64,32 @@ describe('buildVenuePopup', () => {
     expect(popup.querySelector('.popup__events a')).toBeNull()
   })
 
+  test('marks a picked event with its note and credits the post it came from', () => {
+    const source = { id: 'fri', name: 'r/amsterdam_rave', title: 'Friday preview', url: 'https://www.reddit.com/r/amsterdam_rave/comments/1/' }
+    const popup = buildVenuePopup({ venue, events: [event({ pick: { note: 'Live set.', source } })] }, document)
+
+    const credit = popup.querySelector<HTMLAnchorElement>('a.popup__source')
+
+    expect(popup.querySelector('.popup__pick')?.textContent).toBe('Pick: Live set.')
+    expect(credit?.textContent).toBe('r/amsterdam_rave · Friday preview')
+    expect(credit?.getAttribute('href')).toBe('https://www.reddit.com/r/amsterdam_rave/comments/1/')
+    expect(credit?.getAttribute('target')).toBe('_blank')
+  })
+
+  test('a pick without a note still says it is a pick', () => {
+    const source = { id: 'fri', name: 'r/amsterdam_rave', title: 'Friday preview', url: 'https://www.reddit.com/r/amsterdam_rave/' }
+    const popup = buildVenuePopup({ venue, events: [event({ pick: { source } })] }, document)
+
+    expect(popup.querySelector('.popup__pick')?.textContent).toBe('Pick')
+  })
+
+  test('says nothing about picks for an event nobody picked', () => {
+    const popup = buildVenuePopup({ venue, events: [event()] }, document)
+
+    expect(popup.querySelector('.popup__pick')).toBeNull()
+    expect(popup.querySelector('.popup__source')).toBeNull()
+  })
+
   test('links the venue to Google Maps at its map position in a new tab', () => {
     const popup = buildVenuePopup({ venue, events: [event()] }, document)
 

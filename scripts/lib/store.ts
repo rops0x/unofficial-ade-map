@@ -1,6 +1,7 @@
 import { mkdir, readFile, rename, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { z } from 'zod'
+import { FilterGroupsSchema } from '../../src/filters/schema.ts'
 import { AdeEventSchema, AdeVenueSchema } from './ade.ts'
 
 const ROOT = resolve(import.meta.dirname, '../..')
@@ -8,13 +9,20 @@ const ROOT = resolve(import.meta.dirname, '../..')
 export const PATHS = {
   rawEvents: resolve(ROOT, 'data/raw/ade-events.json'),
   rawVenues: resolve(ROOT, 'data/raw/ade-venues.json'),
+  rawFilters: resolve(ROOT, 'data/raw/ade-filters.json'),
   venueLocations: resolve(ROOT, 'data/venue-locations.json'),
   venueOverrides: resolve(ROOT, 'data/venue-overrides.json'),
   eventData: resolve(ROOT, 'src/data/events.json'),
+  picks: resolve(ROOT, 'src/data/picks.json'),
 } as const
 
 export const RawEventsFileSchema = z.object({ collectedAt: z.iso.datetime(), events: z.array(AdeEventSchema) })
 export const RawVenuesFileSchema = z.object({ collectedAt: z.iso.datetime(), venues: z.array(AdeVenueSchema) })
+export const RawFiltersFileSchema = z.object({
+  collectedAt: z.iso.datetime(),
+  groups: FilterGroupsSchema,
+  members: z.record(z.string(), z.array(z.number().int())),
+})
 
 export const VenueLocationsFileSchema = z.record(
   z.string(),

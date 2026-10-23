@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { type AdeEvent, extractVenueAddress, normalizeAdeEvent } from './ade.ts'
+import { type AdeEvent, AdeEventSchema, extractVenueAddress, normalizeAdeEvent } from './ade.ts'
 
 const iso = (ms: number): string => new Date(ms).toISOString()
 
@@ -146,6 +146,8 @@ describe('normalizeAdeEvent', () => {
 
   test('skips an event without a venue', () => {
     expect(normalizeAdeEvent(adeEvent({ venue: null }))).toEqual({ ok: false, reason: 'no-venue' })
+    // Seen on 2026-10-23: a listing with a venue but no venue name. Skip it, don't fail the whole crawl.
+    expect(normalizeAdeEvent(AdeEventSchema.parse({ ...adeEvent(), venue: { title: null } }))).toEqual({ ok: false, reason: 'no-venue' })
   })
 
   test('skips an event without a link to its event page', () => {
@@ -156,6 +158,20 @@ describe('normalizeAdeEvent', () => {
     const result = normalizeAdeEvent(adeEvent({ start_date_time: { date: 'soon', timezone: 'Europe/Amsterdam' } }))
 
     expect(result).toEqual({ ok: false, reason: 'invalid-time' })
+  })
+})
+
+describe('AdeEventSchema', () => {
+  test('reads an event’s categories and sold-out flag', () => {
+    const parsed = AdeEventSchema.parse({ ...adeEvent(), categories: 'Nighttime events / Techno', soldOut: true })
+
+    expect(parsed).toMatchObject({ categories: 'Nighttime events / Techno', soldOut: true })
+  })
+
+  test('categories or a sold-out flag of an unexpected kind never block the event, which matters more than its filters', () => {
+    const parsed = AdeEventSchema.parse({ ...adeEvent(), categories: ['Techno'], soldOut: 'no' })
+
+    expect(parsed).toMatchObject({ id: 101, categories: null, soldOut: null })
   })
 })
 

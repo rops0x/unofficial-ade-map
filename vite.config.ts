@@ -2,8 +2,9 @@ import { fileURLToPath } from 'node:url'
 import type { Plugin } from 'vite'
 import { defineConfig } from 'vitest/config'
 
-// In e2e mode the map loads fixed fixture data instead of the collected ADE data.
+// In e2e mode the map loads fixed fixture data instead of the collected ADE data and picks.
 const E2E_FIXTURE = fileURLToPath(new URL('./e2e/fixtures/events.json', import.meta.url))
+const E2E_PICKS_FIXTURE = fileURLToPath(new URL('./e2e/fixtures/picks.json', import.meta.url))
 
 // Built pages may only load their own files plus OpenStreetMap tiles, and only talk to
 // OpenStreetMap's Nominatim to look up a typed address. Added at build time only, so the
@@ -36,7 +37,13 @@ export default defineConfig(({ mode }) => ({
   base: mode === 'e2e' ? '/' : PAGES_BASE,
   plugins: [contentSecurityPolicy],
   resolve: {
-    alias: mode === 'e2e' ? [{ find: /^\.\/data\/events\.json$/, replacement: E2E_FIXTURE }] : [],
+    alias:
+      mode === 'e2e'
+        ? [
+            { find: /^\.\/data\/events\.json$/, replacement: E2E_FIXTURE },
+            { find: /^\.\/data\/picks\.json$/, replacement: E2E_PICKS_FIXTURE },
+          ]
+        : [],
   },
   test: {
     include: ['src/**/*.test.ts', 'scripts/**/*.test.ts'],

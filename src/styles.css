@@ -242,7 +242,9 @@ button[hidden] {
   transform: scale(0.97);
 }
 
+/* data-active: the Filters button opens a dialog rather than toggling, but turns yellow while filters are on. */
 .day[aria-pressed='true'],
+.day[data-active='true'],
 .action--now,
 .status__action {
   border-color: var(--accent);
@@ -464,6 +466,242 @@ a.popup__name {
   color: var(--text-muted);
   font-size: 0.85rem;
   font-variant-numeric: tabular-nums;
+}
+
+/* A pick: a white rule down the side, matching the white ring on its map marker. */
+.popup__event--pick {
+  padding-left: 10px;
+  border-left: 3px solid var(--text);
+}
+
+.popup__pick {
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.popup__source {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+/* Same specificity as Leaflet's own link colour, so it has to be set on the link itself. */
+a.popup__source {
+  color: var(--text-muted);
+  text-underline-offset: 3px;
+}
+
+/* "Picks only" and "Filters" sit under the day buttons and look like them: pills that fill yellow when on. */
+.toggles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* Filters: ADE's program filters in a dark card over the dimmed map. */
+.filters {
+  width: min(560px, calc(100% - 2 * var(--gutter)));
+  max-width: none;
+  max-height: calc(100dvh - 2 * var(--gutter));
+  /* No padding: then a tap that lands on the dialog itself can only be on the backdrop. */
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  background: var(--surface);
+  color: var(--text);
+}
+
+/* Only while open: a closed <dialog> has to keep the browser's display: none. */
+.filters[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.filters::backdrop {
+  background: rgb(0 0 0 / 70%);
+}
+
+.filters__header,
+.filters__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px var(--gutter);
+}
+
+.filters__header {
+  border-bottom: 1px solid var(--line);
+}
+
+.filters__footer {
+  padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line);
+}
+
+.filters__footer .action--now {
+  flex: 1;
+}
+
+.action:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.action:disabled:hover {
+  border-color: var(--line);
+}
+
+.filters__title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+}
+
+/* A round button with an × drawn from two bars, so it needs no icon font. */
+.filters__close {
+  position: relative;
+  flex: none;
+  width: var(--tap);
+  height: var(--tap);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.filters__close:hover {
+  border-color: var(--text);
+}
+
+.filters__close::before,
+.filters__close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 2px;
+  background: var(--text);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.filters__close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.filters__body {
+  display: grid;
+  gap: 20px;
+  min-height: 0;
+  padding: var(--gutter);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.filters__group {
+  display: grid;
+  gap: 10px;
+}
+
+.filters__heading,
+.filters__family {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+}
+
+.filters__family {
+  margin: 12px 0 8px;
+  font-weight: 500;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Smaller than the day buttons, since Type alone has 29 options; still well above the 24px tap minimum. */
+.chip {
+  min-height: 36px;
+  padding: 0 14px;
+  font-size: 0.9rem;
+}
+
+.filters__summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--tap);
+  font-weight: 500;
+  list-style: none;
+  cursor: pointer;
+}
+
+.filters__summary::-webkit-details-marker {
+  display: none;
+}
+
+.filters__summary::after {
+  content: '+';
+  color: var(--text-muted);
+}
+
+.filters__styles[open] > .filters__summary::after {
+  content: '−';
+}
+
+/* "Hide sold-out events": a pill switch that fills yellow when on, like the chosen chips. */
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: var(--tap);
+}
+
+.switch__input {
+  position: relative;
+  flex: none;
+  width: 48px;
+  height: 28px;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-control);
+  background: transparent;
+  appearance: none;
+  cursor: pointer;
+  transition: background-color 0.4s var(--ease-out);
+}
+
+.switch__input::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--text);
+  transition: transform 0.4s var(--ease-out);
+}
+
+.switch__input:checked {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.switch__input:checked::before {
+  background: var(--on-accent);
+  transform: translateX(20px);
+}
+
+.switch__label {
+  font-weight: 500;
+  cursor: pointer;
 }
 
 /* Wider screens: panel becomes a side column next to the map. */

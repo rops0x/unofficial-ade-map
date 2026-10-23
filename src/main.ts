@@ -2,14 +2,20 @@ import '@fontsource-variable/inter/wght.css'
 import 'leaflet/dist/leaflet.css'
 import './styles.css'
 import rawData from './data/events.json'
+import rawPicks from './data/picks.json'
 import { groupByVenue, type LoadedData, loadEventData } from './events/data.ts'
 import type { EventData } from './events/schema.ts'
+import { activeFilterCount, EMPTY_SELECTION, type FilterSelection, toggleOption } from './filters/filters.ts'
+import { shownEvents, shownNoun } from './filters/shown.ts'
+import { attachPicks } from './picks/picks.ts'
+import type { PicksData } from './picks/schema.ts'
 import { type Coordinates, findAddress } from './map/geocode.ts'
 import { watchLocation } from './map/location.ts'
 import { createEventMap } from './map/map.ts'
 import { festivalDays } from './time/days.ts'
 import { formatMoment } from './time/format.ts'
 import { eventsAt, type FestivalRange, festivalRange, initialView, nextStartAfter } from './time/moments.ts'
+import { createFilterPanel } from './ui/filterPanel.ts'
 import { describeStatus } from './ui/status.ts'
 import { createTimeControl } from './ui/timeControl.ts'
 
@@ -25,6 +31,8 @@ interface AppState {
   readonly isLocating: boolean
   readonly isAddressOpen: boolean
   readonly isFindingAddress: boolean
+  readonly isPicksOnly: boolean
+  readonly filters: FilterSelection
   readonly notice: string | null
 }
 
@@ -43,12 +51,15 @@ function showFatal(panel: HTMLElement, message: string): void {
 
 function run(data: LoadedData, range: FestivalRange, mapElement: HTMLElement, panel: HTMLElement): void {
   const map = createEventMap(mapElement)
+  const picked = data.events.filter((event) => event.pick !== undefined)
   let state: AppState = {
     moment: initialView(Date.now(), range).moment,
     isFollowingNow: true,
     isLocating: false,
     isAddressOpen: false,
     isFindingAddress: false,
+    isPicksOnly: false,
+    filters: EMPTY_SELECTION,
     notice: null,
   }
   let stopLocating: (() => void) | null = null
@@ -85,6 +96,19 @@ function run(data: LoadedData, range: FestivalRange, mapElement: HTMLElement, pa
     setState({ isFindingAddress: false, isLocating: false, isAddressOpen: false })
   }
 
+  // ADE's own program filters (Program, Genre, Type), when the data was collected with them.
+  const filterPanel =
+    data.filters.length > 0
+      ? createFilterPanel({
+          groups: data.filters,
+          onToggle: (groupId, optionId) => setState({ filters: toggleOption(state.filters, groupId, optionId) }),
+          onSoldOutToggle: () => setState({ filters: { ...state.filters, isHidingSoldOut: !state.filters.isHidingSoldOut } }),
+          onClear: () => setState({ filters: EMPTY_SELECTION }),
+        })
+      : null
+  // A modal dialog must be in the document before it can open.
+  if (filterPanel) document.body.append(filterPanel.element)
+
   const control = createTimeControl(panel, {
     days: festivalDays(range),
     onMomentChange: (moment) => setState({ moment, isFollowingNow: false }),
@@ -119,28 +143,49 @@ function run(data: LoadedData, range: FestivalRange, mapElement: HTMLElement, pa
     // Closing the form also clears its messages, so none is left pointing at a hidden field.
     onAddressToggle: () => setState(state.isAddressOpen ? { isAddressOpen: false, notice: null } : { isAddressOpen: true }),
     onAddress: (address) => void showAddress(address),
+    ...(picked.length > 0 ? { onPicksToggle: () => setState({ isPicksOnly: !state.isPicksOnly }) } : {}),
+    ...(filterPanel ? { onFiltersOpen: () => filterPanel.open() } : {}),
   })
 
   const credit = document.createElement('p')
   credit.className = 'credit'
   credit.textContent = `Events from amsterdam-dance-event.nl, updated ${formatMoment(data.collectedAt)}. Times can change, so check the event page.`
   panel.append(credit)
+  if (picked.length > 0) {
+    const pickCredit = document.createElement('p')
+    pickCredit.className = 'credit'
+    const curators = [...new Set(picked.flatMap((event) => (event.pick ? [event.pick.source.name] : [])))].join(', ')
+    pickCredit.textContent = `Picks (white ring) from ${curators}’s daily previews.`
+    panel.append(pickCredit)
+  }
 
   function render(): void {
     const now = Date.now()
     const view = initialView(now, range)
-    const onNow = eventsAt(state.moment, data.events)
+    const shownView = { isPicksOnly: state.isPicksOnly, selection: state.filters }
+    const shown = shownEvents(data.events, shownView)
+    const onNow = eventsAt(state.moment, shown)
     map.showVenues(view.kind === 'ended' ? [] : groupByVenue(onNow))
     control.update({
       moment: state.moment,
       canGoToNow: view.kind === 'live' && !state.isFollowingNow,
       isEnded: view.kind === 'ended',
-      status: describeStatus({ moment: state.moment, now, range, onCount: onNow.length, nextStart: nextStartAfter(state.moment, data.events) }),
+      status: describeStatus({
+        moment: state.moment,
+        now,
+        range,
+        onCount: onNow.length,
+        nextStart: nextStartAfter(state.moment, shown),
+        noun: shownNoun(shownView),
+      }),
       locateLabel: state.isLocating ? 'Centre on me' : 'Show my location',
       isAddressOpen: state.isAddressOpen,
       isFindingAddress: state.isFindingAddress,
+      isPicksOnly: state.isPicksOnly,
+      activeFilterCount: activeFilterCount(state.filters),
       ...(state.notice ? { notice: state.notice } : {}),
     })
+    filterPanel?.update({ selection: state.filters, matchCount: onNow.length })
   }
 
   // While following now, keep the map current if the page stays open.
@@ -153,7 +198,8 @@ function run(data: LoadedData, range: FestivalRange, mapElement: HTMLElement, pa
 
 function main(): void {
   const panel = requireElement('panel')
-  const data = loadEventData(rawData as EventData)
+  const loaded = loadEventData(rawData as EventData)
+  const data = { ...loaded, events: attachPicks(loaded.events, rawPicks as PicksData) }
   const range = festivalRange(data.events)
   if (!range) {
     showFatal(panel, 'No events are loaded yet. Check back soon.')

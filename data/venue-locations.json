@@ -3283,5 +3283,59 @@
   "lng": 4.8873904,
   "status": "located",
   "checkedAt": "2026-10-17T11:32:08.934Z"
+ },
+ "Canal Tours Amsterdam": {
+  "adeId": 2761790,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/canal-tours-amsterdam/2761790/",
+  "address": "Damrak 13, Amsterdam",
+  "lat": 52.3764458,
+  "lng": 4.8981055,
+  "status": "located",
+  "checkedAt": "2026-10-23T14:49:52.493Z"
+ },
+ "Ask for More KI/KI": {
+  "adeId": 2954318,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/unknown-location/2954318/",
+  "address": "Amsterdam, Amsterdam",
+  "lat": 52.3730796,
+  "lng": 4.8924534,
+  "status": "located",
+  "checkedAt": "2026-10-23T14:49:52.841Z"
+ },
+ "Loods 12": {
+  "adeId": 2959957,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/loods-12/2959957/",
+  "address": "Gedempt Hamerkanaal 98, Amsterdam",
+  "lat": 52.3841244,
+  "lng": 4.9207408,
+  "status": "located",
+  "checkedAt": "2026-10-23T14:49:54.235Z"
+ },
+ "RAWFACTORY": {
+  "adeId": 1494555,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/raw-factory/1494555/",
+  "address": "Joan Muyskenweg 39, Amsterdam",
+  "lat": null,
+  "lng": null,
+  "status": "not-found",
+  "checkedAt": "2026-10-23T14:49:55.040Z"
+ },
+ "De Willem": {
+  "adeId": 2733415,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/de-willem/2733415/",
+  "address": "Haarlemmerweg 66, Amsterdam",
+  "lat": 52.3849197,
+  "lng": 4.8829274,
+  "status": "located",
+  "checkedAt": "2026-10-23T14:49:57.088Z"
+ },
+ "B/A/M/": {
+  "adeId": 2958326,
+  "pageUrl": "https://www.amsterdam-dance-event.nl/en/venues/b-a-m/2958326/",
+  "address": "Bijlmerplein 876, Amsterdam",
+  "lat": 52.3138822,
+  "lng": 4.9529934,
+  "status": "located",
+  "checkedAt": "2026-10-23T14:49:59.472Z"
  }
 }

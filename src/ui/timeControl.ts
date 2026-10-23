@@ -12,6 +12,10 @@ export interface TimeControlOptions {
   readonly onLocate: () => void
   readonly onAddressToggle: () => void
   readonly onAddress: (address: string) => void
+  /** Only given when there are picks to filter to; without it there is no "Picks only" button. */
+  readonly onPicksToggle?: () => void
+  /** Only given when the data has ADE filters; without it there is no "Filters" button. */
+  readonly onFiltersOpen?: () => void
 }
 
 export interface TimeControlView {
@@ -23,6 +27,8 @@ export interface TimeControlView {
   readonly notice?: string
   readonly isAddressOpen?: boolean
   readonly isFindingAddress?: boolean
+  readonly isPicksOnly?: boolean
+  readonly activeFilterCount?: number
 }
 
 export interface TimeControl {
@@ -101,6 +107,19 @@ export function createTimeControl(root: HTMLElement, options: TimeControlOptions
 
   const controls = make('div', 'controls', 'controls')
   controls.append(slider, dayRow)
+  // Filters, not actions, so they sit with the time controls and hide with them after ADE.
+  const picksButton = options.onPicksToggle ? button('day', 'Picks only', options.onPicksToggle) : null
+  const filtersButton = options.onFiltersOpen ? button('day', 'Filters', options.onFiltersOpen) : null
+  if (filtersButton) {
+    filtersButton.dataset.role = 'filters'
+    filtersButton.setAttribute('aria-haspopup', 'dialog')
+  }
+  const toggles = [picksButton, filtersButton].filter((toggle): toggle is HTMLButtonElement => toggle !== null)
+  if (toggles.length > 0) {
+    const toggleRow = make('div', 'toggles')
+    toggleRow.append(...toggles)
+    controls.append(toggleRow)
+  }
 
   const nowButton = button('action action--now', 'Back to now', options.onNow)
   const locateButton = button('action', 'Show my location', options.onLocate)
@@ -140,6 +159,12 @@ export function createTimeControl(root: HTMLElement, options: TimeControlOptions
       slider.value = String(stepAt(day, moment))
       slider.setAttribute('aria-valuetext', formatMoment(moment))
       dayButtons.forEach((dayButton, index) => dayButton.setAttribute('aria-pressed', String(days[index]?.key === day.key)))
+      picksButton?.setAttribute('aria-pressed', String(view.isPicksOnly ?? false))
+      if (filtersButton) {
+        const activeCount = view.activeFilterCount ?? 0
+        filtersButton.textContent = activeCount > 0 ? `Filters · ${activeCount}` : 'Filters'
+        filtersButton.dataset.active = String(activeCount > 0)
+      }
 
       statusText.textContent = view.status.text
       statusMoment = view.status.action?.moment ?? null

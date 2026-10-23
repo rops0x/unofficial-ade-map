@@ -9,6 +9,7 @@ import {
 } from '../../src/events/schema.ts'
 import { isHiddenVenueName } from '../../src/events/hidden.ts'
 import { type AdeEvent, type NormalizeSkipReason, normalizeAdeEvent, type Occurrence } from './ade.ts'
+import { categoryNames, createTagger, type FilterSource, type Tagger, usedFilters } from './filters.ts'
 
 export type LocationStatus = 'located' | 'no-address' | 'not-found'
 
@@ -35,6 +36,8 @@ export interface BuildInput {
   readonly locations: VenueLocations
   readonly overrides: VenueOverrides
   readonly collectedAt: string
+  /** ADE's program filters; without them events get no tags and the map offers no filters. */
+  readonly filters?: FilterSource
 }
 
 export interface BuildReport {
@@ -43,6 +46,7 @@ export interface BuildReport {
   readonly venues: number
   readonly estimatedEnds: number
   readonly dailyWindows: number
+  readonly taggedEvents: number
   readonly skipped: Readonly<Partial<Record<SkipReason, number>>>
   readonly skippedExamples: readonly string[]
 }
@@ -77,17 +81,24 @@ function resolveVenue(name: string, locations: VenueLocations, overrides: VenueO
   return parsed.success ? { ok: true, venue: parsed.data } : { ok: false, reason: 'invalid' }
 }
 
-function toMapEvent(occurrence: Occurrence, venueId: string): MapEvent | null {
+type Extras = Pick<MapEvent, 'tags' | 'isSoldOut'>
+
+function toMapEvent(occurrence: Occurrence, venueId: string, extras: Extras): MapEvent | null {
   const { venueName: _venueName, ...rest } = occurrence
-  const parsed = EventSchema.safeParse({ ...rest, venueId })
+  const parsed = EventSchema.safeParse({ ...rest, venueId, ...extras })
   return parsed.success ? parsed.data : null
+}
+
+function extrasFor(raw: AdeEvent, tagger: Tagger | null): Extras {
+  const isSoldOut = raw.soldOut ?? false
+  return tagger ? { tags: [...tagger(raw.id, categoryNames(raw.categories))], isSoldOut } : { isSoldOut }
 }
 
 type Outcome =
   | { readonly kind: 'kept'; readonly venue: Venue; readonly events: readonly MapEvent[] }
   | { readonly kind: 'skipped'; readonly reason: SkipReason; readonly example: string }
 
-function processListing(raw: AdeEvent, input: BuildInput): Outcome {
+function processListing(raw: AdeEvent, input: BuildInput, tagger: Tagger | null): Outcome {
   const skip = (reason: SkipReason): Outcome => ({ kind: 'skipped', reason, example: `${reason}: ${raw.title} @ ${raw.venue?.title ?? '?'}` })
   const normalized = normalizeAdeEvent(raw)
   if (!normalized.ok) return skip(normalized.reason)
@@ -96,7 +107,8 @@ function processListing(raw: AdeEvent, input: BuildInput): Outcome {
   const venue = resolveVenue(venueName, input.locations, input.overrides)
   if (!venue.ok) return skip(venue.reason)
 
-  const events = normalized.occurrences.map((occurrence) => toMapEvent(occurrence, venue.venue.id))
+  const extras = extrasFor(raw, tagger)
+  const events = normalized.occurrences.map((occurrence) => toMapEvent(occurrence, venue.venue.id, extras))
   if (events.length === 0 || events.some((event) => event === null)) return skip('invalid')
   return { kind: 'kept', venue: venue.venue, events: events.filter((event): event is MapEvent => event !== null) }
 }
@@ -106,13 +118,16 @@ function countBy<T extends string>(values: readonly T[]): Partial<Record<T, numb
 }
 
 export function buildEventData(input: BuildInput): { data: EventData; report: BuildReport } {
-  const outcomes = input.rawEvents.map((raw) => processListing(raw, input))
+  const tagger = input.filters ? createTagger(input.filters) : null
+  const outcomes = input.rawEvents.map((raw) => processListing(raw, input, tagger))
   const kept = outcomes.filter((outcome) => outcome.kind === 'kept')
   const skipped = outcomes.filter((outcome) => outcome.kind === 'skipped')
 
   const events = kept.flatMap((outcome) => outcome.events)
   const venues = [...new Map(kept.map((outcome) => [outcome.venue.id, outcome.venue])).values()]
-  const data = EventDataSchema.parse({ collectedAt: input.collectedAt, venues, events })
+  const usedTags = new Set(events.flatMap((event) => event.tags ?? []))
+  const filters = input.filters ? { filters: usedFilters(input.filters.groups, usedTags) } : {}
+  const data = EventDataSchema.parse({ collectedAt: input.collectedAt, venues, events, ...filters })
 
   return {
     data,
@@ -122,6 +137,7 @@ export function buildEventData(input: BuildInput): { data: EventData; report: Bu
       venues: venues.length,
       estimatedEnds: events.filter((event) => event.isEndEstimated).length,
       dailyWindows: events.filter((event) => event.isDaily).length,
+      taggedEvents: events.filter((event) => (event.tags ?? []).length > 0).length,
       skipped: countBy(skipped.map((outcome) => outcome.reason)),
       skippedExamples: skipped.slice(0, MAX_EXAMPLES).map((outcome) => outcome.example),
     },

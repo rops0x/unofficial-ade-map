@@ -5,9 +5,21 @@
   { "id": "v-paradiso", "name": "Paradiso", "address": "Weteringschans 6-8, Amsterdam", "lat": 52.3622, "lng": 4.8838 }
  ],
  "events": [
-  { "id": "e-opening", "name": "Opening Party", "venueId": "v-melkweg", "start": "2026-10-21T10:00:00.000Z", "end": "2026-10-21T18:00:00.000Z", "isEndEstimated": false, "isDaily": false, "sourceUrl": "https://example.org/events/opening" },
-  { "id": "e-friday", "name": "Friday Night", "venueId": "v-paradiso", "start": "2026-10-23T21:00:00.000Z", "end": "2026-10-24T03:00:00.000Z", "isEndEstimated": false, "isDaily": false, "sourceUrl": "https://example.org/events/friday" },
-  { "id": "e-late", "name": "Late Friday", "venueId": "v-melkweg", "start": "2026-10-23T22:00:00.000Z", "end": "2026-10-24T06:00:00.000Z", "isEndEstimated": true, "isDaily": false, "sourceUrl": "https://example.org/events/late" },
-  { "id": "e-closing", "name": "Closing", "venueId": "v-paradiso", "start": "2026-10-25T17:00:00.000Z", "end": "2026-10-26T03:00:00.000Z", "isEndEstimated": false, "isDaily": false, "sourceUrl": "https://example.org/events/closing" }
+  { "id": "e-opening", "name": "Opening Party", "venueId": "v-melkweg", "start": "2026-10-21T10:00:00.000Z", "end": "2026-10-21T18:00:00.000Z", "isEndEstimated": false, "isDaily": false, "sourceUrl": "https://example.org/events/opening", "tags": ["1485951"], "isSoldOut": false },
+  { "id": "e-friday", "name": "Friday Night", "venueId": "v-paradiso", "start": "2026-10-23T21:00:00.000Z", "end": "2026-10-24T03:00:00.000Z", "isEndEstimated": false, "isDaily": false, "sourceUrl": "https://example.org/events/friday", "tags": ["1485951", "2528651", "37"], "isSoldOut": false },
+  { "id": "e-late", "name": "Late Friday", "venueId": "v-melkweg", "start": "2026-10-23T22:00:00.000Z", "end": "2026-10-24T06:00:00.000Z", "isEndEstimated": true, "isDaily": false, "sourceUrl": "https://example.org/events/late", "tags": ["1485951", "2528651", "449", "450"], "isSoldOut": true },
+  { "id": "e-closing", "name": "Closing", "venueId": "v-paradiso", "start": "2026-10-25T17:00:00.000Z", "end": "2026-10-26T03:00:00.000Z", "isEndEstimated": false, "isDaily": false, "sourceUrl": "https://example.org/events/closing", "tags": ["1485951", "37"], "isSoldOut": false }
+ ],
+ "filters": [
+  { "id": "program", "label": "Program", "options": [{ "id": "1485951", "label": "Festival" }] },
+  {
+   "id": "genre",
+   "label": "Genre",
+   "options": [
+    { "id": "450", "label": "House", "children": [{ "id": "449", "label": "Deep House" }] },
+    { "id": "37", "label": "Techno" }
+   ]
+  },
+  { "id": "type", "label": "Type", "options": [{ "id": "2528651", "label": "Club nights" }] }
  ]
 }

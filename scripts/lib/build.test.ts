@@ -106,4 +106,57 @@ describe('buildEventData', () => {
 
     expect(report.skipped).toEqual({ 'venue-outside-area': 1 })
   })
+
+  describe('filters', () => {
+    const filters = {
+      groups: [
+        { id: 'program', label: 'Program', options: [{ id: '1485951', label: 'Festival' }] },
+        { id: 'genre', label: 'Genre', options: [{ id: '37', label: 'Techno', children: [{ id: '2840691', label: 'Hard Techno' }] }] },
+        { id: 'type', label: 'Type', options: [{ id: '2592403', label: 'Warehouses' }, { id: '2528659', label: 'Outdoor events' }] },
+      ],
+      members: { '1485951': [1] },
+    }
+
+    test('tags each event with its filter options and sold-out flag', () => {
+      const { data } = buildEventData({
+        rawEvents: [
+          adeEvent(1, 'Melkweg', { categories: 'Nighttime events / Hard Techno / Warehouses', soldOut: true }),
+          adeEvent(2, 'Paradiso', { categories: 'Centre' }),
+        ],
+        locations,
+        overrides: {},
+        collectedAt,
+        filters,
+      })
+
+      expect(data.events.map((event) => [event.id, event.tags, event.isSoldOut])).toEqual([
+        ['ade-1', ['1485951', '2592403', '2840691', '37'], true],
+        ['ade-2', [], false],
+      ])
+    })
+
+    test('ships only the filter options some event on the map has', () => {
+      const { data, report } = buildEventData({
+        rawEvents: [adeEvent(1, 'Melkweg', { categories: 'Techno' }), adeEvent(2, 'Somewhere Unknown', { categories: 'Outdoor events' })],
+        locations,
+        overrides: {},
+        collectedAt,
+        filters,
+      })
+
+      expect(data.filters).toEqual([
+        { id: 'program', label: 'Program', options: [{ id: '1485951', label: 'Festival' }] },
+        { id: 'genre', label: 'Genre', options: [{ id: '37', label: 'Techno' }] },
+      ])
+      expect(report.taggedEvents).toBe(1)
+    })
+
+    test('without collected filters, events carry no tags and the data no filters', () => {
+      const { data } = buildEventData({ rawEvents: [adeEvent(1, 'Melkweg', { soldOut: true })], locations, overrides: {}, collectedAt })
+
+      expect(data.filters).toBeUndefined()
+      expect(data.events[0]).not.toHaveProperty('tags')
+      expect(data.events[0]?.isSoldOut).toBe(true)
+    })
+  })
 })

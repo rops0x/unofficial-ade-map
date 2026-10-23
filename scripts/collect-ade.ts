@@ -2,21 +2,29 @@
 // Safe to run repeatedly during the festival; each run replaces the raw files.
 // Usage: npm run data:collect [-- --force]
 import type { z } from 'zod'
+import { type FilterGroup, FilterGroupsSchema } from '../src/filters/schema.ts'
 import { AdeEventPageSchema, AdeVenuePageSchema } from './lib/ade.ts'
-import { politeGetJson } from './lib/http.ts'
-import { log, PATHS, RawEventsFileSchema, readJson, writeJson } from './lib/store.ts'
+import { listedOptions, parseAdeFilters } from './lib/filters.ts'
+import { politeGet, politeGetJson } from './lib/http.ts'
+import { log, PATHS, RawEventsFileSchema, RawFiltersFileSchema, readJson, writeJson } from './lib/store.ts'
 
 const ADE_FILTER_API = 'https://www.amsterdam-dance-event.nl/api/program/filter/'
 // The festival program as shown on amsterdam-dance-event.nl/en/program (day and night events).
 const FESTIVAL = { type: '8262,8263', from: '2026-10-21', to: '2026-10-25' } as const
+// The same program's filter panel, read for its Program, Genre and Type options.
+const ADE_FILTER_PAGE = `https://www.amsterdam-dance-event.nl/en/program/filter/?${new URLSearchParams({ section: 'events', ...FESTIVAL }).toString()}`
 const MAX_PAGES = 200
 /** Refuse to replace the data if a run returns far fewer events than the last one (API change, outage). */
 const MIN_SHARE_OF_PREVIOUS = 0.5
 
-async function collectPages<T>(section: 'events' | 'venues', schema: z.ZodType<{ data: T[] }>): Promise<T[]> {
+async function collectPages<T>(
+  section: 'events' | 'venues',
+  schema: z.ZodType<{ data: T[] }>,
+  extra: Readonly<Record<string, string>> = {},
+): Promise<T[]> {
   const pages: T[][] = []
   for (let page = 0; page < MAX_PAGES; page += 1) {
-    const params = new URLSearchParams({ section, ...FESTIVAL, page: String(page) })
+    const params = new URLSearchParams({ section, ...FESTIVAL, ...extra, page: String(page) })
     const body = await politeGetJson(`${ADE_FILTER_API}?${params.toString()}`, { 'Content-Type': 'application/json' })
     const parsed = schema.safeParse(body)
     if (!parsed.success) throw new Error(`ADE ${section} page ${page} has an unexpected format — the API may have changed.`)
@@ -37,6 +45,33 @@ async function previousEventCount(): Promise<number> {
   return previous.events.length
 }
 
+/** The ADE event ids listed under each Program option, which the event listing itself doesn't name. */
+async function collectMembers(groups: readonly FilterGroup[]): Promise<Record<string, number[]>> {
+  const members: [string, number[]][] = []
+  // One option at a time on purpose, like collectPages: the polite throttle spaces out sequential requests.
+  for (const option of listedOptions(groups)) {
+    const events = uniqueById(await collectPages('events', AdeEventPageSchema, { category: option.id }))
+    members.push([option.id, events.map((event) => event.id)])
+    log(`  ${option.label}: ${events.length} events`)
+  }
+  return Object.fromEntries(members)
+}
+
+/** Filters are a nice-to-have: if ADE's page changed, keep the last filters rather than block fresh events. */
+async function collectFilters(collectedAt: string): Promise<void> {
+  try {
+    log('Collecting ADE filters…')
+    // Checked before the crawl, which sends option ids back to ADE, and again before saving.
+    const groups = FilterGroupsSchema.parse(parseAdeFilters(await politeGet(ADE_FILTER_PAGE)))
+    const members = await collectMembers(groups)
+    await writeJson(PATHS.rawFilters, RawFiltersFileSchema.parse({ collectedAt, groups, members }))
+    log(`Collected ${groups.length} filter groups: ${groups.map((group) => `${group.label} (${group.options.length})`).join(', ')}.`)
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : String(error)
+    process.stderr.write(`warning: filters not updated, keeping the previous ones: ${message}\n`)
+  }
+}
+
 async function main(): Promise<void> {
   const isForced = process.argv.includes('--force')
   const collectedAt = new Date().toISOString()
@@ -53,6 +88,7 @@ async function main(): Promise<void> {
   await writeJson(PATHS.rawEvents, { collectedAt, events })
   await writeJson(PATHS.rawVenues, { collectedAt, venues })
   log(`Collected ${events.length} events and ${venues.length} venues (previous run: ${previous} events).`)
+  await collectFilters(collectedAt)
 }
 
 main().catch((error: unknown) => {
