@@ -23,7 +23,8 @@
   --radius-panel: 15px;
   --ease-out: cubic-bezier(0.19, 1, 0.22, 1);
 
-  color-scheme: dark;
+  /* "only": browsers must not re-colour the page, matching the meta tag in index.html. */
+  color-scheme: only dark;
 }
 
 *,
